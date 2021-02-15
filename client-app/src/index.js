@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
+import {Home} from "./feature/preview/pages/home";
 
+import Fonts from './attachments/font/fonts'
 
-const app = <div>Hello</div>
+const app = (
+    <Fonts>
+        <Home />
+    </Fonts>
+)
 
 ReactDOM.render(app, document.getElementById('root') );
 

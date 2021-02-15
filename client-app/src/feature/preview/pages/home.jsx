@@ -4,6 +4,6 @@ import React from 'react'
 export const Home = ({}) => {
 
   return (
-    <div></div>
+    <div>123123</div>
   )
 }
