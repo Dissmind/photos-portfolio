@@ -15,7 +15,7 @@ export default createGlobalStyle`
   }
 
   @font-face {
-    font-family: 'Penta Light';
+    font-family: 'PentaLight';
     src: local('Penta Light'), local('PentaLight'),
     url(${PentaLight}) format('woff2');
     font-weight: 400;

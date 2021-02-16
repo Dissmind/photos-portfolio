@@ -6,10 +6,20 @@ const MenuStl = styled.div`
   display: flex;
   flex-direction: column;
   
-        
   background-color: #133F2C;
   width: 210px;
   height: 400px;
+  padding-left: 28px;
+  padding-top: 50px;
+  border-radius: 10px;
+  
+  div:nth-child(n) {
+    margin-top: 10px;
+  }
+
+  div:first-child {
+    margin: 0;
+  }
 `
 
 export const Menu = () => (
