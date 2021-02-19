@@ -1,17 +1,17 @@
 import React from "react";
 
-import {Menu} from "./menu";
 import Fonts from "../../../../attachments/font/fonts";
+import {ThemeSwitcher} from "./theme-switcher";
 
 export default {
-  title: 'Menu',
-  component: Menu,
+  title: 'ThemeSwitcher',
+  component: ThemeSwitcher,
 }
 
 const Template = (args) => (
   <>
     <Fonts />
-    <Menu {...args} />
+    <ThemeSwitcher {...args} />
   </>
 )
 

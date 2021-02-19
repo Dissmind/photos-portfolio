@@ -6,9 +6,10 @@ import {Home} from "./feature/preview/pages/home";
 import Fonts from './attachments/font/fonts'
 
 const app = (
-    <Fonts>
-        <Home />
-    </Fonts>
+  <>
+    <Fonts />
+    <Home />
+  </>
 )
 
 ReactDOM.render(app, document.getElementById('root') );

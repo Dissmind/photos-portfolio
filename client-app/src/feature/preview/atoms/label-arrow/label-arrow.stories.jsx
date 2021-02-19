@@ -1,21 +1,21 @@
 import React from "react";
 
-import {MenuItems} from "./menu-items";
 import Fonts from "../../../../attachments/font/fonts"
+import {LabelArrow} from "./label-arrow";
 
 export default {
-    title: 'MenuItems',
-    component: MenuItems,
+  title: 'LabelArrow',
+  component: LabelArrow,
 }
 
 const Template = (args) => (
   <>
     <Fonts />
-    <MenuItems {...args} />
+    <LabelArrow {...args} />
   </>
 )
 
 export const Primary = Template.bind({})
 Primary.args = {
-    text: "test-text",
+  text: "Выберите свой язык!",
 }

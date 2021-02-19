@@ -10,5 +10,7 @@ const MenuItemsStl = styled.div`
 `
 
 export const MenuItems = ({text}) => (
-  <MenuItemsStl>{text}</MenuItemsStl>
+  <>
+    <MenuItemsStl>{text}</MenuItemsStl>
+  </>
 )
