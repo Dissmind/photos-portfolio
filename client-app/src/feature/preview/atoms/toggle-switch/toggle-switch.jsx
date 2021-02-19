@@ -53,13 +53,16 @@ const SliderStl = styled.label`
   }
 `
 
-export const ToggleSwitch = () => {
+export const ToggleSwitch = ({onToggle}) => {
   const [] = useState()
 
   return (
     <ToggleSwitchStl>
       <CheckBoxStl type={"checkbox"} id={"checkbox"}/>
-      <SliderStl for={"checkbox"}/>
+      <SliderStl
+        for={"checkbox"}
+        onClick={onToggle}
+      />
     </ToggleSwitchStl>
   )
 }

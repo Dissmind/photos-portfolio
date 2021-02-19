@@ -15,11 +15,13 @@ const ThemeSwitcherStl = styled.div`
 `
 
 export const ThemeSwitcher = () => {
-  const [path, setPath] = useState(BlackThemeMoonIco)
+
+  const [isMoon, setIsMoon] = useState(true)
+
   return(
     <ThemeSwitcherStl>
-      <ThemeIcons path={path}/>
-      <ToggleSwitch />
+      <ThemeIcons path={(isMoon) ? BlackThemeMoonIco : WhiteThemeSunIco}/>
+      <ToggleSwitch onToggle={() => setIsMoon(!isMoon)} />
     </ThemeSwitcherStl>
     )
 }
