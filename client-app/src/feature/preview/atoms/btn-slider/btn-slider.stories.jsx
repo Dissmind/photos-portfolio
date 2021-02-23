@@ -1,17 +1,17 @@
 import React from "react";
 
 import Fonts from "../../../../attachments/font/fonts"
-import {Slider} from "./slider";
+import {BtnSlider} from "./btn-slider";
 
 export default {
-  title: 'Slider',
-  component: Slider,
+  title: 'BtnSlider',
+  component: BtnSlider,
 }
 
 const Template = (args) => (
   <>
     <Fonts />
-    <Slider {...args} />
+    <BtnSlider {...args} />
   </>
 )
 

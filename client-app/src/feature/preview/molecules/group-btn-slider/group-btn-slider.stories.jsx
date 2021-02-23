@@ -1,17 +1,17 @@
 import React from "react";
 
 import Fonts from "../../../../attachments/font/fonts"
-import {SliderGroup} from "./slider-group";
+import {GroupBtnSlider} from "./group-btn-slider";
 
 export default {
-  title: 'SliderGroup',
-  component: SliderGroup,
+  title: 'GroupBtnSlider',
+  component: GroupBtnSlider,
 }
 
 const Template = (args) => (
   <>
     <Fonts />
-    <SliderGroup {...args} />
+    <GroupBtnSlider {...args} />
   </>
 )
 
