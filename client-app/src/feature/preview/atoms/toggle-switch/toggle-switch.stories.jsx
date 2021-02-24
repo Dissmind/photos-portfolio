@@ -1,17 +1,17 @@
 import React from "react";
 
-import Fonts from "../../../../attachments/font/fonts"
+import GlobalComponents from "../../../../shared/global-components"
 import {ToggleSwitch} from "./toggle-switch";
 
 
 export default {
-  title: 'ToggleSwitch',
+  title: 'Home/Atoms/ToggleSwitch',
   component: ToggleSwitch,
 }
 
 const Template = (args) => (
   <>
-    <Fonts />
+    <GlobalComponents />
     <ToggleSwitch {...args} />
   </>
 )

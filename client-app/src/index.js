@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import {Home} from "./feature/preview/pages/home";
 
-import Fonts from './attachments/font/fonts'
+import GlobalComponents from './shared/global-components'
+
+
 
 const app = (
   <>
-    <Fonts />
+    <GlobalComponents />
     <Home />
   </>
 )

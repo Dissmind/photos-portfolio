@@ -1,16 +1,16 @@
 import React from "react";
 
-import Fonts from "../../../../attachments/font/fonts"
+import GlobalComponents from "../../../../shared/global-components"
 import {LabelArrow} from "./label-arrow";
 
 export default {
-  title: 'LabelArrow',
+  title: 'Home/Atoms/LabelArrow',
   component: LabelArrow,
 }
 
 const Template = (args) => (
   <>
-    <Fonts />
+    <GlobalComponents />
     <LabelArrow {...args} />
   </>
 )

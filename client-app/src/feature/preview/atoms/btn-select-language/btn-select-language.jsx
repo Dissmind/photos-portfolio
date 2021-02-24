@@ -13,9 +13,15 @@ const BtnSelectLanguageStl = styled.div`
   border-radius: 18px;
   padding-bottom: 5px;
   color: #164C34;
-  font-family: 'Penta Light', serif;
+  font-family: 'PentaLight', serif;
   font-weight: 400;
   font-size: 30px;
+  
+  :hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: .2s;
+  }
 `
 
 export const BtnSelectLanguage = ({text}) => {

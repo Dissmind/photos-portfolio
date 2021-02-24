@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React  from "react";
 import styled from "styled-components";
 
 const ToggleSwitchStl = styled.div`
@@ -20,8 +20,7 @@ const CheckBoxStl = styled.input`
       box-sizing: border-box;
       width: 35px;
       height: 35px;
-      border: #FFFFFF 0.5px solid;
-      opacity: 70%;
+      border: #FFFFFF 2px solid;
       border-radius: 18px;
       background-color: #133F2C;
       transition: .3s;
@@ -45,8 +44,7 @@ const SliderStl = styled.label`
     box-sizing: border-box;
     width: 35px;
     height: 35px;
-    border: #FFFFFF 0.5px solid;
-    opacity: 70%;
+    border: #FFFFFF 2px solid;
     border-radius: 18px;
     background-color: #133F2C;
     transition: .3s;
@@ -54,8 +52,6 @@ const SliderStl = styled.label`
 `
 
 export const ToggleSwitch = ({onToggle}) => {
-  const [] = useState()
-
   return (
     <ToggleSwitchStl>
       <CheckBoxStl type={"checkbox"} id={"checkbox"}/>

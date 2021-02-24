@@ -1,19 +1,19 @@
 import React from "react";
 
-import Fonts from "../../../../attachments/font/fonts"
+import GlobalComponents from "../../../../shared/global-components"
 import {ThemeIcons} from "./theme-icons";
 
 import Moon from "../../../../attachments/icon/BlackThemeMoonIco.svg"
 import Sun from "../../../../attachments/icon/WhiteThemeSunIco.svg"
 
 export default {
-  title: 'ThemeIcons',
+  title: 'Home/Atoms/ThemeIcons',
   component: ThemeIcons,
 }
 
 const Template = (args) => (
   <>
-    <Fonts />
+    <GlobalComponents />
     <ThemeIcons {...args} />
   </>
 )

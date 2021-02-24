@@ -1,16 +1,16 @@
 import React from "react";
 
 import {MenuItems} from "./menu-items";
-import Fonts from "../../../../attachments/font/fonts"
+import GlobalComponents from "../../../../shared/global-components"
 
 export default {
-    title: 'MenuItems',
+    title: 'Home/Atoms/MenuItems',
     component: MenuItems,
 }
 
 const Template = (args) => (
   <>
-    <Fonts />
+    <GlobalComponents />
     <MenuItems {...args} />
   </>
 )

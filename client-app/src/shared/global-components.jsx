@@ -1,9 +1,12 @@
 import React from "react";
 import {createGlobalStyle} from "styled-components";
 
-import LemonTuesday from "./Lemon Tuesday.woff2"
-import PentaLight from "./PentaLight.woff2"
-import Solena from "./Solena-Regular.woff2"
+// Importing the Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import LemonTuesday from "../attachments/font/Lemon Tuesday.woff2"
+import PentaLight from "../attachments/font/PentaLight.woff2"
+import Solena from "../attachments/font/Solena-Regular.woff2"
 
 export default createGlobalStyle`
   @font-face {

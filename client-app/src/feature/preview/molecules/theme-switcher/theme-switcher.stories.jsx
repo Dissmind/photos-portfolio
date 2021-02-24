@@ -1,16 +1,16 @@
 import React from "react";
 
-import Fonts from "../../../../attachments/font/fonts";
+import GlobalComponents from "../../../../shared/global-components"
 import {ThemeSwitcher} from "./theme-switcher";
 
 export default {
-  title: 'ThemeSwitcher',
+  title: 'Home/Molecules/ThemeSwitcher',
   component: ThemeSwitcher,
 }
 
 const Template = (args) => (
   <>
-    <Fonts />
+    <GlobalComponents />
     <ThemeSwitcher {...args} />
   </>
 )

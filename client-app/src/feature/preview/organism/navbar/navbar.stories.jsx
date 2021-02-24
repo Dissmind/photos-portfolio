@@ -1,22 +1,20 @@
 import React from "react";
 
-import {Menu} from "./menu";
 import GlobalComponents from "../../../../shared/global-components"
-
+import {Navbar} from "./navbar";
 
 export default {
-  title: 'Home/Molecules/Menu',
-  component: Menu,
+  title: 'Home/Organism/Navbar',
+  component: Navbar,
 }
 
 const Template = (args) => (
   <>
     <GlobalComponents />
-    <Menu {...args} />
+    <Navbar {...args} />
   </>
 )
 
 export const Primary = Template.bind({})
 Primary.args = {
-
 }

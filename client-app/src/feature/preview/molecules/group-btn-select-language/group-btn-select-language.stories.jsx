@@ -1,22 +1,20 @@
 import React from "react";
 
-import {Menu} from "./menu";
 import GlobalComponents from "../../../../shared/global-components"
-
+import {GroupBtnSelectLanguage} from "./group-btn-select-language";
 
 export default {
-  title: 'Home/Molecules/Menu',
-  component: Menu,
+  title: 'Home/Molecules/GroupBtnSelectLanguage',
+  component: GroupBtnSelectLanguage,
 }
 
 const Template = (args) => (
   <>
     <GlobalComponents />
-    <Menu {...args} />
+    <GroupBtnSelectLanguage {...args} />
   </>
 )
 
 export const Primary = Template.bind({})
 Primary.args = {
-
 }

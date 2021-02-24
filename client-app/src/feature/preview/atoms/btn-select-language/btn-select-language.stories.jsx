@@ -1,16 +1,16 @@
 import React from "react";
 
-import Fonts from "../../../../attachments/font/fonts"
+import GlobalComponents from "../../../../shared/global-components"
 import {BtnSelectLanguage} from "./btn-select-language";
 
 export default {
-  title: 'BtnSelectLanguage',
+  title: 'Home/Atoms/BtnSelectLanguage',
   component: BtnSelectLanguage,
 }
 
 const Template = (args) => (
   <>
-    <Fonts />
+    <GlobalComponents />
     <BtnSelectLanguage {...args} />
   </>
 )
