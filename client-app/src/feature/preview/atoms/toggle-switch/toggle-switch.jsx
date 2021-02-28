@@ -56,7 +56,7 @@ export const ToggleSwitch = ({onToggle}) => {
     <ToggleSwitchStl>
       <CheckBoxStl type={"checkbox"} id={"checkbox"}/>
       <SliderStl
-        for={"checkbox"}
+        htmlFor={"checkbox"}
         onClick={onToggle}
       />
     </ToggleSwitchStl>

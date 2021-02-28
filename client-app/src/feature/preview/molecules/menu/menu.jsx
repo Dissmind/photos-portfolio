@@ -11,17 +11,13 @@ const MenuStl = styled.div`
 
   background-color: #133F2C;
   width: 210px;
-  height: 400px;
+  height: 390px;
   border-radius: 10px;
   padding-top: 50px;
   padding-left: 30px;
 
-  div:nth-child(n){
+  div:not(:first-child){
     margin-top: 10px;
-  }
-
-  div:first-child{
-    margin: 0;
   }
 
   div:last-child{
@@ -36,18 +32,25 @@ const MenuBackgroundStl = styled.div`
   left: 14px;
 
   width: 210px;
-  height: 400px;
+  height: 390px;
   background-color: #FFFFFF;
   border-radius: 10px;
 `
 
-export const Menu = () => (
-  <MenuStl>
-    <MenuItems text={"Обо мне"} />
-    <MenuItems text={"Портфолио"} />
-    <MenuItems text={"Цена"} />
-    <MenuItems text={"Контакты"} />
+const Wrapper = styled.div`
+  width: 224px;
+  height: 405px;
+`
 
-    <MenuBackgroundStl />
-  </MenuStl>
+export const Menu = () => (
+  <Wrapper>
+    <MenuStl>
+      <MenuItems text={"Обо мне"} />
+      <MenuItems text={"Портфолио"} />
+      <MenuItems text={"Цена"} />
+      <MenuItems text={"Контакты"} />
+
+      <MenuBackgroundStl />
+    </MenuStl>
+  </Wrapper>
 )

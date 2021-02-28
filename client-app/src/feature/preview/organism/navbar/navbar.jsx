@@ -5,13 +5,20 @@ import {BtnSignUp} from "../../atoms/btn-sign-up/btn-sign-up";
 import {ThemeSwitcher} from "../../molecules/theme-switcher/theme-switcher";
 
 const NavbarStl = styled.div`
-  padding-left: 40px;
-  padding-right: 40px;
-  width: 100%;
+  padding: 0 40px;
   height: 70px;
   background-color: #133F2C;
+  
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  & > div:nth-child(1) {
+    flex-grow: 1;
+  }
+  & > div:nth-child(2) {
+    margin-right: 70px;
+  }
 `
 
 export const Navbar = () => (

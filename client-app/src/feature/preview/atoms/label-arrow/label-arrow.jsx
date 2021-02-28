@@ -3,26 +3,28 @@ import styled from "styled-components";
 
 import Arrow from "../../../../attachments/icon/arrow.svg"
 
-const LabelStl = styled.div`
+const LabelArrowStl = styled.div`
   display: flex;
+`
+
+const ArrowStl = styled.img`
+  height: 62px;
+`
+
+const LabelStl = styled.div`
   font-family: 'Lemon Tuesday', serif;
   font-weight: 400;
   font-size: 30px;
   color: #164C34;
-  
-  div:nth-child(2){
-    padding-top: 50px;
-    padding-left: 10px;
-  }
+  padding-top: 40px;
+  padding-left: 5px;
 `
 
-const ArrowStl = styled.img``
-
-export const LabelArrow = ({text}) => {
+export const LabelArrow = () => {
   return(
-    <LabelStl>
+    <LabelArrowStl>
       <ArrowStl src={Arrow} alt={"Arrow"} />
-      <div>{text}</div>
-    </LabelStl>
+      <LabelStl>Выберите свой язык!</LabelStl>
+    </LabelArrowStl>
   )
 }
