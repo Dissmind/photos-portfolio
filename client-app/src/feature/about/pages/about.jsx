@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import {VerticalLabel} from "../atoms/vertical-label";
-import {MainPhoto} from "../molecules/main-photo";
-import {MainLabel} from "../molecules/main-label";
+import {MainPhoto} from "../atoms/main-photo";
+import {MainLabel} from "../atoms/main-label";
 import {Navbar} from "../../navbar/organisms/navbar";
 
 const AboutStl = styled.div`
@@ -14,6 +14,12 @@ const AboutStl = styled.div`
 const Wrapper = styled.div`
   margin-top: 160px;
   display: flex;
+  justify-content: center;
+  
+  & > div:nth-child(2){
+    margin-left: 15px;
+    margin-right: 70px;
+  }
 `
 
 export const About = () => (
@@ -26,5 +32,3 @@ export const About = () => (
     </Wrapper>
   </AboutStl>
 )
-
-//TODO: переделать простые компоненты в атомы (фото, надпись)

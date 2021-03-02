@@ -1,17 +1,17 @@
 import React from "react";
 
 import GlobalComponents from "../../../../shared/global-components"
-import {MainPhotoBorder} from "../main-photo-border";
+import {MainLabel} from "../main-label";
 
 export default {
-  title: 'About/Atoms/MainPhotoBorder',
-  component: MainPhotoBorder,
+  title: 'About/Atoms/MainLabel',
+  component: MainLabel,
 }
 
 const Template = (args) => (
   <>
     <GlobalComponents />
-    <MainPhotoBorder {...args} />
+    <MainLabel {...args} />
   </>
 )
 
