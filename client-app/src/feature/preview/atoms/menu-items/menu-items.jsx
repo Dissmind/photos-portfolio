@@ -10,6 +10,7 @@ const MenuItemsStl = styled.div`
   :hover{
     cursor: pointer;
     color: #ccc;
+    transition: .2s;
   }
 `
 

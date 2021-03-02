@@ -1,17 +1,17 @@
 import React from "react";
 
 import GlobalComponents from "../../../../shared/global-components"
-import {Navbar} from "./navbar";
+import {NavbarHome} from "./navbar-home";
 
 export default {
-  title: 'Home/Organism/Navbar',
-  component: Navbar,
+  title: 'Home/Organism/NavbarHome',
+  component: NavbarHome,
 }
 
 const Template = (args) => (
   <>
     <GlobalComponents />
-    <Navbar {...args} />
+    <NavbarHome {...args} />
   </>
 )
 

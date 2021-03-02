@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {Navbar} from "../organism/navbar/navbar";
+import {NavbarHome} from "../organism/navbar-home/navbar-home";
 import {LabelArrow} from "../atoms/label-arrow/label-arrow";
 import {MainContent} from "../organism/main-content/main-content";
 
@@ -20,7 +20,7 @@ const HomeStl = styled.div`
 
 export const Home = () => (
   <HomeStl>
-    <Navbar />
+    <NavbarHome />
     <LabelArrow />
     <MainContent />
   </HomeStl>

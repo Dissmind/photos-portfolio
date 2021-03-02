@@ -4,7 +4,7 @@ import {GroupBtnSelectLanguage} from "../../molecules/group-btn-select-language/
 import {BtnSignUp} from "../../atoms/btn-sign-up/btn-sign-up";
 import {ThemeSwitcher} from "../../molecules/theme-switcher/theme-switcher";
 
-const NavbarStl = styled.div`
+const NavbarHomeStl = styled.div`
   padding: 0 40px;
   height: 70px;
   background-color: #133F2C;
@@ -21,10 +21,10 @@ const NavbarStl = styled.div`
   }
 `
 
-export const Navbar = () => (
-  <NavbarStl>
+export const NavbarHome = () => (
+  <NavbarHomeStl>
     <GroupBtnSelectLanguage />
     <BtnSignUp />
     <ThemeSwitcher />
-  </NavbarStl>
+  </NavbarHomeStl>
 )
