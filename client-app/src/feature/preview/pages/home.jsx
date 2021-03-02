@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
-import {NavbarHome} from "../organism/navbar-home/navbar-home";
-import {LabelArrow} from "../atoms/label-arrow/label-arrow";
-import {MainContent} from "../organism/main-content/main-content";
+import {LabelArrow} from "../atoms/label-arrow";
+import {MainContent} from "../organisms/main-content";
+import {Navbar} from "../../navbar/organisms/navbar";
 
 const HomeStl = styled.div`
   min-height: 100%;
@@ -20,7 +20,7 @@ const HomeStl = styled.div`
 
 export const Home = () => (
   <HomeStl>
-    <NavbarHome />
+    <Navbar type={"lang"} />
     <LabelArrow />
     <MainContent />
   </HomeStl>

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import {NavbarMain} from "../organism/navbar-main/navbar-main";
-import {VerticalLabel} from "../atoms/vertical-label/vertical-label";
-import {MainPhoto} from "../molecules/main-photo/main-photo";
-import {MainLabel} from "../molecules/main-label/main-label";
+import {VerticalLabel} from "../atoms/vertical-label";
+import {MainPhoto} from "../molecules/main-photo";
+import {MainLabel} from "../molecules/main-label";
+import {Navbar} from "../../navbar/organisms/navbar";
 
 const AboutStl = styled.div`
   min-height: 100%;
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 
 export const About = () => (
   <AboutStl>
-    <NavbarMain />
+    <Navbar type={"menu"} />
     <Wrapper>
       <VerticalLabel />
       <MainPhoto />
@@ -27,4 +27,4 @@ export const About = () => (
   </AboutStl>
 )
 
-//TODO: я тут
+//TODO: переделать простые компоненты в атомы (фото, надпись)
