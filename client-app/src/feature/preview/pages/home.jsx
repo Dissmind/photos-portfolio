@@ -21,7 +21,7 @@ const HomeStl = styled.div`
 export const Home = () => (
   <HomeStl>
     <Navbar type={"lang"} />
-    <LabelArrow />
+    <LabelArrow text={"Выберите свой язык!"} />
     <MainContent />
   </HomeStl>
 )

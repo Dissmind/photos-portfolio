@@ -18,5 +18,3 @@ export const VerticalLabel = () => {
     <VerticalLabelStl>Обо мне</VerticalLabelStl>
   )
 }
-
-//TODO: что-то не так

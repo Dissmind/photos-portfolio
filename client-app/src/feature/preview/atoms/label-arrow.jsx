@@ -20,11 +20,11 @@ const LabelStl = styled.div`
   padding-left: 5px;
 `
 
-export const LabelArrow = () => {
+export const LabelArrow = ({text}) => {
   return(
     <LabelArrowStl>
       <ArrowStl src={Arrow} alt={"Arrow"} />
-      <LabelStl>Выберите свой язык!</LabelStl>
+      <LabelStl>{text}</LabelStl>
     </LabelArrowStl>
   )
 }
