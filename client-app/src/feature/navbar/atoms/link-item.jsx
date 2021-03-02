@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const LinkItemStl = styled.div`
   font-family: 'PentaLight', serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #FFFFFF;
 
   :hover{

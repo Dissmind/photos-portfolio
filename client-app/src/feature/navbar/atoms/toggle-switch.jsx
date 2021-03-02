@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const ToggleSwitchStl = styled.div`
   position: relative;
-  width: 70px;
-  height: 35px;
+  width: 4.375rem;
+  height: 2.1875rem;
 `
 
 const CheckBoxStl = styled.input`
@@ -13,15 +13,15 @@ const CheckBoxStl = styled.input`
   &:checked + label {
     //background-color: ;
     &::after{
-      margin-left: 35px;
+      margin-left: 2.1875rem;
       
       content: "";
       display: block;
       box-sizing: border-box;
-      width: 35px;
-      height: 35px;
-      border: #FFFFFF 2px solid;
-      border-radius: 18px;
+      width: 2.1875rem;
+      height: 2.1875rem;
+      border: #FFFFFF 0.125rem solid;
+      border-radius: 1.125rem;
       background-color: #133F2C;
       transition: .3s;
     }
@@ -32,9 +32,9 @@ const SliderStl = styled.label`
   position: absolute;
   top: 0;
   left: 0;
-  width: 70px;
-  height: 35px;
-  border-radius: 18px;
+  width: 4.375rem;
+  height: 2.1875rem;
+  border-radius: 1.125rem;
   background-color: #FFFFFF;
   cursor: pointer;
   
@@ -42,14 +42,15 @@ const SliderStl = styled.label`
     content: "";
     display: block;
     box-sizing: border-box;
-    width: 35px;
-    height: 35px;
-    border: #FFFFFF 2px solid;
-    border-radius: 18px;
+    width: 2.1875rem;
+    height: 2.1875rem;
+    border: #FFFFFF 0.125rem solid;
+    border-radius: 1.125rem;
     background-color: #133F2C;
     transition: .3s;
   }
 `
+
 
 export const ToggleSwitch = ({onToggle}) => {
   return (
@@ -62,3 +63,5 @@ export const ToggleSwitch = ({onToggle}) => {
     </ToggleSwitchStl>
   )
 }
+
+//TODO: тута

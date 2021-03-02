@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const MainLabelStl = styled.div`
-  width: 782px;
-  height: 660px;
+  width: 48.875rem;
+  height: 41.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,17 +11,17 @@ const MainLabelStl = styled.div`
 `
 
 const HorizontalLineStl = styled.div`
-  width: 583px;
-  height: 5px;
+  width: 36.4375rem;
+  height: 0.3125rem;
   background-color: #133F2C;
 `
 
 const MainLabelTextStl = styled.div`
   font-family: 'PentaLight', serif;
   font-weight: 400;
-  line-height: 45px;
+  line-height: 2.8125rem;
   text-align: center;
-  font-size: 45px;
+  font-size: 2.8125rem;
   color: #333334;
 `
 

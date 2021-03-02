@@ -12,13 +12,13 @@ const AboutStl = styled.div`
 `
 
 const Wrapper = styled.div`
-  margin-top: 160px;
+  margin-top: 10rem;
   display: flex;
   justify-content: center;
   
   & > div:nth-child(2){
-    margin-left: 15px;
-    margin-right: 70px;
+    margin-left: 0.9375rem;
+    margin-right: 4.375rem;
   }
 `
 

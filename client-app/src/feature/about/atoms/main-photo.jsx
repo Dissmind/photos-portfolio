@@ -6,20 +6,20 @@ const MainPhotoStl = styled.div`
   position: relative;
   & > div:nth-child(2){
     position: absolute;
-    top: 33px;
-    left: 38px;
+    top: 2.0625rem;
+    left: 2.375rem;
   }
 `
 
 const MainPhotoImgStl = styled.img`
-  width: 518px;
-  height: 660px;
+  width: 32.375rem;
+  height: 41.25rem;
 `
 
 const MainPhotoBorderStl = styled.div`
-  width: 442px;
-  height: 594px;
-  border: #FFFFFF 5px solid;
+  width: 27.625rem;
+  height: 37.125rem;
+  border: #FFFFFF 0.3125rem solid;
 `
 
 export const MainPhoto = () => (
