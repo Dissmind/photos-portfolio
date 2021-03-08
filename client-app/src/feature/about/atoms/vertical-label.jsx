@@ -13,8 +13,8 @@ const VerticalLabelStl = styled.div`
   writing-mode: vertical-lr;
 `
 
-export const VerticalLabel = () => {
+export const VerticalLabel = ({text}) => {
   return (
-    <VerticalLabelStl>Обо мне</VerticalLabelStl>
+    <VerticalLabelStl>{text}</VerticalLabelStl>
   )
 }

@@ -26,7 +26,7 @@ export const About = () => (
   <AboutStl>
     <Navbar type={"menu"} />
     <Wrapper>
-      <VerticalLabel />
+      <VerticalLabel text={"Обо мне"} />
       <MainPhoto />
       <MainLabel />
     </Wrapper>
