@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {Navbar} from "../../navbar/organisms/navbar";
 import {Label} from "../atoms/label";
 import {ThemeLinkList} from "../molecules/theme-link-list";
-import {LabelArrow} from "../../preview/atoms/label-arrow";
+import {PortfolioLabelArrow} from "../atoms/portfolio-label-arrow";
 
 const PortfolioStl = styled.div`
   min-height: 100%;
@@ -37,7 +37,7 @@ export const Portfolio = ({}) => {
       <Wrapper>
         <Label />
         <ThemeLinkList />
-        <LabelArrow text={"Выберите любую тему!"} />
+        <PortfolioLabelArrow />
       </Wrapper>
     </PortfolioStl>
   )

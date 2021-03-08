@@ -64,4 +64,4 @@ export const ToggleSwitch = ({onToggle}) => {
   )
 }
 
-//TODO: тута
+//TODO: тута (адаптив)
