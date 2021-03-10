@@ -11,10 +11,10 @@ const TitleStl = styled.div`
 `
 
 
-export const Title = ({}) => {
+export const Title = ({title}) => {
   return (
     <TitleStl>
-      Woman
+      {title}
     </TitleStl>
   )
 }

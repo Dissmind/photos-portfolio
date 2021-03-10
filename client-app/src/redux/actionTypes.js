@@ -1,0 +1,1 @@
+export const CHANGE_PHOTOS = "CHANGE_PHOTOS"
