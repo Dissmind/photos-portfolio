@@ -2,10 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import {Home} from "./feature/preview/pages/home";
-import {Photos} from "./feature/photos/pages/photos";
-
 
 import GlobalComponents from './shared/global-components'
+import {BrowserRouter} from "react-router-dom"
 import {Provider} from "react-redux";
 import {createStore} from "redux";
 import {rootReducer} from "./redux/rootReducer";
@@ -15,11 +14,17 @@ const store = createStore(rootReducer)
 const app = (
   <>
     <GlobalComponents />
-    <Photos />
+    <Home />
   </>
 )
 
-const root = <Provider store={store}>{app}</Provider>
+const root = (
+  <Provider store={store}>
+    <BrowserRouter>
+      {app}
+    </BrowserRouter>
+  </Provider>
+)
 
 ReactDOM.render(root, document.getElementById('root') );
 

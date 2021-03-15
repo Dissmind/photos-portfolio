@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import {Route, NavLink} from "react-router-dom"
 import {MenuItems} from "../atoms/menu-items";
+import {About} from "../../about/pages/about";
 
 const MenuStl = styled.div`
   box-sizing: border-box;
@@ -45,8 +47,16 @@ const Wrapper = styled.div`
 export const Menu = () => (
   <Wrapper>
     <MenuStl>
-      <MenuItems text={"Обо мне"} />
-      <MenuItems text={"Портфолио"} />
+      <Route path={"/about"} exact render={() => (<About />)} />
+      <NavLink to={"/about"}>
+        <MenuItems text={"Обо мне"} />
+      </NavLink>
+
+      <NavLink to={"/portfolio"}>
+        <MenuItems text={"Портфолио"} />
+      </NavLink>
+
+
       <MenuItems text={"Цена"} />
       <MenuItems text={"Контакты"} />
 
@@ -54,3 +64,5 @@ export const Menu = () => (
     </MenuStl>
   </Wrapper>
 )
+
+//TODO: router
