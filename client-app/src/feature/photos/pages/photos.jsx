@@ -32,12 +32,14 @@ const ItemsWrapper = styled.div`
   align-self: center;
 `
 
+
 const sortPhotos = (arr) => {
-  
-  
-  
+
+  // TODO: sort array
+
   return arr
 }
+
 
 const Comp = ({groupTitle, photosLink, addPhotos}) => {
 
