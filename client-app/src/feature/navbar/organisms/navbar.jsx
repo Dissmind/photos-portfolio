@@ -4,6 +4,7 @@ import {BtnLanguageList} from "../molecules/btn-language-list";
 import {LinkList} from "../molecules/link-list";
 import {LinkItem} from "../atoms/link-item";
 import {ThemeSwitcher} from "../molecules/theme-switcher";
+import {NavLink} from "react-router-dom";
 
 const NavbarStl = styled.div`
   padding: 0 40px;
@@ -17,11 +18,16 @@ const NavbarStl = styled.div`
   & > div:nth-child(1) {
     flex-grow: 1;
   }
-  & > div:nth-child(2) {
+  & > a:nth-child(2) {
     margin-right: 70px;
   }
 `
 
+const Link = styled(NavLink)`
+  &:link{
+    text-decoration: none;
+  }
+`
 
 export const Navbar = ({type}) => {
 
@@ -40,7 +46,7 @@ export const Navbar = ({type}) => {
   return (
     <NavbarStl>
       {list}
-      <LinkItem text={"Записаться на фотосессию"} />
+      <Link to={"/records"}><LinkItem text={"Записаться на фотосессию"} /></Link>
       <ThemeSwitcher />
     </NavbarStl>
   )

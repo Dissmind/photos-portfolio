@@ -7,7 +7,7 @@ const VerticalLabelStl = styled.div`
   font-size: 6.25rem;
   line-height: 7.5rem;
   text-align: right;
-  color: #333334;
+  color: #14402D;
   opacity: 40%;
   transform: rotate(180deg);
   writing-mode: vertical-lr;

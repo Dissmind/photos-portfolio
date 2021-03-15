@@ -22,7 +22,7 @@ const MainLabelTextStl = styled.div`
   line-height: 2.8125rem;
   text-align: center;
   font-size: 2.8125rem;
-  color: #333334;
+  color: #14402D;
 `
 
 export const MainLabel = () => (

@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {Route, NavLink} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 import {MenuItems} from "../atoms/menu-items";
-import {About} from "../../about/pages/about";
 
 const MenuStl = styled.div`
   box-sizing: border-box;
@@ -18,12 +17,8 @@ const MenuStl = styled.div`
   padding-top: 50px;
   padding-left: 30px;
 
-  div:not(:first-child){
+  a:not(:first-child){
     margin-top: 10px;
-  }
-
-  div:last-child{
-    margin: 0;
   }
 `
 
@@ -44,25 +39,23 @@ const Wrapper = styled.div`
   height: 405px;
 `
 
+const Link = styled(NavLink)`
+  &:link{
+    text-decoration: none;
+  }  
+`
+
 export const Menu = () => (
   <Wrapper>
     <MenuStl>
-      <Route path={"/about"} exact render={() => (<About />)} />
-      <NavLink to={"/about"}>
-        <MenuItems text={"Обо мне"} />
-      </NavLink>
-
-      <NavLink to={"/portfolio"}>
-        <MenuItems text={"Портфолио"} />
-      </NavLink>
-
-
-      <MenuItems text={"Цена"} />
-      <MenuItems text={"Контакты"} />
+      <Link to={"/about"}><MenuItems text={"Обо мне"} /></Link>
+      <Link to={"/portfolio"}><MenuItems text={"Портфолио"} /></Link>
+      <Link to={"/"}><MenuItems text={"Цены"} /></Link>
+      <Link to={"records"}><MenuItems text={"Контакты"} /></Link>
 
       <MenuBackgroundStl />
     </MenuStl>
   </Wrapper>
 )
 
-//TODO: router
+//TODO: рутер на "Цена"
