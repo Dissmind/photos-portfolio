@@ -12,6 +12,8 @@ import {Home} from "./feature/preview/pages/home";
 import {About} from "./feature/about/pages/about";
 import {Portfolio} from "./feature/portfolio/pages/portfolio";
 import {Records} from "./feature/records/pages/records";
+import {ThemeListItems} from "./feature/portfolio/molecules/theme-link-list";
+import {Photos} from "./feature/photos/pages/photos";
 
 const store = createStore(rootReducer)
 
@@ -22,6 +24,10 @@ const app = (
       <Route path={"/"} exact render={() => <Home />} />
       <Route path={"/about"} exact render={() => <About />} />
       <Route path={"/portfolio"} exact render={() => <Portfolio />} />
+      {ThemeListItems.map((ThemeListItem) => (
+        <Route path={`/portfolio/${ThemeListItem.theme.toLowerCase().split(' ').join('-')}`}
+               exact render={() => <Photos />} />
+      ))}
       <Route path={"/records"} exact render={() => <Records />} />
     </BrowserRouter>
   </Provider>
