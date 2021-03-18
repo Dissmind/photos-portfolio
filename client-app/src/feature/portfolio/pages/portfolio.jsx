@@ -18,14 +18,14 @@ const Wrapper = styled.div`
   align-items: center;
   
   & > div:nth-child(1){
-    margin-top: 70px;
+    margin-top: 4.375rem;
   }
   & > div:nth-child(2){
-    margin-top: 100px;
+    margin-top: 6.25rem;
   }
   & > div:nth-child(3){
-    margin-top: 40px;
-    margin-left: 360px;
+    margin-top: 2.5rem;
+    margin-left: 22.5rem;
   }
 `
 

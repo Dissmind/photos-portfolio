@@ -63,5 +63,3 @@ export const ToggleSwitch = ({onToggle}) => {
     </ToggleSwitchStl>
   )
 }
-
-//TODO: тута (адаптив)

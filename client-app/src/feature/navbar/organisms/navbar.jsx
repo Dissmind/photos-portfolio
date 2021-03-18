@@ -7,8 +7,8 @@ import {ThemeSwitcher} from "../molecules/theme-switcher";
 import {NavLink} from "react-router-dom";
 
 const NavbarStl = styled.div`
-  padding: 0 40px;
-  height: 70px;
+  padding: 0 2.5rem;
+  height: 4.375rem;
   background-color: #133F2C;
 
   display: flex;
@@ -19,7 +19,7 @@ const NavbarStl = styled.div`
     flex-grow: 1;
   }
   & > a:nth-child(2) {
-    margin-right: 70px;
+    margin-right: 4.375rem;
   }
 `
 

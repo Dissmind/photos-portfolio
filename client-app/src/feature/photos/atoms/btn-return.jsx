@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const BtnReturnStl = styled.div`
-  width: 26px;
-  height: 61px;
+  width: 1.625rem;
+  height: 3.8125rem;
   
   background-color: red;
 `

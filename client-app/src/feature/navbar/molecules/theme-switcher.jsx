@@ -10,7 +10,7 @@ const ThemeSwitcherStl = styled.div`
   display: flex;
 
   img:nth-child(1) {
-    margin-right: 20px;
+    margin-right: 1.25rem;
   }
 `
 

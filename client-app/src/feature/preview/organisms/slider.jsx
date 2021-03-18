@@ -6,8 +6,8 @@ import image1 from "../../../attachments/photos/home1.jpg"
 import image2 from "../../../attachments/photos/home2.jpg"
 
 const SliderStl = styled.div`
-  width: 1174px;
-  height: 729px;
+  width: 73.375rem;
+  height: 45.5625rem;
   & > div:first-child{
     padding: 0;
   }

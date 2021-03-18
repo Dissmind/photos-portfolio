@@ -6,7 +6,7 @@ import {Slider} from "./slider";
 const MainContentStl = styled.div`
   position: relative;
   
-  width: 1306px;
+  width: 81.625rem;
   display: flex;
   justify-content: flex-end;
   
@@ -14,7 +14,7 @@ const MainContentStl = styled.div`
     position: absolute;
     z-index: 1;
     left: 0;
-    top: 87px;
+    top: 5.4375rem;
   }
 `
 

@@ -10,7 +10,7 @@ const HomeStl = styled.div`
   flex-direction: column;
   
   & > div:nth-child(2){
-    margin: 10px 0 46px 154px;
+    margin: 0.625rem 0 2.875rem 9.625rem;
   }
   
   & > div:nth-child(3){

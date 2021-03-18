@@ -6,20 +6,20 @@ const FormInputStl = styled.div`
 `
 
 const Label = styled.div`
-  width: 108px;
+  width: 6.75rem;
   font-family: 'PentaLight', serif;
   font-weight: 400;
-  font-size: 45px;
-  line-height: 45px;
+  font-size: 2.8125rem;
+  line-height: 2.8125rem;
   color: #FFFFFF;
-  margin-right: 19px;
+  margin-right: 1.1875rem;
 `
 
 const Input = styled.input`
   border: none;
-  border-radius: 23px;
-  width: 404px;
-  height: 48px;
+  border-radius: 1.4375rem;
+  width: 25.25rem;
+  height: 3rem;
   //padding: 0 10px;
   //font-size: 45px;
   &:focus{

@@ -11,32 +11,32 @@ const MenuStl = styled.div`
   position: relative;
 
   background-color: #133F2C;
-  width: 210px;
-  height: 390px;
-  border-radius: 10px;
-  padding-top: 50px;
-  padding-left: 30px;
+  width: 13.125rem;
+  height: 24.375rem;
+  border-radius: 0.625rem;
+  padding-top: 3.125rem;
+  padding-left: 1.875rem;
 
   a:not(:first-child){
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 `
 
 const MenuBackgroundStl = styled.div`
   position: absolute;
   z-index: -1;
-  top: 15px;
-  left: 14px;
+  top: 0.9375rem;
+  left: 0.875rem;
 
-  width: 210px;
-  height: 390px;
+  width: 13.125rem;
+  height: 24.375rem;
   background-color: #FFFFFF;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 `
 
 const Wrapper = styled.div`
-  width: 224px;
-  height: 405px;
+  width: 14rem;
+  height: 25.3125rem;
 `
 
 const Link = styled(NavLink)`

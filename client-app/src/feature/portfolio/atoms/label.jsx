@@ -4,8 +4,8 @@ import styled from 'styled-components'
 const LabelStl = styled.div`
   font-family: 'Solena', serif;
   font-weight: 400;
-  font-size: 100px;
-  line-height: 120px;
+  font-size: 6.25rem;
+  line-height: 7.5rem;
   opacity: 40%;
   color: #14402D;
 `

@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const MenuItemsStl = styled.div`
   color: white;
-  font-size: 45px;
+  font-size: 2.8125rem;
   font-family: 'Solena', serif;
   font-weight: 400;
   font-style: normal;

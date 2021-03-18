@@ -6,7 +6,7 @@ const BtnLanguageListStl = styled.div`
   display: flex;
   
   div:not(:first-child) {
-    margin-left: 20px;
+    margin-left: 1.25rem;
   }
 `
 

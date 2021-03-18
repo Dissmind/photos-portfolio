@@ -8,16 +8,16 @@ const LabelArrowStl = styled.div`
 `
 
 const ArrowStl = styled.img`
-  height: 62px;
+  height: 3.875rem;
 `
 
 const LabelStl = styled.div`
   font-family: 'Lemon Tuesday', serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #164C34;
-  padding-top: 40px;
-  padding-left: 5px;
+  padding-top: 2.5rem;
+  padding-left: 0.3125rem;
 `
 
 export const LabelArrow = ({text}) => {

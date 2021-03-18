@@ -18,16 +18,16 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 4.375rem;
   & > div:nth-child(1){
     position: absolute;
-    left: 240px;
+    left: 15rem;
   }
 `
 
 const ItemsWrapper = styled.div`
-  width: 1180px;
-  height: 1000px;
+  width: 73.75rem;
+  height: 62.5rem;
   background-color: #ccc;
   align-self: center;
 `

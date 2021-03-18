@@ -16,12 +16,12 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 160px;
+  margin-top: 10rem;
   
   & > div:nth-child(1){
-    height: 640px;
+    height: 40rem;
     position: absolute;
-    left: 40px;
+    left: 2.5rem;
   }
 `
 

@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import {ThemeLinkItem} from "../atoms/theme-link-item";
 
 const ThemeLinkListStl = styled.div`
-  width: 1103px;
+  width: 68.9375rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 50px normal;
+  gap: 3.125rem normal;
 `
 
 
