@@ -1,4 +1,5 @@
-const {CHANGE_PHOTOS} = require("../actionTypes");
+import {CHANGE_PHOTOS, CHANGE_TITLE} from "../actionTypes";
+
 
 const defaultState = {
   groupTitle: "qwe1",
@@ -7,6 +8,12 @@ const defaultState = {
 
 export function photosReducer(state = defaultState, action) {
   switch(action.type) {
+    case CHANGE_TITLE:
+      return {
+        ...state,
+        groupTitle: action.payload.title
+      }
+
     case CHANGE_PHOTOS:
       return {
         ...state,

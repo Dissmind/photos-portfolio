@@ -26,7 +26,7 @@ const app = (
       <Route path={"/portfolio"} exact render={() => <Portfolio />} />
       {ThemeListItems.map((ThemeListItem) => (
         <Route path={`/portfolio/${ThemeListItem.theme.toLowerCase().split(' ').join('-')}`}
-               exact render={() => <Photos />} />
+               exact render={() => <Photos theme={ThemeListItem.theme} />} />
       ))}
       <Route path={"/records"} exact render={() => <Records />} />
     </BrowserRouter>

@@ -4,7 +4,7 @@ import {Navbar} from "../../navbar/organisms/navbar";
 import {BtnReturn} from "../atoms/btn-return";
 import {Title} from "../atoms/title";
 import {connect} from "react-redux";
-import {CHANGE_PHOTOS} from "../../../redux/actionTypes";
+import {CHANGE_PHOTOS, CHANGE_TITLE} from "../../../redux/actionTypes";
 import {photosReducer} from "../../../redux/reducers/photosReducer";
 
 const PhotosStl = styled.div`
@@ -41,49 +41,83 @@ const sortPhotos = (arr) => {
 }
 
 
-const Comp = ({groupTitle, photosLink, addPhotos}) => {
+const Comp = ({theme, groupTitle, photosLink, addPhotos, onChangeTitle}) => {
 
-  useEffect(() => {
-
-    // TODO: fetch
-
-    const array = [
-      {
-        link: '',
-        type: 'small'
-      },
-      {
-        link: '',
-        type: 'large'
-      },
-      {
-        link: '',
-        type: 'small'
-      }
-    ]
+  // useEffect(() => {
+  //   // TODO: fetch
+  //   const array = [
+  //     {
+  //       link: '',
+  //       type: 'small'
+  //     },
+  //     {
+  //       link: '',
+  //       type: 'large'
+  //     },
+  //     {
+  //       link: '',
+  //       type: 'small'
+  //     }
+  //   ]
+  // }
     
     
-    
-    const payload = {
-      groupTitle: 'qwefdsfgg',
-      photosLink: [
-        {
-          link: 'http://localhost/img/AL2A7228.png',
-          type: 'small'
-        },
-        {
-          link: 'http://localhost/img/AL2A7228.png',
-          type: 'large'
-        },
-        {
-          link: 'http://localhost/img/AL2A7228.png',
-          type: 'small'
-        }
-      ]
+  //   const payload = {
+  //     groupTitle: 'qwefdsfgg',
+  //     photosLink: [
+  //       {
+  //         link: 'http://localhost/img/AL2A7228.png',
+  //         type: 'small'
+  //       },
+  //       {
+  //         link: 'http://localhost/img/AL2A7228.png',
+  //         type: 'large'
+  //       },
+  //       {
+  //         link: 'http://localhost/img/AL2A7228.png',
+  //         type: 'small'
+  //       }
+  //     ]
+  //   }
+  //
+  //   addPhotos(payload)
+  // }, [])
+
+
+
+
+
+
+
+
+
+  const url = window.location.href
+
+  const result = url => {
+    let str = url.split('/')
+    str = str[str.length - 1]
+
+    str = str[0].toUpperCase() + str.slice(1, str.length)
+
+    let secondWordIndex = str.search('-')
+    while(secondWordIndex !== -1) {
+      let veryBigWord = str[secondWordIndex + 1].toUpperCase()
+
+      str = str.slice(0, secondWordIndex)
+        + ' '
+        + veryBigWord
+        + str.slice(secondWordIndex + 2, str.length)
+
+      str.search('-')
+
+      secondWordIndex = str.search('-')
     }
 
-    addPhotos(payload)
-  }, [])
+    return str
+  }
+
+  onChangeTitle({title: result(url)})
+
 
   return (
     <PhotosStl>
@@ -115,6 +149,10 @@ const mapDispatchToProps = dispatch => {
   return {
     addPhotos: (payload) => dispatch({
       type: CHANGE_PHOTOS,
+      payload
+    }),
+    onChangeTitle: (payload) => dispatch({
+      type: CHANGE_TITLE,
       payload
     })
   }
