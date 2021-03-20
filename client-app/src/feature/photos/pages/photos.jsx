@@ -6,6 +6,7 @@ import {Title} from "../atoms/title";
 import {connect} from "react-redux";
 import {CHANGE_PHOTOS, CHANGE_TITLE} from "../../../redux/actionTypes";
 import {photosReducer} from "../../../redux/reducers/photosReducer";
+import {ThemeListItems} from "../../portfolio/molecules/theme-link-list";
 
 const PhotosStl = styled.div`
   min-height: 100%;
@@ -83,40 +84,21 @@ const Comp = ({theme, groupTitle, photosLink, addPhotos, onChangeTitle}) => {
   //   addPhotos(payload)
   // }, [])
 
-
-
-
-
-
-
-
-
-  const url = window.location.href
-
-  const result = url => {
+  const setTitleFromUrl = (url, themeList) => {
     let str = url.split('/')
     str = str[str.length - 1]
 
-    str = str[0].toUpperCase() + str.slice(1, str.length)
-
-    let secondWordIndex = str.search('-')
-    while(secondWordIndex !== -1) {
-      let veryBigWord = str[secondWordIndex + 1].toUpperCase()
-
-      str = str.slice(0, secondWordIndex)
-        + ' '
-        + veryBigWord
-        + str.slice(secondWordIndex + 2, str.length)
-
-      str.search('-')
-
-      secondWordIndex = str.search('-')
-    }
+    themeList.map((item) => {
+      if (item.theme.toLowerCase().split(' ').join('-') === str) {
+        str = item.theme
+      }
+    })
 
     return str
   }
 
-  onChangeTitle({title: result(url)})
+  onChangeTitle({title: setTitleFromUrl(window.location.href, ThemeListItems)})
+
 
 
   return (
