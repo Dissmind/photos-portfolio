@@ -5,7 +5,6 @@ import {BtnReturn} from "../atoms/btn-return";
 import {Title} from "../atoms/title";
 import {connect} from "react-redux";
 import {CHANGE_PHOTOS, CHANGE_TITLE} from "../../../redux/actionTypes";
-import {photosReducer} from "../../../redux/reducers/photosReducer";
 import {ThemeListItems} from "../../portfolio/molecules/theme-link-list";
 
 const PhotosStl = styled.div`
@@ -42,7 +41,7 @@ const sortPhotos = (arr) => {
 }
 
 
-const Comp = ({theme, groupTitle, photosLink, addPhotos, onChangeTitle}) => {
+const Comp = ({groupTitle, photosLink, addPhotos, onChangeTitle}) => {
 
   // useEffect(() => {
   //   // TODO: fetch
@@ -84,11 +83,12 @@ const Comp = ({theme, groupTitle, photosLink, addPhotos, onChangeTitle}) => {
   //   addPhotos(payload)
   // }, [])
 
-  const setTitleFromUrl = (url, themeList) => {
+  /* Set title */
+  const setTitleFromUrl = (url, ThemeListItems) => {
     let str = url.split('/')
     str = str[str.length - 1]
 
-    themeList.map((item) => {
+    ThemeListItems.map((item) => {
       if (item.theme.toLowerCase().split(' ').join('-') === str) {
         str = item.theme
       }
@@ -98,7 +98,7 @@ const Comp = ({theme, groupTitle, photosLink, addPhotos, onChangeTitle}) => {
   }
 
   onChangeTitle({title: setTitleFromUrl(window.location.href, ThemeListItems)})
-
+  /* End */
 
 
   return (
@@ -125,7 +125,6 @@ const mapStateToProps = (state) => {
     photosLink: state.photosReducer.photosLink
   }
 }
-
 
 const mapDispatchToProps = dispatch => {
   return {

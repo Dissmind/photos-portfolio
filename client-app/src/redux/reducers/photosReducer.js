@@ -2,7 +2,7 @@ import {CHANGE_PHOTOS, CHANGE_TITLE} from "../actionTypes";
 
 
 const defaultState = {
-  groupTitle: "qwe1",
+  groupTitle: "",
   photosLink: []
 }
 
