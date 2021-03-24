@@ -1,4 +1,8 @@
-import {createStore} from "redux";
-import {rootReducer} from "./rootReducer";
+import {configureStore} from "@reduxjs/toolkit";
+import {photosReducer} from "../feature/photos/photos.slice";
 
-export const store = createStore(rootReducer)
+export const store = configureStore({
+  reducer: {
+    photos: photosReducer
+  }
+})

@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import {Navbar} from "../../navbar/organisms/navbar";
 import {BtnReturn} from "../atoms/btn-return";
 import {Title} from "../atoms/title";
-import {connect} from "react-redux";
-import {CHANGE_PHOTOS, CHANGE_TITLE} from "../../../redux/actionTypes";
+import {useDispatch, useSelector} from "react-redux";
 import {ThemeListItems} from "../../portfolio/molecules/theme-link-list";
+import {selectGroupTitle, setTitle} from "../photos.slice";
 
 const PhotosStl = styled.div`
   min-height: 100%;
@@ -41,7 +41,7 @@ const sortPhotos = (arr) => {
 }
 
 
-const Comp = ({groupTitle, photosLink, addPhotos, onChangeTitle}) => {
+export const Photos = () => {
 
   // useEffect(() => {
   //   // TODO: fetch
@@ -83,7 +83,11 @@ const Comp = ({groupTitle, photosLink, addPhotos, onChangeTitle}) => {
   //   addPhotos(payload)
   // }, [])
 
-  /* Set title */
+
+  const groupTitle = useSelector(selectGroupTitle)
+  const dispatch = useDispatch()
+
+
   const setTitleFromUrl = (url, ThemeListItems) => {
     let str = url.split('/')
     str = str[str.length - 1]
@@ -97,8 +101,8 @@ const Comp = ({groupTitle, photosLink, addPhotos, onChangeTitle}) => {
     return str
   }
 
-  onChangeTitle({title: setTitleFromUrl(window.location.href, ThemeListItems)})
-  /* End */
+  dispatch(setTitle(setTitleFromUrl(window.location.href, ThemeListItems)))
+
 
 
   return (
@@ -110,34 +114,10 @@ const Comp = ({groupTitle, photosLink, addPhotos, onChangeTitle}) => {
       </Wrapper>
 
       <ItemsWrapper>
-        {
-          photosLink.map(i => <img src={i} alt=""/>)
-        }
+        {/*{*/}
+        {/*  photosLink.map(i => <img src={i} alt=""/>)*/}
+        {/*}*/}
       </ItemsWrapper>
     </PhotosStl>
   )
 }
-
-
-const mapStateToProps = (state) => {
-  return {
-    groupTitle: state.photosReducer.groupTitle,
-    photosLink: state.photosReducer.photosLink
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    addPhotos: (payload) => dispatch({
-      type: CHANGE_PHOTOS,
-      payload
-    }),
-    onChangeTitle: (payload) => dispatch({
-      type: CHANGE_TITLE,
-      payload
-    })
-  }
-}
-
-
-export const Photos = connect(mapStateToProps, mapDispatchToProps)(Comp)

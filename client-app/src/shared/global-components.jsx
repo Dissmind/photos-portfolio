@@ -4,7 +4,7 @@ import {createGlobalStyle} from "styled-components";
 // Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import LemonTuesday from "../attachments/font/Lemon Tuesday.woff2"
+import LemonTuesday from "../attachments/font/Lemon-Tuesday.woff2"
 import PentaLight from "../attachments/font/PentaLight.woff2"
 import Solena from "../attachments/font/Solena-Regular.woff2"
 

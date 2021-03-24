@@ -2,9 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import {ThemeLinkItem} from "../atoms/theme-link-item";
 import {NavLink} from "react-router-dom";
-import {connect} from "react-redux";
-import {CHANGE_PHOTOS, CHANGE_TITLE} from "../../../redux/actionTypes";
-import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
+import {useDispatch} from "react-redux";
+import {setTitle} from "../../photos/photos.slice";
 
 const ThemeLinkListStl = styled.div`
   width: 68.9375rem;
@@ -32,16 +31,15 @@ export const ThemeListItems = [
   {theme: "Women"},
 ]
 
-export const Comp = ({onChangeTitle}) => {
+export const ThemeLinkList = () => {
 
-  const changeTitle = (title) => {
-    onChangeTitle({title: title})
-  }
+  const dispatch = useDispatch()
+
 
   return (
     <ThemeLinkListStl>
       {ThemeListItems.map((ThemeListItem) => (
-        <Link onClick={() => changeTitle(ThemeListItem.theme)} to={`/portfolio/${ThemeListItem.theme.toLowerCase().split(' ').join('-')}`} >
+        <Link onClick={() => dispatch(setTitle(ThemeListItem.theme))} to={`/portfolio/${ThemeListItem.theme.toLowerCase().split(' ').join('-')}`} >
           <ThemeLinkItem
             text={ThemeListItem.theme}
           />
@@ -50,16 +48,3 @@ export const Comp = ({onChangeTitle}) => {
     </ThemeLinkListStl>
   )
 }
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onChangeTitle: (payload) => dispatch({
-      type: CHANGE_TITLE,
-      payload
-    })
-  }
-}
-
-
-
-export const ThemeLinkList = connect(null, mapDispatchToProps)(Comp)
