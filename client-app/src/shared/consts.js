@@ -1,0 +1,1 @@
+export const imgDomain = 'http://localhost:80/img/'

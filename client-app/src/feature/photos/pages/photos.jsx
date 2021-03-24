@@ -5,7 +5,8 @@ import {BtnReturn} from "../atoms/btn-return";
 import {Title} from "../atoms/title";
 import {useDispatch, useSelector} from "react-redux";
 import {ThemeListItems} from "../../portfolio/molecules/theme-link-list";
-import {selectGroupTitle, setTitle} from "../photos.slice";
+import {selectGroupTitle, selectPhotosLinks, setPhotos, setTitle} from "../photos.slice";
+import {getPhotos} from "../../../tests/mocks/photosMock";
 
 const PhotosStl = styled.div`
   min-height: 100%;
@@ -33,58 +34,11 @@ const ItemsWrapper = styled.div`
 `
 
 
-const sortPhotos = (arr) => {
-
-  // TODO: sort array
-
-  return arr
-}
-
-
 export const Photos = () => {
-
-  // useEffect(() => {
-  //   // TODO: fetch
-  //   const array = [
-  //     {
-  //       link: '',
-  //       type: 'small'
-  //     },
-  //     {
-  //       link: '',
-  //       type: 'large'
-  //     },
-  //     {
-  //       link: '',
-  //       type: 'small'
-  //     }
-  //   ]
-  // }
-    
-    
-  //   const payload = {
-  //     groupTitle: 'qwefdsfgg',
-  //     photosLink: [
-  //       {
-  //         link: 'http://localhost/img/AL2A7228.png',
-  //         type: 'small'
-  //       },
-  //       {
-  //         link: 'http://localhost/img/AL2A7228.png',
-  //         type: 'large'
-  //       },
-  //       {
-  //         link: 'http://localhost/img/AL2A7228.png',
-  //         type: 'small'
-  //       }
-  //     ]
-  //   }
-  //
-  //   addPhotos(payload)
-  // }, [])
 
 
   const groupTitle = useSelector(selectGroupTitle)
+  const photosLinks = useSelector(selectPhotosLinks)
   const dispatch = useDispatch()
 
 
@@ -101,7 +55,13 @@ export const Photos = () => {
     return str
   }
 
-  dispatch(setTitle(setTitleFromUrl(window.location.href, ThemeListItems)))
+  const groupTitleParsed = setTitleFromUrl(window.location.href, ThemeListItems)
+  dispatch(setTitle(groupTitleParsed))
+
+  useEffect(() => {
+    const photos = getPhotos(groupTitleParsed)
+    dispatch(setPhotos({photos: photos.photos}))
+  }, [])
 
 
 
@@ -114,9 +74,9 @@ export const Photos = () => {
       </Wrapper>
 
       <ItemsWrapper>
-        {/*{*/}
-        {/*  photosLink.map(i => <img src={i} alt=""/>)*/}
-        {/*}*/}
+        {
+          photosLinks.map(i => <img src={i.link} alt=""/>)
+        }
       </ItemsWrapper>
     </PhotosStl>
   )

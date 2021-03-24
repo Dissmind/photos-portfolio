@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import {ThemeLinkItem} from "../atoms/theme-link-item";
 import {NavLink} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {setTitle} from "../../photos/photos.slice";
+import {setPhotos, setTitle} from "../../photos/photos.slice";
+import {getPhotos} from "../../../tests/mocks/photosMock";
 
 const ThemeLinkListStl = styled.div`
   width: 68.9375rem;
@@ -39,7 +40,10 @@ export const ThemeLinkList = () => {
   return (
     <ThemeLinkListStl>
       {ThemeListItems.map((ThemeListItem) => (
-        <Link onClick={() => dispatch(setTitle(ThemeListItem.theme))} to={`/portfolio/${ThemeListItem.theme.toLowerCase().split(' ').join('-')}`} >
+        <Link onClick={() => {
+                dispatch(setTitle(ThemeListItem.theme))
+              }}
+              to={`/portfolio/${ThemeListItem.theme.toLowerCase().split(' ').join('-')}`} >
           <ThemeLinkItem
             text={ThemeListItem.theme}
           />
