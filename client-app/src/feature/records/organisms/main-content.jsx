@@ -27,16 +27,17 @@ const MainContentStl = styled.div`
   }
 `
 
-const BgImg = styled.img`
+const BgImgStl = styled.img`
   position: absolute;
+  user-select: none;
 `
 
 
 export const MainContent = ({}) => {
   return (
     <MainContentStl>
-      <BgImg src={BgImg1} alt={"BgImg1"} />
-      <BgImg src={BgImg2} alt={"BgImg1"} />
+      <BgImgStl src={BgImg1} />
+      <BgImgStl src={BgImg2} />
       <Form />
     </MainContentStl>
   )

@@ -6,6 +6,7 @@ const LinkItemStl = styled.div`
   font-weight: 400;
   font-size: 1.875rem;
   color: #FFFFFF;
+  user-select: none;
 
   :hover{
     cursor: pointer;

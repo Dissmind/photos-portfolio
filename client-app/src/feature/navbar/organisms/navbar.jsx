@@ -23,7 +23,7 @@ const NavbarStl = styled.div`
   }
 `
 
-const Link = styled(NavLink)`
+const LinkStl = styled(NavLink)`
   &:link{
     text-decoration: none;
   }
@@ -46,7 +46,11 @@ export const Navbar = ({type}) => {
   return (
     <NavbarStl>
       {list}
-      <Link to={"/records"}><LinkItem text={"Записаться на фотосессию"} /></Link>
+
+      <LinkStl to={"/records"}>
+        <LinkItem text={"Записаться на фотосессию"} />
+      </LinkStl>
+
       <ThemeSwitcher />
     </NavbarStl>
   )

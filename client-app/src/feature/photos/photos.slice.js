@@ -11,8 +11,9 @@ export const photosSlice = createSlice({
 
   reducers: {
     setTitle: (state, action) => {
-      state.groupTitle = action.payload
+      state.groupTitle = action.payload.groupTitle
     },
+
     setPhotos: (state, action) => {
       state.photos = action.payload.photos
     }

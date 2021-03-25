@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
-import GlobalComponents from './shared/global-components'
+import {GlobalStyle} from './shared/global-components'
 import {BrowserRouter, Route} from "react-router-dom"
 import {Provider} from "react-redux";
 import {store} from "./redux/store";
@@ -17,7 +17,8 @@ import {Photos} from "./feature/photos/pages/photos";
 
 const app = (
   <Provider store={store}>
-    <GlobalComponents />
+    <GlobalStyle />
+
     <BrowserRouter>
       <Route path={"/"} exact render={() => <Home />} />
       <Route path={"/about"} exact render={() => <About />} />

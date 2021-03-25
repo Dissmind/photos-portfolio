@@ -11,7 +11,7 @@ const AboutStl = styled.div`
   flex-direction: column;
 `
 
-const Wrapper = styled.div`
+const WrapperStl = styled.div`
   margin-top: 10rem;
   display: flex;
   justify-content: center;
@@ -25,10 +25,12 @@ const Wrapper = styled.div`
 export const About = () => (
   <AboutStl>
     <Navbar type={"menu"} />
-    <Wrapper>
+
+    <WrapperStl>
       <VerticalLabel text={"Обо мне"} />
+
       <MainPhoto />
       <MainLabel />
-    </Wrapper>
+    </WrapperStl>
   </AboutStl>
 )

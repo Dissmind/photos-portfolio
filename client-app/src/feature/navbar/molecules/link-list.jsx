@@ -10,7 +10,7 @@ const LinkListStl = styled.div`
   }
 `
 
-const Link = styled(NavLink)`
+const LinkStl = styled(NavLink)`
   &:link{
     text-decoration: none;
   }
@@ -20,11 +20,11 @@ const Link = styled(NavLink)`
 export const LinkList = ({}) => {
   return (
     <LinkListStl>
-      <Link to={"/"}><LinkItem text={"Главная"} /></Link>
-      <Link to={"/about"}><LinkItem text={"Обо мне"} /></Link>
-      <Link to={"/portfolio"}><LinkItem text={"Портфолио"} /></Link>
-      <Link to={"/records"}><LinkItem text={"Контакты"} /></Link>
-      <Link to={"/"}><LinkItem text={"Цены"} /></Link>
+      <LinkStl to={"/"}><LinkItem text={"Главная"} /></LinkStl>
+      <LinkStl to={"/about"}><LinkItem text={"Обо мне"} /></LinkStl>
+      <LinkStl to={"/portfolio"}><LinkItem text={"Портфолио"} /></LinkStl>
+      <LinkStl to={"/records"}><LinkItem text={"Контакты"} /></LinkStl>
+      <LinkStl to={"/"}><LinkItem text={"Цены"} /></LinkStl>
     </LinkListStl>
   )
 }

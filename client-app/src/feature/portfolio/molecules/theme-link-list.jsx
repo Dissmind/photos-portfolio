@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import {ThemeLinkItem} from "../atoms/theme-link-item";
 import {NavLink} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {setPhotos, setTitle} from "../../photos/photos.slice";
-import {getPhotos} from "../../../tests/mocks/photosMock";
+import {setTitle} from "../../photos/photos.slice";
 
 const ThemeLinkListStl = styled.div`
   width: 68.9375rem;
@@ -14,7 +13,7 @@ const ThemeLinkListStl = styled.div`
   gap: 3.125rem normal;
 `
 
-const Link = styled(NavLink)`
+const LinkStl = styled(NavLink)`
   &:link{
     text-decoration: none;
   }
@@ -39,16 +38,19 @@ export const ThemeLinkList = () => {
 
   return (
     <ThemeLinkListStl>
-      {ThemeListItems.map((ThemeListItem) => (
-        <Link onClick={() => {
-                dispatch(setTitle(ThemeListItem.theme))
-              }}
-              to={`/portfolio/${ThemeListItem.theme.toLowerCase().split(' ').join('-')}`} >
-          <ThemeLinkItem
-            text={ThemeListItem.theme}
-          />
-        </Link>
-      ))}
+      {
+        ThemeListItems.map((ThemeListItem) => (
+          <LinkStl
+            onClick={() => {
+              dispatch(setTitle({groupTitle: ThemeListItem.theme}))
+            }}
+
+            to={`/portfolio/${ThemeListItem.theme.toLowerCase().split(' ').join('-')}`}
+          >
+            <ThemeLinkItem text={ThemeListItem.theme} />
+          </LinkStl>
+        ))
+      }
     </ThemeLinkListStl>
   )
 }

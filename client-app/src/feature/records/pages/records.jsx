@@ -10,7 +10,7 @@ const RecordsStl = styled.div`
   flex-direction: column;
 `
 
-const Wrapper = styled.div`
+const WrapperStl = styled.div`
   position: relative;
   display: flex;
   flex-direction: row;
@@ -26,15 +26,16 @@ const Wrapper = styled.div`
 `
 
 
-export const Records = ({}) => {
+export const Records = () => {
 
   return (
     <RecordsStl>
       <Navbar type={"menu"} />
-      <Wrapper>
+
+      <WrapperStl>
         <RecordsVerticalLabel text={"Запись на фотосессию"} />
         <MainContent />
-      </Wrapper>
+      </WrapperStl>
     </RecordsStl>
   )
 }

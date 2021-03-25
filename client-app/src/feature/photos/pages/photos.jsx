@@ -14,7 +14,7 @@ const PhotosStl = styled.div`
   flex-direction: column;
 `
 
-const Wrapper = styled.div`
+const WrapperStl = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   }
 `
 
-const ItemsWrapper = styled.div`
+const ItemsWrapperStl = styled.div`
   width: 73.75rem;
   height: 62.5rem;
   background-color: #ccc;
@@ -56,7 +56,7 @@ export const Photos = () => {
   }
 
   const groupTitleParsed = setTitleFromUrl(window.location.href, ThemeListItems)
-  dispatch(setTitle(groupTitleParsed))
+  dispatch(setTitle({groupTitle: groupTitleParsed}))
 
   useEffect(() => {
     const photos = getPhotos(groupTitleParsed)
@@ -68,16 +68,16 @@ export const Photos = () => {
   return (
     <PhotosStl>
       <Navbar type={"menu"} />
-      <Wrapper>
+      <WrapperStl>
         <BtnReturn />
         <Title title={groupTitle} />
-      </Wrapper>
+      </WrapperStl>
 
-      <ItemsWrapper>
+      <ItemsWrapperStl>
         {
           photosLinks.map(i => <img src={i.link} alt=""/>)
         }
-      </ItemsWrapper>
+      </ItemsWrapperStl>
     </PhotosStl>
   )
 }

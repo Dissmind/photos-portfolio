@@ -5,7 +5,7 @@ const FormInputStl = styled.div`
   display: flex;
 `
 
-const Label = styled.div`
+const LabelStl = styled.div`
   width: 6.75rem;
   font-family: 'PentaLight', serif;
   font-weight: 400;
@@ -15,7 +15,7 @@ const Label = styled.div`
   margin-right: 1.1875rem;
 `
 
-const Input = styled.input`
+const InputStl = styled.input`
   border: none;
   border-radius: 1.4375rem;
   width: 25.25rem;
@@ -34,8 +34,8 @@ export const FormInput = ({text}) => {
   
   return (
     <FormInputStl>
-      <Label>{text}</Label>
-      <Input type={"text"} />
+      <LabelStl>{text}</LabelStl>
+      <InputStl type={"text"} />
     </FormInputStl>
   )
 }

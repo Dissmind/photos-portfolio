@@ -34,28 +34,28 @@ const MenuBackgroundStl = styled.div`
   border-radius: 0.625rem;
 `
 
-const Wrapper = styled.div`
+const WrapperStl = styled.div`
   width: 14rem;
   height: 25.3125rem;
 `
 
-const Link = styled(NavLink)`
+const LinkStl = styled(NavLink)`
   &:link{
     text-decoration: none;
   }  
 `
 
 export const Menu = () => (
-  <Wrapper>
+  <WrapperStl>
     <MenuStl>
-      <Link to={"/about"}><MenuItems text={"Обо мне"} /></Link>
-      <Link to={"/portfolio"}><MenuItems text={"Портфолио"} /></Link>
-      <Link to={"/"}><MenuItems text={"Цены"} /></Link>
-      <Link to={"records"}><MenuItems text={"Контакты"} /></Link>
+      <LinkStl to={"/about"}><MenuItems text={"Обо мне"} /></LinkStl>
+      <LinkStl to={"/portfolio"}><MenuItems text={"Портфолио"} /></LinkStl>
+      <LinkStl to={"/"}><MenuItems text={"Цены"} /></LinkStl>
+      <LinkStl to={"records"}><MenuItems text={"Контакты"} /></LinkStl>
 
       <MenuBackgroundStl />
     </MenuStl>
-  </Wrapper>
+  </WrapperStl>
 )
 
 //TODO: рутер на "Цена"

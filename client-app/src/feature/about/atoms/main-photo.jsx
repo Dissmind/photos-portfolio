@@ -4,6 +4,8 @@ import AboutMainPhoto from "../../../attachments/photos/AbotMainPhoto.jpg";
 
 const MainPhotoStl = styled.div`
   position: relative;
+  user-select: none;
+  
   & > div:nth-child(2){
     position: absolute;
     top: 2.0625rem;

@@ -16,6 +16,7 @@ const BtnLanguageStl = styled.div`
   font-family: 'PentaLight', serif;
   font-weight: 400;
   font-size: 1.875rem;
+  user-select: none;
   
   :hover{
     cursor: pointer;

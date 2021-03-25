@@ -11,7 +11,7 @@ const PortfolioStl = styled.div`
   flex-direction: column;
 `
 
-const Wrapper = styled.div`
+const WrapperStl = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,15 +30,15 @@ const Wrapper = styled.div`
 `
 
 
-export const Portfolio = ({}) => {
+export const Portfolio = () => {
   return (
     <PortfolioStl>
       <Navbar type={"menu"} />
-      <Wrapper>
+      <WrapperStl>
         <Label />
         <ThemeLinkList />
         <PortfolioLabelArrow />
-      </Wrapper>
+      </WrapperStl>
     </PortfolioStl>
   )
 }

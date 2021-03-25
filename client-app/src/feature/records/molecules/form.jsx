@@ -19,7 +19,7 @@ const FormStl = styled.div`
   }
 `
 
-const Label = styled.div`
+const LabelStl = styled.div`
   font-family: 'PentaLight', serif;
   font-weight: 400;
   font-size: 2.8125rem;
@@ -33,9 +33,15 @@ export const Form = ({}) => {
 
   return (
     <FormStl>
-      <Label>Заполните анкету и я перезвоню вам для уточнения даты и времени!</Label>
+      <LabelStl>
+        Заполните анкету и я перезвоню вам для уточнения даты и времени!
+      </LabelStl>
+
       <FormInput text={"Имя:"} marginRight={"3rem"} />
       <FormInput text={"Почта:"} marginRight={"1.1875rem"} />
+
+    {/*  TODO: инпут номер телефона*/}
+    {/*  TODO: сенд месаже*/}
     </FormStl>
   )
 }

@@ -9,6 +9,7 @@ const LabelArrowStl = styled.div`
 
 const ArrowStl = styled.img`
   height: 3.875rem;
+  user-select: none;
 `
 
 const LabelStl = styled.div`

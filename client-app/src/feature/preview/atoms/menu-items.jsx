@@ -7,6 +7,7 @@ const MenuItemsStl = styled.div`
   font-family: 'Solena', serif;
   font-weight: 400;
   font-style: normal;
+  
   :hover{
     cursor: pointer;
     color: #ccc;
