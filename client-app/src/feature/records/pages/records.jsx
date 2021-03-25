@@ -18,6 +18,7 @@ const WrapperStl = styled.div`
   align-items: center;
   margin-top: 10rem;
   
+  //RecordsVerticalLabel
   & > div:nth-child(1){
     height: 40rem;
     position: absolute;

@@ -10,6 +10,7 @@ const MainContentStl = styled.div`
   display: flex;
   justify-content: flex-end;
   
+  //Menu
   & > div:nth-child(1){
     position: absolute;
     z-index: 1;

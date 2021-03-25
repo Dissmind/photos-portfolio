@@ -1,7 +1,7 @@
 import React from "react";
 
 import {Menu} from "../menu";
-import GlobalComponents from "../../../../shared/global-components"
+import {GlobalStyle} from "../../../../shared/global-components"
 
 
 export default {
@@ -11,7 +11,7 @@ export default {
 
 const Template = (args) => (
   <>
-    <GlobalComponents />
+    <GlobalStyle />
     <Menu {...args} />
   </>
 )

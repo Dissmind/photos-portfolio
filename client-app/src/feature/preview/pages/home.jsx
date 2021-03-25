@@ -9,10 +9,12 @@ const HomeStl = styled.div`
   display: flex;
   flex-direction: column;
   
+  //LabelArrow
   & > div:nth-child(2){
     margin: 0.625rem 0 2.875rem 9.625rem;
   }
   
+  //MainContent
   & > div:nth-child(3){
     align-self: center;
   }

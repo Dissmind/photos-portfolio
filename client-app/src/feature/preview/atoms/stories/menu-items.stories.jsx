@@ -1,7 +1,7 @@
 import React from "react";
 
 import {MenuItems} from "../menu-items";
-import GlobalComponents from "../../../../shared/global-components"
+import {GlobalStyle} from "../../../../shared/global-components"
 
 export default {
     title: 'Home/Atoms/MenuItems',
@@ -10,7 +10,7 @@ export default {
 
 const Template = (args) => (
   <>
-    <GlobalComponents />
+    <GlobalStyle />
     <MenuItems {...args} />
   </>
 )

@@ -18,6 +18,7 @@ const NavbarStl = styled.div`
   & > div:nth-child(1) {
     flex-grow: 1;
   }
+  
   & > a:nth-child(2) {
     margin-right: 4.375rem;
   }

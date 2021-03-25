@@ -17,12 +17,17 @@ const WrapperStl = styled.div`
   justify-content: center;
   align-items: center;
   
+  //Label
   & > div:nth-child(1){
     margin-top: 4.375rem;
   }
+  
+  //ThemeLinkList
   & > div:nth-child(2){
     margin-top: 6.25rem;
   }
+  
+  //PortfolioLabelArrow
   & > div:nth-child(3){
     margin-top: 2.5rem;
     margin-left: 22.5rem;

@@ -1,6 +1,6 @@
 import React from "react";
 
-import GlobalComponents from "../../../../shared/global-components"
+import {GlobalStyle} from "../../../../shared/global-components"
 import {ToggleSwitch} from "../toggle-switch";
 
 
@@ -11,7 +11,7 @@ export default {
 
 const Template = (args) => (
   <>
-    <GlobalComponents />
+    <GlobalStyle />
     <ToggleSwitch {...args} />
   </>
 )

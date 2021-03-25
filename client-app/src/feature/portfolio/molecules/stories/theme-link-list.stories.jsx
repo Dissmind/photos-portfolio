@@ -1,6 +1,6 @@
 import React from "react";
 
-import GlobalComponents from "../../../../shared/global-components"
+import {GlobalStyle} from "../../../../shared/global-components"
 import {ThemeLinkList} from "../theme-link-list";
 
 export default {
@@ -10,7 +10,7 @@ export default {
 
 const Template = (args) => (
   <>
-    <GlobalComponents />
+    <GlobalStyle />
     <ThemeLinkList {...args} />
   </>
 )

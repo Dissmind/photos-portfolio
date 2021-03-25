@@ -22,6 +22,7 @@ const InputStl = styled.input`
   height: 3rem;
   //padding: 0 10px;
   //font-size: 45px;
+  
   &:focus{
     border: none;
     outline: none;

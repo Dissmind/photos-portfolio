@@ -1,6 +1,6 @@
 import React from "react";
 
-import GlobalComponents from "../../../../shared/global-components"
+import {GlobalStyle} from "../../../../shared/global-components"
 import {ThemeIcons} from "../theme-icons";
 
 import Moon from "../../../../attachments/icon/BlackThemeMoonIco.svg"
@@ -13,7 +13,7 @@ export default {
 
 const Template = (args) => (
   <>
-    <GlobalComponents />
+    <GlobalStyle />
     <ThemeIcons {...args} />
   </>
 )

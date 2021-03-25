@@ -39,6 +39,7 @@ export const Form = ({}) => {
 
       <FormInput text={"Имя:"} marginRight={"3rem"} />
       <FormInput text={"Почта:"} marginRight={"1.1875rem"} />
+      {/*<FormInput text={"Телефон:"} marginRight={} />*/}
 
     {/*  TODO: инпут номер телефона*/}
     {/*  TODO: сенд месаже*/}

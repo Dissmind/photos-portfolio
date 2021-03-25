@@ -9,6 +9,7 @@ import WhiteThemeSunIco from "../../../attachments/icon/WhiteThemeSunIco.svg";
 const ThemeSwitcherStl = styled.div`
   display: flex;
 
+  //ThemeIcons
   img:nth-child(1) {
     margin-right: 1.25rem;
   }

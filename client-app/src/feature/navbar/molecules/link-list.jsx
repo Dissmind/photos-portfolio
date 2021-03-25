@@ -5,7 +5,8 @@ import {NavLink} from "react-router-dom";
 
 const LinkListStl = styled.div`
   display: flex;
-  a:not(:first-child){
+  
+  a:not(:first-child) {
     margin-left: 4.375rem;
   }
 `

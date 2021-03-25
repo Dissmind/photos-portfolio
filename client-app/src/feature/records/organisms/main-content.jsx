@@ -13,12 +13,15 @@ const MainContentStl = styled.div`
   justify-content: center;
   align-items: center;
   
+  //BgImgStl - 1
   & > img:nth-child(1){
     width: 13.5625rem;
     height: 13.4375rem;
     top: 0;
     right: 0;
   }
+  
+  //BgImgStl - 2
   & > img:nth-child(2){
     width: 16.875rem;
     height: 20rem;

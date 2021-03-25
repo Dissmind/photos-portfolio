@@ -6,7 +6,7 @@ const LabelStl = styled.div`
   font-weight: 400;
   font-size: 6.25rem;
   line-height: 7.5rem;
-  opacity: 40%;
+  opacity: 60%;
   color: #14402D;
 `
 

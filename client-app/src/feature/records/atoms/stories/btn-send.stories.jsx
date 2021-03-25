@@ -1,17 +1,17 @@
 import React from "react";
 
-import {FormInput} from "../form-input";
 import {GlobalStyle} from "../../../../shared/global-components";
+import {BtnSend} from "../btn-send";
 
 export default {
-  title: 'Records/Atoms/FormInput',
-  component: FormInput,
+  title: 'Records/Atoms/BtnSend',
+  component: BtnSend,
 }
 
 const Template = (args) => (
   <>
     <GlobalStyle />
-    <FormInput {...args} />
+    <BtnSend {...args} />
   </>
 )
 

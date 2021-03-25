@@ -20,6 +20,8 @@ const WrapperStl = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 4.375rem;
+  
+  //BtnReturn
   & > div:nth-child(1){
     position: absolute;
     left: 15rem;

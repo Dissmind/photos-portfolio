@@ -6,7 +6,7 @@ const TitleStl = styled.div`
   font-weight: 400;
   font-size: 7.125rem;
   line-height: 8.5625rem;
-  opacity: 0.6;
+  opacity: 60%;
   color: #14402D;
 `
 
