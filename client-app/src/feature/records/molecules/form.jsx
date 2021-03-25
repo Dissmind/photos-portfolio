@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import {FormInput} from "../atoms/form-input";
+import {BtnSend} from "../atoms/btn-send";
 
 
 const FormStl = styled.div`
   position: relative;
   width: 45.3125rem;
-  height: 20.9375rem;
   background-color: #14402D;
   
   display: flex;
@@ -14,8 +14,15 @@ const FormStl = styled.div`
   justify-content: center;
   padding: 2.5rem 2.8125rem 3.125rem;
   
-  & > div:not(:first-child){
+  //FormInput's - 2 and 3
+  div:nth-child(3), div:nth-child(4) {
     margin-top: 1.5625rem;
+  }
+  
+  //BtnSend
+  & > div:last-child {
+    margin-top: 2.1875rem;
+    align-self: center;
   }
 `
 
@@ -29,20 +36,18 @@ const LabelStl = styled.div`
 `
 
 
-export const Form = ({}) => {
-
+export const Form = () => {
   return (
     <FormStl>
       <LabelStl>
         Заполните анкету и я перезвоню вам для уточнения даты и времени!
       </LabelStl>
 
-      <FormInput text={"Имя:"} marginRight={"3rem"} />
-      <FormInput text={"Почта:"} marginRight={"1.1875rem"} />
-      {/*<FormInput text={"Телефон:"} marginRight={} />*/}
+      <FormInput text={"Имя:"} />
+      <FormInput text={"Почта:"} />
+      <FormInput text={"Телефон:"} />
 
-    {/*  TODO: инпут номер телефона*/}
-    {/*  TODO: сенд месаже*/}
+      <BtnSend />
     </FormStl>
   )
 }
