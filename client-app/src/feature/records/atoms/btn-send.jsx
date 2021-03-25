@@ -6,8 +6,8 @@ const BtnSendStl = styled.div`
   justify-content: center;
   align-items: center;
   
-  width: 15.5rem;
-  height: 3rem;
+  width: 18.25rem;
+  height: 3.1875rem;
   border-radius: 1.4375rem;
   font-family: 'PentaLight', serif;
   font-weight: 400;

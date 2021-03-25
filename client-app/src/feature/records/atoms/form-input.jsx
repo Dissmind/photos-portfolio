@@ -23,13 +23,16 @@ const InputStl = styled.input`
   border-radius: 1.4375rem;
   width: 28.3125rem;
   height: 3rem;
-  //padding: 0 10px;
-  //font-size: 45px;
+  padding: 0 1.25rem;
+
+  font-family: 'PentaLight', serif;
+  font-weight: 400;
+  font-size: 2.8125rem;
+  color: #14402D;
   
   &:focus{
     border: none;
     outline: none;
-    //padding: 0 10px;
   }
 `
 
@@ -43,5 +46,3 @@ export const FormInput = ({text}) => {
     </FormInputStl>
   )
 }
-
-//TODO: спросить у Вики о стилизации текста внутри инпутов
