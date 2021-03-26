@@ -23,7 +23,7 @@ const WrapperStl = styled.div`
   margin-bottom: 3.75rem;
   
   //BtnReturn
-  & > div:nth-child(1){
+  & > :first-child {
     position: absolute;
     left: 15rem;
   }
@@ -31,13 +31,15 @@ const WrapperStl = styled.div`
 
 const ItemsWrapperStl = styled.div`
   width: 73.75rem;
-  background-color: #cccccc;
   align-self: center;
   
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 1.25rem;
+  
+  //TODO: del
+  background-color: #cccccc;
 `
 
 const ImgSmallContainerStl = styled.div`
@@ -83,6 +85,7 @@ export const Photos = () => {
 
   useEffect(() => {
     const photos = getPhotos(groupTitleParsed)
+    //TODO: sort array
     dispatch(setPhotos({photos: photos.photos}))
   }, [])
 

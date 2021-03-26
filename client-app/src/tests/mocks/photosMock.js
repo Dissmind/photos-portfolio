@@ -9,8 +9,12 @@ const photosMock = [
         size: 'small'
       },
       {
-        link: imgDomain + 'AL2A0160.jpg',
+        link: imgDomain + 'AL2A0667.jpg',
         size: 'small'
+      },
+      {
+        link: imgDomain + 'AL2A0160.jpg',
+        size: 'large'
       },
       {
         link: imgDomain + 'AL2A0593.jpg',

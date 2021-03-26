@@ -1,19 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
+import {NavLink} from "react-router-dom";
+
+
+import btnReturnIco from "../../../attachments/icon/btn-return.svg"
 
 const BtnReturnStl = styled.div`
   width: 1.625rem;
   height: 3.8125rem;
-  
-  background-color: red;
+  user-select: none;
+  cursor: pointer;
+`
+
+const LinkStl = styled(NavLink)`
+  &:link{
+    text-decoration: none;
+  }
 `
 
 
-
-export const BtnReturn = ({}) => {
+export const BtnReturn = () => {
   return (
-    <BtnReturnStl />
+    <LinkStl to={'/portfolio'}>
+      <BtnReturnStl as={"img"} src={btnReturnIco} />
+    </LinkStl>
   )
 }
-
-//TODO: спросить у Вики, сделать кнопку
