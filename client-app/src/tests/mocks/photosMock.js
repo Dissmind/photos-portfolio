@@ -29,7 +29,7 @@ const photosMock = [
 ]
 
 const photosError = {
-  errorMessage: 'пиздец'
+  errorMessage: 'Error'
 }
 
 export const getPhotos = (group) => {

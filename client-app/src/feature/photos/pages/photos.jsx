@@ -20,6 +20,7 @@ const WrapperStl = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 4.375rem;
+  margin-bottom: 3.75rem;
   
   //BtnReturn
   & > div:nth-child(1){
@@ -30,14 +31,34 @@ const WrapperStl = styled.div`
 
 const ItemsWrapperStl = styled.div`
   width: 73.75rem;
-  height: 62.5rem;
-  background-color: #ccc;
+  background-color: #cccccc;
   align-self: center;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 1.25rem;
+`
+
+const ImgSmallContainerStl = styled.div`
+  width: 36.25rem;
+  height: 47.5rem;
+`
+
+const ImgLargeContainerStl = styled.div`
+  width: 73.75rem;
+  height: 45rem;
+`
+
+const ImgStl = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `
 
 
-export const Photos = () => {
 
+export const Photos = () => {
 
   const groupTitle = useSelector(selectGroupTitle)
   const photosLinks = useSelector(selectPhotosLinks)
@@ -77,7 +98,16 @@ export const Photos = () => {
 
       <ItemsWrapperStl>
         {
-          photosLinks.map(i => <img src={i.link} alt=""/>)
+          photosLinks.map(i => (
+            i.size === "small"
+              ? (<ImgSmallContainerStl>
+                  <ImgStl src={i.link} />
+                </ImgSmallContainerStl>)
+
+              : (<ImgLargeContainerStl>
+                  <ImgStl src={i.link} />
+                </ImgLargeContainerStl>)
+          ))
         }
       </ItemsWrapperStl>
     </PhotosStl>
