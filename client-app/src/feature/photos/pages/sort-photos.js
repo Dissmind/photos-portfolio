@@ -1,24 +1,23 @@
 export const sortPhotos = (array) => {
-  const one = []
-  const two = []
-
+  const smallPhotos = []
+  const largePhotos = []
 
   array.forEach((i) => {
-    if (i === 1) one.push(i)
-    else two.push(i)
+    if (i.size === 'small') smallPhotos.push(i)
+    else largePhotos.push(i)
   })
 
-  let lastOne = null
-  const isExcessOneElement = one.length % 2 !== 0
+  let lastSmallPhotos = null
+  const isExcessSmallPhotosElement = smallPhotos.length % 2 !== 0
 
-  if (isExcessOneElement) {
-    lastOne = one[one.length - 1]
-    one.splice(one.length - 1, 1)
+  if (isExcessSmallPhotosElement) {
+    lastSmallPhotos = smallPhotos[smallPhotos.length - 1]
+    smallPhotos.splice(smallPhotos.length - 1, 1)
   }
 
   const resultArray = []
 
-  const lengthArray = one.length + two.length
+  const lengthArray = smallPhotos.length + largePhotos.length
   const indexThreeable = []
 
   for (let i = 2; i < lengthArray; i += 3) {
@@ -31,19 +30,19 @@ export const sortPhotos = (array) => {
 
   while (i < lengthArray) {
     if (i === indexThreeable[j]) {
-      if (two[j] !== undefined) {
-        resultArray.push(two[j])
+      if (largePhotos[j] !== undefined) {
+        resultArray.push(largePhotos[j])
         j++
       } else {
-        resultArray.push(one[x])
+        resultArray.push(smallPhotos[x])
         x++
       }
     } else {
-      if (one[x] !== undefined) {
-        resultArray.push(one[x])
+      if (smallPhotos[x] !== undefined) {
+        resultArray.push(smallPhotos[x])
         x++
       } else {
-        resultArray.push(two[j])
+        resultArray.push(largePhotos[j])
         j++
       }
     }
@@ -51,8 +50,8 @@ export const sortPhotos = (array) => {
     i++
   }
 
-  if (isExcessOneElement) {
-    resultArray.push(lastOne)
+  if (isExcessSmallPhotosElement) {
+    resultArray.push(lastSmallPhotos)
   }
 
   return resultArray
