@@ -1,5 +1,6 @@
 import {imgDomain} from "../../shared/consts";
 
+
 const photosMock = [
   {
     group: 'family',
