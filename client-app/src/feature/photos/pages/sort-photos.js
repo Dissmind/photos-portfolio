@@ -10,6 +10,7 @@ export const sortPhotos = (array) => {
 
   let lastOne = null
   const isExcessOneElement = one.length % 2 !== 0
+
   if (isExcessOneElement) {
     lastOne = one[one.length - 1]
     one.splice(one.length - 1, 1)
@@ -23,7 +24,6 @@ export const sortPhotos = (array) => {
   for (let i = 2; i < lengthArray; i += 3) {
     indexThreeable.push(i)
   }
-
 
   let i = 0
   let j = 0
