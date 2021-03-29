@@ -7,6 +7,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {ThemeListItems} from "../../portfolio/molecules/theme-link-list";
 import {selectGroupTitle, selectPhotosLinks, setPhotos, setTitle} from "../photos.slice";
 import {getPhotos} from "../../../tests/mocks/photosMock";
+import {forEach} from "react-bootstrap/ElementChildren";
 
 const PhotosStl = styled.div`
   min-height: 100%;
@@ -85,7 +86,9 @@ export const Photos = () => {
 
   useEffect(() => {
     const photos = getPhotos(groupTitleParsed)
+
     //TODO: sort array
+
     dispatch(setPhotos({photos: photos.photos}))
   }, [])
 
