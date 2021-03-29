@@ -6,10 +6,6 @@ const photosMock = [
     group: 'family',
     photos: [
       {
-        link: imgDomain + 'AL2A0085.jpg',
-        size: 'small'
-      },
-      {
         link: imgDomain + 'AL2A0667.jpg',
         size: 'small'
       },
@@ -37,14 +33,14 @@ const photosError = {
   errorMessage: 'Error'
 }
 
-export const getPhotos = (group) => {
+export const getPhotosMock = (group) => {
    let result
 
   console.log("group: " + group)
 
   photosMock.forEach(i => {
      if (i.group === group.toLowerCase()) {
-       result = i
+       result = i.photos
      }
    })
 

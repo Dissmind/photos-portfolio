@@ -6,8 +6,9 @@ import {Title} from "../atoms/title";
 import {useDispatch, useSelector} from "react-redux";
 import {ThemeListItems} from "../../portfolio/molecules/theme-link-list";
 import {selectGroupTitle, selectPhotosLinks, setPhotos, setTitle} from "../photos.slice";
-import {getPhotos} from "../../../tests/mocks/photosMock";
+import {getPhotos, getPhotosMock} from "../../../tests/mocks/photosMock";
 import {forEach} from "react-bootstrap/ElementChildren";
+import {sortPhotos} from "./sort-photos";
 
 const PhotosStl = styled.div`
   min-height: 100%;
@@ -39,8 +40,9 @@ const ItemsWrapperStl = styled.div`
   justify-content: space-between;
   row-gap: 1.25rem;
   
-  //TODO: del
-  background-color: #cccccc;
+  & > div:last-child {
+    margin: 0 auto;
+  }
 `
 
 const ImgSmallContainerStl = styled.div`
@@ -85,11 +87,9 @@ export const Photos = () => {
   dispatch(setTitle({groupTitle: groupTitleParsed}))
 
   useEffect(() => {
-    const photos = getPhotos(groupTitleParsed)
+    const photos = sortPhotos(getPhotosMock(groupTitleParsed))
 
-    //TODO: sort array
-
-    dispatch(setPhotos({photos: photos.photos}))
+    dispatch(setPhotos({photos}))
   }, [])
 
 
