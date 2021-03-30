@@ -13,12 +13,21 @@ const NavbarStl = styled.div`
 
   display: flex;
   align-items: center;
+  justify-content: center;
+`
+
+const WrapperStl = styled.div`
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+
+  width: 1600px;
+  height: 4.375rem;
 
   & > div:nth-child(1) {
     flex-grow: 1;
   }
-  
+
   & > a:nth-child(2) {
     margin-right: 4.375rem;
   }
@@ -46,13 +55,15 @@ export const Navbar = ({type}) => {
 
   return (
     <NavbarStl>
-      {list}
+      <WrapperStl>
+        {list}
 
-      <LinkStl to={"/records"}>
-        <LinkItem text={"Записаться на фотосессию"} />
-      </LinkStl>
+        <LinkStl to={"/records"}>
+          <LinkItem text={"Записаться на фотосессию"} />
+        </LinkStl>
 
-      <ThemeSwitcher />
+        <ThemeSwitcher />
+      </WrapperStl>
     </NavbarStl>
   )
 }
