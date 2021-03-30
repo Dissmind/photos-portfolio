@@ -6,8 +6,7 @@ import {Title} from "../atoms/title";
 import {useDispatch, useSelector} from "react-redux";
 import {ThemeListItems} from "../../portfolio/molecules/theme-link-list";
 import {selectGroupTitle, selectPhotosLinks, setPhotos, setTitle} from "../photos.slice";
-import {getPhotos, getPhotosMock} from "../../../tests/mocks/photosMock";
-import {forEach} from "react-bootstrap/ElementChildren";
+import {getPhotosMock} from "../../../tests/mocks/photosMock";
 import {sortPhotos} from "./sort-photos";
 
 const PhotosStl = styled.div`
@@ -40,6 +39,7 @@ const ItemsWrapperStl = styled.div`
   justify-content: space-between;
   row-gap: 1.25rem;
   
+  //Last photo
   & > div:last-child {
     margin: 0 auto;
   }
