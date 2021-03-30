@@ -7,7 +7,6 @@ import {ThemeSwitcher} from "../molecules/theme-switcher";
 import {NavLink} from "react-router-dom";
 
 const NavbarStl = styled.div`
-  padding: 0 2.5rem;
   height: 4.375rem;
   background-color: #133F2C;
 
@@ -21,8 +20,10 @@ const WrapperStl = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  padding: 0 2.5rem;
+  max-width: 1600px;
   width: 1600px;
-  height: 4.375rem;
+  min-width: 1px;
 
   & > div:nth-child(1) {
     flex-grow: 1;

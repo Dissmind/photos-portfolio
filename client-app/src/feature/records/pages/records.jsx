@@ -16,6 +16,10 @@ const WrapperStl = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  align-self: center;
+  
+  max-width: 1600px;
+  width: 100%;
   margin-top: 10rem;
   
   //RecordsVerticalLabel
