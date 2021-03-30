@@ -6,7 +6,16 @@ import {LinkItem} from "../atoms/link-item";
 import {ThemeSwitcher} from "../molecules/theme-switcher";
 import {NavLink} from "react-router-dom";
 
+
 const NavbarStl = styled.div`
+  position: relative;
+  height: 4.375rem;
+`
+
+const ContainerStl = styled.div`
+  position: fixed;
+  width: 100%;
+  
   height: 4.375rem;
   background-color: #133F2C;
 
@@ -56,15 +65,17 @@ export const Navbar = ({type}) => {
 
   return (
     <NavbarStl>
-      <WrapperStl>
-        {list}
+      <ContainerStl>
+        <WrapperStl>
+          {list}
 
-        <LinkStl to={"/records"}>
-          <LinkItem text={"Записаться на фотосессию"} />
-        </LinkStl>
+          <LinkStl to={"/records"}>
+            <LinkItem text={"Записаться на фотосессию"} />
+          </LinkStl>
 
-        <ThemeSwitcher />
-      </WrapperStl>
+          <ThemeSwitcher />
+        </WrapperStl>
+      </ContainerStl>
     </NavbarStl>
   )
 }

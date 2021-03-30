@@ -1,7 +1,3 @@
-import {createGlobalStyle} from "styled-components";
-import {GlobalStyle} from "./global-components";
-
-
 export const MediaQueries = `
   
   //Mobile 320px-576px

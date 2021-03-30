@@ -3,12 +3,13 @@ import styled from "styled-components";
 import {LabelArrow} from "../atoms/label-arrow";
 import {MainContent} from "../organisms/main-content";
 import {Navbar} from "../../navbar/organisms/navbar";
+import {Footer} from "../../footer/organisms/footer";
 
 const HomeStl = styled.div`
   display: flex;
   flex-direction: column;
   
-  min-height: 100%;
+  min-height: 100vh;
 `
 
 const WrapperStl = styled.div`
@@ -33,9 +34,12 @@ const WrapperStl = styled.div`
 export const Home = () => (
   <HomeStl>
     <Navbar type={"lang"} />
+
     <WrapperStl>
       <LabelArrow text={"Выберите свой язык!"} />
       <MainContent />
     </WrapperStl>
+
+    <Footer />
   </HomeStl>
 )

@@ -4,9 +4,10 @@ import {Navbar} from "../../navbar/organisms/navbar";
 import {Label} from "../atoms/label";
 import {ThemeLinkList} from "../molecules/theme-link-list";
 import {PortfolioLabelArrow} from "../atoms/portfolio-label-arrow";
+import {Footer} from "../../footer/organisms/footer";
 
 const PortfolioStl = styled.div`
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 `
@@ -39,11 +40,14 @@ export const Portfolio = () => {
   return (
     <PortfolioStl>
       <Navbar type={"menu"} />
+
       <WrapperStl>
         <Label />
         <ThemeLinkList />
         <PortfolioLabelArrow />
       </WrapperStl>
+
+      <Footer />
     </PortfolioStl>
   )
 }

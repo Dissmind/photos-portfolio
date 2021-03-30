@@ -8,9 +8,11 @@ import {ThemeListItems} from "../../portfolio/molecules/theme-link-list";
 import {selectGroupTitle, selectPhotosLinks, setPhotos, setTitle} from "../photos.slice";
 import {getPhotosMock} from "../../../tests/mocks/photosMock";
 import {sortPhotos} from "./sort-photos";
+import {Footer} from "../../footer/organisms/footer";
 
 const PhotosStl = styled.div`
-  min-height: 100%;
+  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
 `
@@ -116,6 +118,8 @@ export const Photos = () => {
           ))
         }
       </ItemsWrapperStl>
+
+      <Footer />
     </PhotosStl>
   )
 }

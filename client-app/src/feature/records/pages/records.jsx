@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import {Navbar} from "../../navbar/organisms/navbar";
 import {MainContent} from "../organisms/main-content";
 import {RecordsVerticalLabel} from "../atoms/records-vertical-label";
+import {Footer} from "../../footer/organisms/footer";
 
 const RecordsStl = styled.div`
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 `
@@ -41,6 +42,8 @@ export const Records = () => {
         <RecordsVerticalLabel text={"Запись на фотосессию"} />
         <MainContent />
       </WrapperStl>
+
+      <Footer />
     </RecordsStl>
   )
 }

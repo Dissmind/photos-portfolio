@@ -4,9 +4,10 @@ import {VerticalLabel} from "../atoms/vertical-label";
 import {MainPhoto} from "../atoms/main-photo";
 import {MainLabel} from "../atoms/main-label";
 import {Navbar} from "../../navbar/organisms/navbar";
+import {Footer} from "../../footer/organisms/footer";
 
 const AboutStl = styled.div`
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 `
@@ -33,5 +34,7 @@ export const About = () => (
       <MainPhoto />
       <MainLabel />
     </WrapperStl>
+
+    <Footer />
   </AboutStl>
 )
