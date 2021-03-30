@@ -16,7 +16,9 @@ const WrapperStl = styled.div`
   margin-top: 10rem;
   display: flex;
   justify-content: center;
-  
+
+  margin-bottom: 1.875rem;
+
   //MainPhoto
   & > div:nth-child(2){
     margin-left: 0.9375rem;

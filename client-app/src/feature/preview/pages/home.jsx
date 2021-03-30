@@ -19,6 +19,7 @@ const WrapperStl = styled.div`
 
   max-width: 1600px;
   width: 100%;
+  margin-bottom: 1.875rem;
 
   //LabelArrow
   & > div:nth-child(1){

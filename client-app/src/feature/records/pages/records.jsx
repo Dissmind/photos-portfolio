@@ -22,7 +22,8 @@ const WrapperStl = styled.div`
   max-width: 1600px;
   width: 100%;
   margin-top: 10rem;
-  
+  margin-bottom: 1.875rem;
+
   //RecordsVerticalLabel
   & > div:nth-child(1){
     height: 40rem;

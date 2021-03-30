@@ -17,7 +17,9 @@ const WrapperStl = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
+  margin-bottom: 1.875rem;
+
   //Label
   & > div:nth-child(1){
     margin-top: 4.375rem;

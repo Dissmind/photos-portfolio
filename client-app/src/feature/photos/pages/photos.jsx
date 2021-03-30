@@ -40,7 +40,9 @@ const ItemsWrapperStl = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 1.25rem;
-  
+
+  margin-bottom: 1.875rem;
+
   //Last photo
   & > div:last-child {
     margin: 0 auto;
