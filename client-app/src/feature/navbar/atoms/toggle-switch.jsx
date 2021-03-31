@@ -5,6 +5,12 @@ const ToggleSwitchStl = styled.div`
   position: relative;
   width: 4.375rem;
   height: 2.1875rem;
+
+  //Mobile styles
+  @media screen and (min-width: 320px) and (max-width: 576px){
+    width: 2.25rem;
+    height: 1.125rem;
+  }
 `
 
 const CheckBoxStl = styled.input`
@@ -17,13 +23,22 @@ const CheckBoxStl = styled.input`
       
       content: "";
       display: block;
-      box-sizing: border-box;
       width: 2.1875rem;
       height: 2.1875rem;
       border: #FFFFFF 0.125rem solid;
       border-radius: 1.125rem;
       background-color: #133F2C;
       transition: .3s;
+
+      //Mobile styles
+      @media screen and (min-width: 320px) and (max-width: 576px){
+        margin-left: 1.125rem;
+
+        width: 1.125rem;
+        height: 1.125rem;
+        border: #FFFFFF 0.0643rem solid;
+        border-radius: 0.5786rem;
+      }
     }
 }
 `
@@ -37,17 +52,31 @@ const SliderStl = styled.label`
   border-radius: 1.125rem;
   background-color: #FFFFFF;
   cursor: pointer;
+
+  //Mobile styles
+  @media screen and (min-width: 320px) and (max-width: 576px){
+    width: 2.25rem;
+    height: 1.125rem;
+    border-radius: 0.5786rem;
+  }
   
   &::after{
     content: "";
     display: block;
-    box-sizing: border-box;
     width: 2.1875rem;
     height: 2.1875rem;
     border: #FFFFFF 0.125rem solid;
     border-radius: 1.125rem;
     background-color: #133F2C;
     transition: .3s;
+
+    //Mobile styles
+    @media screen and (min-width: 320px) and (max-width: 576px){
+      width: 1.125rem;
+      height: 1.125rem;
+      border: #FFFFFF 0.0643rem solid;
+      border-radius: 0.5786rem;
+    }
   }
 `
 

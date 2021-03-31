@@ -10,6 +10,12 @@ import {NavLink} from "react-router-dom";
 const NavbarStl = styled.div`
   position: relative;
   height: 4.375rem;
+
+  //Mobile styles
+  @media screen and (min-width: 320px) and (max-width: 576px){
+    height: 2.5rem;
+  }
+  //TODO: будет ли двигаться навбар?
 `
 
 const ContainerStl = styled.div`
@@ -22,7 +28,14 @@ const ContainerStl = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  //Mobile styles
+  @media screen and (min-width: 320px) and (max-width: 576px){
+    height: 2.5rem;
+  }
 `
+
+//TODO: здесь!!
 
 const WrapperStl = styled.div`
   display: flex;
@@ -31,8 +44,7 @@ const WrapperStl = styled.div`
 
   padding: 0 2.5rem;
   max-width: 1600px;
-  width: 1600px;
-  min-width: 1px;
+  width: 100%;
 
   & > div:nth-child(1) {
     flex-grow: 1;

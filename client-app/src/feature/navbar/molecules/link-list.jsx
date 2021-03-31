@@ -9,6 +9,11 @@ const LinkListStl = styled.div`
   a:not(:first-child) {
     margin-left: 4.375rem;
   }
+
+  //Mobile styles
+  @media screen and (min-width: 320px) and (max-width: 576px){
+    display: none;
+  }
 `
 
 const LinkStl = styled(NavLink)`

@@ -13,6 +13,11 @@ const LinkItemStl = styled.div`
     color: #ccc;
     transition: .2s;
   }
+  
+  //Mobile styles
+  @media screen and (min-width: 320px) and (max-width: 576px){
+    font-size: 0.9375rem;
+  }
 `
 
 

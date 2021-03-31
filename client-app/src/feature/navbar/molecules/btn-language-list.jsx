@@ -8,6 +8,11 @@ const BtnLanguageListStl = styled.div`
   div:not(:first-child) {
     margin-left: 1.25rem;
   }
+
+   //Mobile styles
+   @media screen and (min-width: 320px) and (max-width: 576px){
+     display: none;
+   }
 `
 
 
