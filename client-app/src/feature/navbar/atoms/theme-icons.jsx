@@ -7,9 +7,9 @@ const ThemeIconsStl = styled.img`
   user-select: none;
 
    //Mobile styles
-  @media screen and (min-width: 320px) and (max-width: 576px){
-     width: 0.9375rem;
-     height: 0.9375rem;
+  @media screen and (max-width: 576px){
+     width: 1.125rem;
+     height: 1.125rem;
    }
 `
 

@@ -13,6 +13,14 @@ const ThemeSwitcherStl = styled.div`
   img:nth-child(1) {
     margin-right: 1.25rem;
   }
+
+  //Mobile styles
+  @media screen and (max-width: 576px){
+    //ThemeIcons
+    img:nth-child(1) {
+      margin-right: 0.625rem;
+    }
+  }
 `
 
 

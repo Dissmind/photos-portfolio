@@ -1,7 +1,7 @@
 
 
 // //Mobile styles
-// @media screen and (min-width: 320px) and (max-width: 576px){
+// @media screen and (max-width: 576px){
 //
 // }
 
@@ -16,20 +16,26 @@ export const MediaQueries = `
     }
   }
 
-  //Tablet 576px
+  //Tablet? 576px
   @media screen and (min-width: 576px){}
+  
+  //Tablet? 768px
+  @media screen and (min-width: 768px){}
+  
+  //Tablet? 992px
+  @media screen and (min-width: 992px){}
 
-  //Desktop 1200-1439px styles
+  //Desktop 1200-1399px styles
   @media screen and (min-width: 1200px){
     html{
       font-size: 12px;
     }
   }
 
-  //Desktop 1440-1599px styles
-  @media screen and (min-width: 1440px){
+  //Desktop 1400-1599px styles
+  @media screen and (min-width: 1400px){
     html{
-      font-size: 14.4px;
+      font-size: 14px;
     }
   }
 

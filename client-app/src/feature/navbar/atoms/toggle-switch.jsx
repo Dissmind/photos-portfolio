@@ -7,7 +7,7 @@ const ToggleSwitchStl = styled.div`
   height: 2.1875rem;
 
   //Mobile styles
-  @media screen and (min-width: 320px) and (max-width: 576px){
+  @media screen and (max-width: 576px){
     width: 2.25rem;
     height: 1.125rem;
   }
@@ -31,7 +31,7 @@ const CheckBoxStl = styled.input`
       transition: .3s;
 
       //Mobile styles
-      @media screen and (min-width: 320px) and (max-width: 576px){
+      @media screen and (max-width: 576px){
         margin-left: 1.125rem;
 
         width: 1.125rem;
@@ -54,7 +54,7 @@ const SliderStl = styled.label`
   cursor: pointer;
 
   //Mobile styles
-  @media screen and (min-width: 320px) and (max-width: 576px){
+  @media screen and (max-width: 576px){
     width: 2.25rem;
     height: 1.125rem;
     border-radius: 0.5786rem;
@@ -71,7 +71,7 @@ const SliderStl = styled.label`
     transition: .3s;
 
     //Mobile styles
-    @media screen and (min-width: 320px) and (max-width: 576px){
+    @media screen and (max-width: 576px){
       width: 1.125rem;
       height: 1.125rem;
       border: #FFFFFF 0.0643rem solid;

@@ -11,7 +11,7 @@ const LinkListStl = styled.div`
   }
 
   //Mobile styles
-  @media screen and (min-width: 320px) and (max-width: 576px){
+  @media screen and (max-width: 576px){
     display: none;
   }
 `
@@ -23,8 +23,7 @@ const LinkStl = styled(NavLink)`
 `
 
 
-export const LinkList = ({}) => {
-  return (
+export const LinkList = () => (
     <LinkListStl>
       <LinkStl to={"/"}><LinkItem text={"Главная"} /></LinkStl>
       <LinkStl to={"/about"}><LinkItem text={"Обо мне"} /></LinkStl>
@@ -32,7 +31,6 @@ export const LinkList = ({}) => {
       <LinkStl to={"/records"}><LinkItem text={"Контакты"} /></LinkStl>
       <LinkStl to={"/"}><LinkItem text={"Цены"} /></LinkStl>
     </LinkListStl>
-  )
-}
+)
 
 //TODO: роутер для "Цены"

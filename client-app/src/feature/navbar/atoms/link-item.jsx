@@ -15,7 +15,7 @@ const LinkItemStl = styled.div`
   }
   
   //Mobile styles
-  @media screen and (min-width: 320px) and (max-width: 576px){
+  @media screen and (max-width: 576px){
     font-size: 0.9375rem;
   }
 `

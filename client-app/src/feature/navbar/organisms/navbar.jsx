@@ -5,6 +5,7 @@ import {LinkList} from "../molecules/link-list";
 import {LinkItem} from "../atoms/link-item";
 import {ThemeSwitcher} from "../molecules/theme-switcher";
 import {NavLink} from "react-router-dom";
+import {BtnSelectLanguage} from "../atoms/btn-select-language.mobile";
 
 
 const NavbarStl = styled.div`
@@ -12,7 +13,7 @@ const NavbarStl = styled.div`
   height: 4.375rem;
 
   //Mobile styles
-  @media screen and (min-width: 320px) and (max-width: 576px){
+  @media screen and (max-width: 576px){
     height: 2.5rem;
   }
   //TODO: будет ли двигаться навбар?
@@ -30,12 +31,10 @@ const ContainerStl = styled.div`
   justify-content: center;
 
   //Mobile styles
-  @media screen and (min-width: 320px) and (max-width: 576px){
+  @media screen and (max-width: 576px){
     height: 2.5rem;
   }
 `
-
-//TODO: здесь!!
 
 const WrapperStl = styled.div`
   display: flex;
@@ -46,12 +45,24 @@ const WrapperStl = styled.div`
   max-width: 1600px;
   width: 100%;
 
+  //BtnLanguageList || LinkList
   & > div:nth-child(1) {
     flex-grow: 1;
   }
 
-  & > a:nth-child(2) {
+  //LinkStl
+  & > a:nth-child(3) {
     margin-right: 4.375rem;
+  }
+
+  //Mobile styles
+  @media screen and (max-width: 576px){
+    padding: 0 1.625rem;
+
+    //LinkStl
+    & > a:nth-child(3) {
+      margin-right: 0;
+    }
   }
 `
 
@@ -80,6 +91,8 @@ export const Navbar = ({type}) => {
       <ContainerStl>
         <WrapperStl>
           {list}
+
+          <BtnSelectLanguage />
 
           <LinkStl to={"/records"}>
             <LinkItem text={"Записаться на фотосессию"} />
