@@ -78,8 +78,6 @@ export const Navbar = ({type}) => {
   const [popupToggle, setPopupToggle] = useState(false)
 
 
-
-
   let list = null
 
   switch (type) {
@@ -100,7 +98,7 @@ export const Navbar = ({type}) => {
 
           <BtnSelectLanguage onClick={() => {setPopupToggle(true)}} />
           {
-            popupToggle ? <LanguageModal /> : null
+            popupToggle ? <LanguageModal close={() => {setPopupToggle(false)}} /> : null
           }
 
           <LinkStl to={"/records"}>

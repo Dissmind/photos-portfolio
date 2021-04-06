@@ -8,6 +8,9 @@ const BtnSelectLanguageStl = styled.img`
 
   //Mobile styles
   @media screen and (max-width: 576px){
+    position: relative;
+    z-index: 2;
+    
     display: block;
     width: 1.1875rem;
     height: 1.1875rem;
