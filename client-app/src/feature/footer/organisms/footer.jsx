@@ -9,7 +9,7 @@ const FooterStl = styled.div`
 
   height: 4.375rem;
   background-color: #133F2C;
-  margin-top: auto;
+  margin-top: 1.875rem;
 `
 
 const WrapperStl = styled.div`
