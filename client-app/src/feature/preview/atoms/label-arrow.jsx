@@ -10,6 +10,11 @@ const LabelArrowStl = styled.div`
 const ArrowStl = styled.img`
   height: 3.875rem;
   user-select: none;
+
+  //Mobile styles
+  @media screen and (max-width: 576px){
+    height: 1.5rem;
+  }
 `
 
 const LabelStl = styled.div`
@@ -19,6 +24,13 @@ const LabelStl = styled.div`
   color: #164C34;
   padding-top: 2.5rem;
   padding-left: 0.3125rem;
+
+  //Mobile styles
+  @media screen and (max-width: 576px){
+    font-size: 0.9375rem;
+    padding-top: 0.875rem;
+    padding-left: 0.25rem;
+  }
 `
 
 export const LabelArrow = ({text}) => {

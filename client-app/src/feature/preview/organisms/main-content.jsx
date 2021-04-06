@@ -17,6 +17,11 @@ const MainContentStl = styled.div`
     left: 0;
     top: 5.4375rem;
   }
+
+  //Mobile styles
+  @media screen and (max-width: 576px){
+    display: none;
+  }
 `
 
 export const MainContent = () => (

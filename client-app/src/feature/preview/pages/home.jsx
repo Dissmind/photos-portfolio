@@ -29,6 +29,14 @@ const WrapperStl = styled.div`
   & > div:nth-child(2){
     align-self: center;
   }
+
+  //Mobile styles
+  @media screen and (max-width: 576px){
+    //LabelArrow
+    & > div:nth-child(1){
+      margin: 0.5rem 0 0 2rem ;
+    }
+  }
 `
 
 export const Home = () => (
