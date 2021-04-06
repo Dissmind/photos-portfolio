@@ -3,7 +3,13 @@ import styled from 'styled-components'
 import {BtnLanguageListModal} from "../molecules/btn-language-list-modal.mobile";
 
 const LanguageModalStl = styled.div`
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
 `
 
 
@@ -48,10 +54,10 @@ const ContainerStl = styled.div`
 `
 
 
-export const LanguageModal = ({}) => {
+export const LanguageModal = ({close}) => {
 
   return (
-    <LanguageModalStl>
+    <LanguageModalStl onClick={close}>
 
       <BgWrapper>
         <BgPointerShadowStl />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import {BtnLanguageList} from "../molecules/btn-language-list";
 import {LinkList} from "../molecules/link-list";
@@ -6,6 +6,7 @@ import {LinkItem} from "../atoms/link-item";
 import {ThemeSwitcher} from "../molecules/theme-switcher";
 import {NavLink} from "react-router-dom";
 import {BtnSelectLanguage} from "../atoms/btn-select-language.mobile";
+import {LanguageModal} from "./language-modal.mobile";
 
 
 const NavbarStl = styled.div`
@@ -74,6 +75,11 @@ const LinkStl = styled(NavLink)`
 
 export const Navbar = ({type}) => {
 
+  const [popupToggle, setPopupToggle] = useState(false)
+
+
+
+
   let list = null
 
   switch (type) {
@@ -92,7 +98,10 @@ export const Navbar = ({type}) => {
         <WrapperStl>
           {list}
 
-          <BtnSelectLanguage />
+          <BtnSelectLanguage onClick={() => {setPopupToggle(true)}} />
+          {
+            popupToggle ? <LanguageModal /> : null
+          }
 
           <LinkStl to={"/records"}>
             <LinkItem text={"Записаться на фотосессию"} />

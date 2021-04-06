@@ -17,6 +17,6 @@ const BtnSelectLanguageStl = styled.img`
 `
 
 
-export const BtnSelectLanguage = () => (
-  <BtnSelectLanguageStl src={BtnSelectLanguageIco} />
+export const BtnSelectLanguage = ({onClick}) => (
+  <BtnSelectLanguageStl src={BtnSelectLanguageIco} onClick={onClick} />
 )
