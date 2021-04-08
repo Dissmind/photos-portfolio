@@ -20,7 +20,7 @@ const MainContentStl = styled.div`
 
   //Mobile styles
   @media screen and (max-width: 576px){
-    display: none;
+    width: auto;
   }
 `
 

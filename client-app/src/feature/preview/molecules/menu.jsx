@@ -4,7 +4,6 @@ import {NavLink} from "react-router-dom"
 import {MenuItems} from "../atoms/menu-items";
 
 const MenuStl = styled.div`
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 

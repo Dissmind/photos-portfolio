@@ -13,6 +13,11 @@ const SliderStl = styled.div`
   & > div:first-child{
     padding: 0;
   }
+
+  //Mobile styles
+  @media screen and (max-width: 576px){
+    display: none;
+  }
 `
 
 export const Slider = () => {
