@@ -96,7 +96,9 @@ export const Navbar = ({type}) => {
         <WrapperStl>
           {list}
 
-          <BtnSelectLanguage onClick={() => {setPopupToggle(true)}} />
+          <BtnSelectLanguage
+            onClick={() => {popupToggle ? setPopupToggle(false) : setPopupToggle(true)}}
+          />
           {
             popupToggle ? <LanguageModal close={() => {setPopupToggle(false)}} /> : null
           }
