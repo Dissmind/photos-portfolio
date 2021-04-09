@@ -21,6 +21,11 @@ const MainContentStl = styled.div`
   //Mobile styles
   @media screen and (max-width: 576px){
     width: auto;
+
+    //Menu
+    & > div:nth-child(1){
+      position: static;
+    }
   }
 `
 

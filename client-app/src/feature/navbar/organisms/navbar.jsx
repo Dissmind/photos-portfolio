@@ -17,7 +17,6 @@ const NavbarStl = styled.div`
   @media screen and (max-width: 576px){
     height: 2.5rem;
   }
-  //TODO: будет ли двигаться навбар?
 `
 
 const ContainerStl = styled.div`
@@ -33,6 +32,7 @@ const ContainerStl = styled.div`
 
   //Mobile styles
   @media screen and (max-width: 576px){
+    position: static;
     height: 2.5rem;
   }
 `

@@ -9,7 +9,6 @@ const BtnMoreStl = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0.625rem;
 
     width: 7.125rem;
     height: 1.75rem;

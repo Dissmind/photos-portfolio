@@ -30,7 +30,7 @@ const MenuItemsStl = styled.div`
 `
 
 export const MenuItems = ({title}) => (
-
-  <MenuItemsStl>{title}</MenuItemsStl>
-
+  <MenuItemsStl>
+    {title}
+  </MenuItemsStl>
 )

@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import {MenuItems} from "../atoms/menu-items";
 import {BtnMore} from "../atoms/btn-more.mobile";
+import {NavLink} from "react-router-dom";
 
 const MenuCardStl = styled.div`
-  //display: none;
+  display: none;
 
   //Mobile styles
   @media screen and (max-width: 576px){
@@ -27,6 +28,7 @@ const ImageStl = styled.image`
   
   //Mobile styles
   @media screen and (max-width: 576px){
+    
     //del
     background-color: bisque;
     //
@@ -48,14 +50,23 @@ const ColWrapperStl = styled.div`
   }
 `
 
+const LinkStl = styled(NavLink)`
+  &:link{
+    text-decoration: none;
+  }
+`
 
-export const MenuCard = ({title, img, children}) => (
+
+export const MenuCard = ({title, img, link}) => (
   <MenuCardStl>
     <ImageStl src={img} />
 
     <ColWrapperStl>
       <MenuItems title={title} />
-      {/*<BtnMore />*/}{children}
+
+      <LinkStl to={link}>
+        <BtnMore />
+      </LinkStl>
     </ColWrapperStl>
   </MenuCardStl>
 )

@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom"
-import {MenuItems} from "../atoms/menu-items";
 import {MenuCard} from "./menu-card.mobile";
-import {BtnMore} from "../atoms/btn-more.mobile";
+import {MenuItems} from "../atoms/menu-items";
 
 const MenuStl = styled.div`
   display: flex;
@@ -18,8 +17,31 @@ const MenuStl = styled.div`
   padding-top: 3.125rem;
   padding-left: 1.875rem;
 
+  //LinkStl
   a:not(:first-child){
     margin-top: 0.625rem;
+  }
+
+  //Mobile styles
+  @media screen and (max-width: 576px){
+    display: none;
+  }
+`
+
+const MobileMenuStl = styled.div`
+  display: none;
+
+  //Mobile styles
+  @media screen and (max-width: 576px){
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-top: 1.875rem;
+
+    //LinkStl in MenuCard
+    a:not(:first-child){
+      margin-top: 0.625rem;
+    }
   }
 `
 
@@ -38,6 +60,12 @@ const MenuBackgroundStl = styled.div`
 const WrapperStl = styled.div`
   width: 14rem;
   height: 25.3125rem;
+
+  //Mobile styles
+  @media screen and (max-width: 576px){
+    width: auto;
+    height: auto;
+  }
 `
 
 const LinkStl = styled(NavLink)`
@@ -75,29 +103,27 @@ export const Menu = () => {
     <WrapperStl>
       <MenuStl>
         {
-          MenuItemsList.map((MenuItem) => (
-            // <LinkStl to={MenuItem.url}>
-            //   <MenuCard
-            //     title={MenuItem.title}
-            //     img={MenuItem.img}
-            //   />
-            // </LinkStl>
-
-
-
-            <MenuCard title={MenuItem.title} img={MenuItem.img}>
-              <LinkStl to={MenuItem.url}>
-                <BtnMore />
-              </LinkStl>
-            </MenuCard>
-
-
+          MenuItemsList.map((Item) => (
+            <LinkStl to={Item.url}>
+              <MenuItems title={Item.title} />
+            </LinkStl>
           ))
         }
-        {/*TODO: карта кликабельна полностью ??*/}
 
         <MenuBackgroundStl/>
       </MenuStl>
+
+      <MobileMenuStl>
+        {
+          MenuItemsList.map((MenuItem) => (
+            <MenuCard
+              title={MenuItem.title}
+              img={MenuItem.img}
+              link={MenuItem.url}
+            />
+          ))
+        }
+      </MobileMenuStl>
     </WrapperStl>
   )
 }
