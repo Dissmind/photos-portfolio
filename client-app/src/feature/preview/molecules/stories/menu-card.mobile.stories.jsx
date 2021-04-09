@@ -1,21 +1,21 @@
 import React from "react";
 
-import {MenuItems} from "../menu-items";
 import {GlobalStyle} from "../../../../shared/global-components"
+import {MenuCard} from "../menu-card.mobile";
 
 export default {
-    title: 'Home/Atoms/MenuItems',
-    component: MenuItems,
+  title: 'Home/Molecules/MenuCard',
+  component: MenuCard,
 }
 
 const Template = (args) => (
   <>
     <GlobalStyle />
-    <MenuItems {...args} />
+    <MenuCard {...args} />
   </>
 )
 
 export const Primary = Template.bind({})
 Primary.args = {
-    title: "test-text",
+  title: 'Test'
 }

@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom"
 import {MenuItems} from "../atoms/menu-items";
+import {MenuCard} from "./menu-card.mobile";
+import {BtnMore} from "../atoms/btn-more.mobile";
 
 const MenuStl = styled.div`
   display: flex;
@@ -44,17 +46,60 @@ const LinkStl = styled(NavLink)`
   }  
 `
 
-export const Menu = () => (
-  <WrapperStl>
-    <MenuStl>
-      <LinkStl to={"/about"}><MenuItems text={"Обо мне"} /></LinkStl>
-      <LinkStl to={"/portfolio"}><MenuItems text={"Портфолио"} /></LinkStl>
-      <LinkStl to={"/"}><MenuItems text={"Цены"} /></LinkStl>
-      <LinkStl to={"records"}><MenuItems text={"Контакты"} /></LinkStl>
+export const Menu = () => {
 
-      <MenuBackgroundStl />
-    </MenuStl>
-  </WrapperStl>
-)
+  const MenuItemsList = [
+    {
+      title: 'Обо мне',
+      url: '/about',
+      img: ''
+    },
+    {
+      title: 'Портфолио',
+      url: '/portfolio',
+      img: ''
+    },
+    {
+      title: 'Цены',
+      url: '/',
+      img: ''
+    },
+    {
+      title: 'Контакты',
+      url: '/records',
+      img: ''
+    }
+  ]
+
+  return(
+    <WrapperStl>
+      <MenuStl>
+        {
+          MenuItemsList.map((MenuItem) => (
+            // <LinkStl to={MenuItem.url}>
+            //   <MenuCard
+            //     title={MenuItem.title}
+            //     img={MenuItem.img}
+            //   />
+            // </LinkStl>
+
+
+
+            <MenuCard title={MenuItem.title} img={MenuItem.img}>
+              <LinkStl to={MenuItem.url}>
+                <BtnMore />
+              </LinkStl>
+            </MenuCard>
+
+
+          ))
+        }
+        {/*TODO: карта кликабельна полностью ??*/}
+
+        <MenuBackgroundStl/>
+      </MenuStl>
+    </WrapperStl>
+  )
+}
 
 //TODO: рутер на "Цена"
