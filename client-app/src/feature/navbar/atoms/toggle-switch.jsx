@@ -12,6 +12,7 @@ const ToggleSwitchStl = styled.input`
   border-radius: 1.125rem;
   outline: none;
   transition: 0.3s;
+  cursor: pointer;
 
   //Mobile styles
   @media screen and (max-width: 576px){
