@@ -1,3 +1,4 @@
+import {css} from "styled-components";
 
 
 // //Mobile styles
@@ -7,7 +8,8 @@
 
 
 
-export const MediaQueries = `
+
+export const MediaQueries = css`
   
   //Mobile 320px-576px
   @media screen and (min-width: 320px){

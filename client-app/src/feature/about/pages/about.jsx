@@ -26,13 +26,13 @@ const WrapperStl = styled.div`
   }
 `
 
+
 export const About = () => (
   <AboutStl>
     <Navbar type={"menu"} />
 
     <WrapperStl>
       <VerticalLabel text={"Обо мне"} />
-
       <MainPhoto />
       <MainLabel />
     </WrapperStl>

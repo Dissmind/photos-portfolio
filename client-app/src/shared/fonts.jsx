@@ -1,8 +1,10 @@
+import {css} from "styled-components";
+
 import LemonTuesday from "../attachments/font/Lemon-Tuesday.woff2"
 import PentaLight from "../attachments/font/PentaLight.woff2"
 import Solena from "../attachments/font/Solena-Regular.woff2"
 
-export const Fonts = `
+export const Fonts = css`
   @font-face {
     font-family: 'Lemon Tuesday';
     src: local('Lemon Tuesday'), local('LemonTuesday'),

@@ -11,6 +11,7 @@ const VerticalLabelStl = styled.div`
   opacity: 60%;
   transform: rotate(180deg);
   writing-mode: vertical-lr;
+  user-select: none;
 `
 
 export const VerticalLabel = ({text}) => {
