@@ -6,15 +6,15 @@ const BtnLanguageStl = styled.div`
   justify-content: center;
   align-items: center;
   
-  width: 4.1875rem;
-  height: 2.1875rem;
+  width: 6.2037vh;
+  height: 3.241vh;
   background-color: #FFFFFF;
-  border-radius: 1.125rem;
-  padding-bottom: 0.3125rem;
+  border-radius: 1.6666vh;
+  padding-bottom: 0.4629vh;
   color: #164C34;
   font-family: 'PentaLight', serif;
   font-weight: 400;
-  font-size: 1.875rem;
+  font-size: 2.7777vh;
   user-select: none;
   
   :hover{

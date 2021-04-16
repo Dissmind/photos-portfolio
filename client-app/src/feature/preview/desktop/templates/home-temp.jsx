@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Column, Container} from "../../../../shared/layout";
+import {Navbar} from "../../../navbar/desktop/organisms/navbar";
+import {Footer} from "../../../footer/organisms/footer";
 
 const NavbarContainerStl = styled(Container)`
   height: 6.481vh;
@@ -33,10 +35,10 @@ export const HomeTemp = ({navbarChildren, labelChildren, mainContentChildren, fo
   return (
     <>
       <Column h100>
-        <NavbarContainerStl>{navbarChildren}</NavbarContainerStl>
+        <NavbarContainerStl><Navbar type={'lang'} />{navbarChildren}</NavbarContainerStl>
         <LabelContainerStl>{labelChildren}</LabelContainerStl>
         <MainContentContainerStl>{mainContentChildren}</MainContentContainerStl>
-        <FooterContainerStl>{footerChildren}</FooterContainerStl>
+        <FooterContainerStl><Footer />{footerChildren}</FooterContainerStl>
       </Column>
     </>
   )

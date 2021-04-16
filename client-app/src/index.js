@@ -21,7 +21,10 @@ const app = (
     <GlobalStyle />
 
     <BrowserRouter>
+
+      {/*del*/}
       <Route path={"/"} exact render={() => <HomeTemp />} />
+      {/**/}
 
 
       {/*<Route path={"/"} exact render={() => <Home />} />*/}
