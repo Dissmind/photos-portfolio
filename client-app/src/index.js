@@ -7,12 +7,13 @@ import {BrowserRouter, Route} from "react-router-dom"
 import {Provider} from "react-redux";
 import {store} from "./redux/store";
 
-import {Home} from "./feature/preview/pages/home";
+import {Home} from "./feature/preview/desktop/pages/home";
 import {About} from "./feature/about/pages/about";
 import {Portfolio} from "./feature/portfolio/pages/portfolio";
 import {Records} from "./feature/records/pages/records";
 import {ThemeListItems} from "./feature/portfolio/molecules/theme-link-list";
 import {Photos} from "./feature/photos/pages/photos";
+import {HomeTemp} from "./feature/preview/desktop/templates/home-temp";
 
 
 const app = (
@@ -20,7 +21,10 @@ const app = (
     <GlobalStyle />
 
     <BrowserRouter>
-      <Route path={"/"} exact render={() => <Home />} />
+      <Route path={"/"} exact render={() => <HomeTemp />} />
+
+
+      {/*<Route path={"/"} exact render={() => <Home />} />*/}
       <Route path={"/about"} exact render={() => <About />} />
       <Route path={"/portfolio"} exact render={() => <Portfolio />} />
 

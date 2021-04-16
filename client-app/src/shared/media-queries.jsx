@@ -27,26 +27,26 @@ export const MediaQueries = css`
   //Tablet? 992px
   @media screen and (min-width: 992px){}
 
-  //Desktop 1200-1399px styles
-  @media screen and (min-width: 1200px){
-    html{
-      font-size: 12px;
-    }
-  }
-
-  //Desktop 1400-1599px styles
-  @media screen and (min-width: 1400px){
-    html{
-      font-size: 14px;
-    }
-  }
-
-  //Desktop >1600px styles
-  @media screen and (min-width: 1600px) {
-    html{
-      font-size: 16px;
-    }
-  }
+  ////Desktop 1200-1399px styles
+  //@media screen and (min-width: 1200px){
+  //  html{
+  //    font-size: 12px;
+  //  }
+  //}
+  //
+  ////Desktop 1400-1599px styles
+  //@media screen and (min-width: 1400px){
+  //  html{
+  //    font-size: 14px;
+  //  }
+  //}
+  //
+  ////Desktop >1600px styles
+  //@media screen and (min-width: 1600px) {
+  //  html{
+  //    font-size: 16px;
+  //  }
+  //}
   
 `
 

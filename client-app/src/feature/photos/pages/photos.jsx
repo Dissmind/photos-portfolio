@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import styled from 'styled-components'
-import {Navbar} from "../../navbar/organisms/navbar";
+import {Navbar} from "../../navbar/desktop/organisms/navbar";
 import {BtnReturn} from "../atoms/btn-return";
 import {Title} from "../atoms/title";
 import {useDispatch, useSelector} from "react-redux";

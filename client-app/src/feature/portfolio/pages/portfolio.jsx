@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Navbar} from "../../navbar/organisms/navbar";
+import {Navbar} from "../../navbar/desktop/organisms/navbar";
 import {Label} from "../atoms/label";
 import {ThemeLinkList} from "../molecules/theme-link-list";
 import {PortfolioLabelArrow} from "../atoms/portfolio-label-arrow";

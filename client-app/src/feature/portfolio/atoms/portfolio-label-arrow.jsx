@@ -1,5 +1,5 @@
 import React from 'react'
-import {LabelArrow} from "../../preview/atoms/label-arrow";
+import {LabelArrow} from "../../preview/desktop/atoms/label-arrow";
 
 export const PortfolioLabelArrow = () => {
   return (
