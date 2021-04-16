@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const DescriptionStl = styled.div`
   font-family: 'PentaLight', serif;
-  font-size: 1.875rem;
+  font-size: 2.77vh;
   color: #FFFFFF;
 `
 
