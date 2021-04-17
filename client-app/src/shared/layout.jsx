@@ -22,7 +22,8 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   ${props => props.w1600 && css`
-    max-width: 1600px;
+    //width: 148.1481vh;
     width: 100%;
+    max-width: 1600px;
   `}
 `

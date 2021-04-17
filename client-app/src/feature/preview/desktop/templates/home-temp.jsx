@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Column, Container} from "../../../../shared/layout";
+import {Column, Container, Wrapper} from "../../../../shared/layout";
 import {Navbar} from "../../../navbar/desktop/organisms/navbar";
 import {Footer} from "../../../footer/organisms/footer";
 
