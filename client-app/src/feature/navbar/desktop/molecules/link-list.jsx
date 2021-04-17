@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {LinkItem} from "../atoms/link-item";
 import {NavLink} from "react-router-dom";
 
-const LinkListStl = styled.div`
+export const LinkListStl = styled.div`
   display: flex;
   
   a:not(:first-child) {

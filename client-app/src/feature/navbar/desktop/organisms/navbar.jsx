@@ -1,70 +1,25 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import {BtnLanguageList} from "../molecules/btn-language-list";
-import {LinkList} from "../molecules/link-list";
+import {BtnLanguageList, BtnLanguageListStl} from "../molecules/btn-language-list";
+import {LinkList, LinkListStl} from "../molecules/link-list";
 import {LinkItem} from "../atoms/link-item";
 import {ThemeSwitcher} from "../molecules/theme-switcher";
 import {NavLink} from "react-router-dom";
 import {BtnSelectLanguage} from "../atoms/btn-select-language.mobile";
 import {LanguageModal} from "./language-modal.mobile";
+import {Container, Wrapper} from "../../../../shared/layout";
 
 
 const NavbarStl = styled.div`
   position: relative;
-  height: 4.375rem;
-
-  //Mobile styles
-  @media screen and (max-width: 576px){
-    height: 2.5rem;
-  }
+  height: 100%;
 `
 
-const ContainerStl = styled.div`
+const ContainerStl = styled(Container)`
   position: fixed;
   width: 100%;
-  
-  height: 4.375rem;
+  height: 6.481vh;
   background-color: #133F2C;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  //Mobile styles
-  @media screen and (max-width: 576px){
-    position: static;
-    height: 2.5rem;
-  }
-`
-
-const WrapperStl = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 2.5rem;
-  max-width: 1600px;
-  width: 100%;
-
-  //BtnLanguageList || LinkList
-  & > div:nth-child(1) {
-    flex-grow: 1;
-  }
-
-  //LinkStl
-  & > a:nth-child(3) {
-    margin-right: 4.375rem;
-  }
-
-  //Mobile styles
-  @media screen and (max-width: 576px){
-    padding: 0 1.625rem;
-
-    //LinkStl
-    & > a:nth-child(3) {
-      margin-right: 0;
-    }
-  }
 `
 
 const LinkStl = styled(NavLink)`
@@ -72,6 +27,23 @@ const LinkStl = styled(NavLink)`
     text-decoration: none;
   }
 `
+
+const WrapperStl = styled(Wrapper)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 2.5%;
+  
+  ${BtnLanguageListStl}, ${LinkListStl} {
+    flex-grow: 1;
+  }
+  
+  ${LinkStl} {
+    margin-right: 3.95%;
+  }
+`
+
 
 export const Navbar = ({type}) => {
 
@@ -92,23 +64,25 @@ export const Navbar = ({type}) => {
 
   return (
     <NavbarStl>
-      <ContainerStl>
-        <WrapperStl>
-          {list}
+      <ContainerStl flexRowCenter>
+        <Wrapper w1600>
+          <WrapperStl>
+            {list}
 
-          <BtnSelectLanguage
-            onClick={() => {popupToggle ? setPopupToggle(false) : setPopupToggle(true)}}
-          />
-          {
-            popupToggle ? <LanguageModal close={() => {setPopupToggle(false)}} /> : null
-          }
+            <BtnSelectLanguage
+              onClick={() => {popupToggle ? setPopupToggle(false) : setPopupToggle(true)}}
+            />
+            {
+              popupToggle ? <LanguageModal close={() => {setPopupToggle(false)}} /> : null
+            }
 
-          <LinkStl to={"/records"}>
-            <LinkItem text={"Записаться на фотосессию"} />
-          </LinkStl>
+            <LinkStl to={"/records"}>
+              <LinkItem text={"Записаться на фотосессию"} />
+            </LinkStl>
 
-          <ThemeSwitcher />
-        </WrapperStl>
+            <ThemeSwitcher />
+          </WrapperStl>
+        </Wrapper>
       </ContainerStl>
     </NavbarStl>
   )

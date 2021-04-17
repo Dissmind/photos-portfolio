@@ -2,17 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import {BtnLanguage} from "../atoms/btn-language";
 
-const BtnLanguageListStl = styled.div`
+export const BtnLanguageListStl = styled.div`
   display: flex;
-  
-  div:not(:first-child) {
-    margin-left: 1.25rem;
-  }
+  column-gap: 1.25rem;
 
   //Mobile styles
-  @media screen and (max-width: 576px){
-    display: none;
-  }
+  //@media screen and (max-width: 576px){
+  //  display: none;
+  //}
 `
 
 
