@@ -6,15 +6,15 @@ const BtnLanguageListModalStl = styled.div`
   display: none;
 
   //Mobile styles
-  @media screen and (max-width: 576px){
-    width: 100%;
-    height: 100%;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
+  //@media screen and (max-width: 576px){
+  //  width: 100%;
+  //  height: 100%;
+  //  
+  //  display: flex;
+  //  flex-direction: column;
+  //  justify-content: space-between;
+  //  align-items: center;
+  //}
 `
 
 

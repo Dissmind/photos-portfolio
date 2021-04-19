@@ -6,6 +6,7 @@ const LinkItemStl = styled.div`
   font-weight: 400;
   font-size: 2.7777vh;
   color: #FFFFFF;
+  white-space: pre;
   user-select: none;
 
   :hover{

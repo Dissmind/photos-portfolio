@@ -4,7 +4,6 @@ import {BtnLanguage} from "../atoms/btn-language";
 
 export const BtnLanguageListStl = styled.div`
   display: flex;
-  column-gap: 1.966%;
 `
 
 

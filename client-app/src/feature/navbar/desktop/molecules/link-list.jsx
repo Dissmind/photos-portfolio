@@ -5,15 +5,8 @@ import {NavLink} from "react-router-dom";
 
 export const LinkListStl = styled.div`
   display: flex;
-  
-  a:not(:first-child) {
-    margin-left: 4.375rem;
-  }
-
-  //Mobile styles
-  @media screen and (max-width: 576px){
-    display: none;
-  }
+  flex-grow: 1;
+  column-gap: 6.6642%;
 `
 
 const LinkStl = styled(NavLink)`
