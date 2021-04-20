@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Description} from "../atoms/description";
-import {Wrapper, Row} from "../../../shared/layout";
+import {Container, Wrapper} from "../../../shared/layout";
 
 const FooterStl = styled.div`
   display: flex;
@@ -12,20 +12,21 @@ const FooterStl = styled.div`
   background-color: #133F2C;
 `
 
-const RowStl = styled(Row)`
+const ContainerStl = styled(Container)`
   padding: 0 2.5%;
 `
 
 
-export const Footer = ({}) => {
-
+export const Footer = () => {
   return (
     <FooterStl>
-      <Wrapper w1600>
-        <RowStl>
-          <Description text={`© 2021 "Название студии"`} />
-        </RowStl>
-      </Wrapper>
+      <Container w1600>
+        <ContainerStl>
+          <Wrapper>
+            <Description text={`© 2021 "Название студии"`} />
+          </Wrapper>
+        </ContainerStl>
+      </Container>
     </FooterStl>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Column, Container, Wrapper} from "../../../../shared/layout";
+import {Container} from "../../../../shared/layout";
 import {Navbar} from "../../../navbar/desktop/organisms/navbar";
 import {Footer} from "../../../footer/organisms/footer";
 
@@ -34,12 +34,12 @@ const FooterContainerStl = styled(Container)`
 export const HomeTemp = ({navbarChildren, labelChildren, mainContentChildren, footerChildren}) => {
   return (
     <>
-      <Column h100>
+      <Container flex column h100>
         <NavbarContainerStl><Navbar type={'lang'} />{navbarChildren}</NavbarContainerStl>
         <LabelContainerStl>{labelChildren}</LabelContainerStl>
         <MainContentContainerStl>{mainContentChildren}</MainContentContainerStl>
         <FooterContainerStl><Footer />{footerChildren}</FooterContainerStl>
-      </Column>
+      </Container>
     </>
   )
 }

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import BtnSelectLanguageIco from '../../../../attachments/icon/BtnSelectLanguageIco.svg'
 
 const BtnSelectLanguageStl = styled.img`
-  display: none;
+  //display: none;
 
   //Mobile styles
   //@media screen and (max-width: 576px){

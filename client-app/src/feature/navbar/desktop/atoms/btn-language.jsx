@@ -22,17 +22,6 @@ const BtnLanguageStl = styled.div`
     opacity: 0.9;
     transition: .2s;
   }
-
-  //Mobile styles
-  //@media screen and (max-width: 576px){
-  //  width: 10.6875rem;
-  //  height: 1.75rem;
-  //  border: #133F2C 0.0625rem solid;
-  //  border-radius: 0.9375rem;
-  //  font-size: 0.9375rem;
-  //  padding: 0;
-  //  
-  //}
 `
 
 export const BtnLanguage = ({text}) => {

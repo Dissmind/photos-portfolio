@@ -2,11 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import {LinkItem} from "../atoms/link-item";
 import {NavLink} from "react-router-dom";
+import {Wrapper} from "../../../../shared/layout";
 
-export const LinkListStl = styled.div`
+const LinkListStl = styled.div`
   display: flex;
   flex-grow: 1;
-  column-gap: 6.6642%;
+
+  div:not(:last-child){
+    margin-right: 6.4814vmin;
+    //TODO: this
+  }
 `
 
 const LinkStl = styled(NavLink)`
@@ -16,14 +21,46 @@ const LinkStl = styled(NavLink)`
 `
 
 
-export const LinkList = () => (
+export const LinkList = () => {
+
+  const LinksArray = [
+    {
+      title: 'Главная',
+      url: '/'
+    },
+    {
+      title: 'Обо мне',
+      url: '/about'
+    },
+    {
+      title: 'Портфолио',
+      url: '/portfolio'
+    },
+    {
+      title: 'Контакты',
+      url: '/records'
+    },
+    {
+      title: 'Цены',
+      url: '/'
+    }
+  ]
+
+  return(
     <LinkListStl>
-      <LinkStl to={"/"}><LinkItem text={"Главная"} /></LinkStl>
-      <LinkStl to={"/about"}><LinkItem text={"Обо мне"} /></LinkStl>
-      <LinkStl to={"/portfolio"}><LinkItem text={"Портфолио"} /></LinkStl>
-      <LinkStl to={"/records"}><LinkItem text={"Контакты"} /></LinkStl>
-      <LinkStl to={"/"}><LinkItem text={"Цены"} /></LinkStl>
+
+      {
+        LinksArray.map((item) => (
+          <Wrapper>
+            <LinkStl to={item.url}>
+              <LinkItem text={item.title} />
+            </LinkStl>
+          </Wrapper>
+        ))
+      }
+
     </LinkListStl>
-)
+  )
+}
 
 //TODO: роутер для "Цены"
