@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components"
+import {media} from "../../../../shared/media-queries";
 
 const MenuItemsStl = styled.div`
   color: #FFFFFF;
-  font-size: 2.8125rem;
-  line-height: 3.375rem;
+  font-size: 4.1666vh;
+  line-height: 5vh;
   font-family: 'Solena', serif;
   font-weight: 400;
   font-style: normal;
@@ -15,17 +16,10 @@ const MenuItemsStl = styled.div`
     color: #ccc;
     transition: .2s;
   }
-
-  //Mobile styles
-  @media screen and (max-width: 576px){
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-
-    :hover{
-      cursor: default;
-      color: #FFFFFF;
-      transition: none;
-    }
+  
+  ${media.desktop} {
+    font-size: 2.8125vw;
+    line-height: 3.375vw;
   }
 `
 

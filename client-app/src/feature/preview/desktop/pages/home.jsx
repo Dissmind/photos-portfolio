@@ -48,6 +48,6 @@ export const Home = () => (
       <MainContent />
     </WrapperStl>
 
-    {/*<Footer />*/}
+    <Footer />
   </HomeStl>
 )

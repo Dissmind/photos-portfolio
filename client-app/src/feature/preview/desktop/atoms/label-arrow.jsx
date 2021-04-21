@@ -1,43 +1,59 @@
 import React from "react";
 import styled from "styled-components";
+import {Container} from "../../../../shared/layout";
+import {media} from "../../../../shared/media-queries";
 
 import Arrow from "../../../../attachments/icon/arrow.svg"
 
-const LabelArrowStl = styled.div`
-  display: flex;
+const LabelArrowStl = styled(Container)`
+  height: 100%;
+`
+
+const ContainerStl = styled(Container)`
+  ${Container} {
+    margin-left: 14.2592vh;
+  }
+
+  ${media.desktop} {
+    ${Container} {
+      margin-left: 9.625vw;
+    }
+  }
 `
 
 const ArrowStl = styled.img`
-  height: 3.875rem;
+  height: 5.7407vh;
   user-select: none;
-
-  //Mobile styles
-  @media screen and (max-width: 576px){
-    height: 1.5rem;
+  
+  ${media.desktop} {
+    height: 3.875vw;
   }
 `
 
 const LabelStl = styled.div`
   font-family: 'Lemon Tuesday', serif;
   font-weight: 400;
-  font-size: 1.875rem;
+  font-size: 2.7777vh;
   color: #164C34;
-  padding-top: 2.5rem;
-  padding-left: 0.3125rem;
-
-  //Mobile styles
-  @media screen and (max-width: 576px){
-    font-size: 0.9375rem;
-    padding-top: 0.875rem;
-    padding-left: 0.25rem;
+  padding-top: 3.7037vh;
+  padding-left: 0.4629vh;
+  
+  ${media.desktop} {
+    font-size: 1.875vw;
+    padding-top: 2.5vw;
+    padding-left: 0.3125vw;
   }
 `
 
 export const LabelArrow = ({text}) => {
   return(
-    <LabelArrowStl>
-      <ArrowStl src={Arrow} alt={"Arrow"} />
-      <LabelStl>{text}</LabelStl>
+    <LabelArrowStl flex row center>
+      <ContainerStl limiter>
+        <Container flex>
+          <ArrowStl src={Arrow} alt={"Arrow"} />
+          <LabelStl>{text}</LabelStl>
+        </Container>
+      </ContainerStl>
     </LabelArrowStl>
   )
 }

@@ -1,70 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom"
-import {MenuCard} from "./menu-card.mobile";
 import {MenuItems} from "../atoms/menu-items";
+import {Container} from "../../../../shared/layout";
+import {media} from "../../../../shared/media-queries";
 
-const MenuStl = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  position: relative;
-
-  background-color: #133F2C;
-  width: 13.125rem;
-  height: 24.375rem;
-  border-radius: 0.625rem;
-  padding-top: 3.125rem;
-  padding-left: 1.875rem;
-
-  //LinkStl
-  a:not(:first-child){
-    margin-top: 0.625rem;
-  }
-
-  //Mobile styles
-  @media screen and (max-width: 576px){
-    display: none;
-  }
-`
-
-const MobileMenuStl = styled.div`
-  display: none;
-
-  //Mobile styles
-  @media screen and (max-width: 576px){
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    margin-top: 1.875rem;
-
-    //LinkStl in MenuCard
-    a:not(:first-child){
-      margin-top: 0.625rem;
-    }
-  }
-`
-
-const MenuBackgroundStl = styled.div`
-  position: absolute;
-  z-index: -1;
-  top: 0.9375rem;
-  left: 0.875rem;
-
-  width: 13.125rem;
-  height: 24.375rem;
-  background-color: #FFFFFF;
-  border-radius: 0.625rem;
-`
-
-const WrapperStl = styled.div`
-  width: 14rem;
-  height: 25.3125rem;
-
-  //Mobile styles
-  @media screen and (max-width: 576px){
-    width: auto;
-    height: auto;
+export const MenuContainerStl = styled(Container)`
+  width: 20.7407vh;
+  height: 37.5vh;
+  
+  ${media.desktop} {
+    width: 14vw;
+    height: 25.3125vw;
   }
 `
 
@@ -73,6 +20,55 @@ const LinkStl = styled(NavLink)`
     text-decoration: none;
   }  
 `
+
+const MenuStl = styled(Container)`
+  position: relative;
+
+  background-color: #133F2C;
+  width: 19.4444vh;
+  height: 36.1111vh;
+  border-radius: 0.9259vh;
+  padding-top: 4.6296vh;
+  padding-left: 2.7777vh;
+
+  ${LinkStl} {
+    margin-top: 0.9259vh;
+  }
+  
+  ${media.desktop} {
+    width: 13.125vw;
+    height: 24.375vw;
+    border-radius: 0.625vw;
+    padding-top: 3.125vw;
+    padding-left: 1.875vw;
+
+    ${LinkStl} {
+      margin-top: 0.625vw;
+    }
+  }
+`
+
+const MenuBackgroundStl = styled.div`
+  position: absolute;
+  z-index: -1;
+  top: 1.3888vh;
+  left: 1.2962vh;
+
+  width: 19.4444vh;
+  height: 36.1111vh;
+  background-color: #FFFFFF;
+  border-radius: 0.9259vh;
+  
+  ${media.desktop} {
+    top: 0.9375vw;
+    left: 0.875vw;
+    
+    width: 13.125vw;
+    height: 24.375vw;
+    border-radius: 0.625vw;
+  }
+`
+
 
 export const Menu = () => {
 
@@ -88,20 +84,21 @@ export const Menu = () => {
       img: ''
     },
     {
-      title: 'Цены',
-      url: '/',
+      title: 'Контакты',
+      url: '/records',
       img: ''
     },
     {
-      title: 'Контакты',
-      url: '/records',
+      title: 'Цены',
+      url: '/',
       img: ''
     }
   ]
 
   return(
-    <WrapperStl>
-      <MenuStl>
+    <MenuContainerStl>
+      <MenuStl flex column>
+
         {
           MenuItemsList.map((Item) => (
             <LinkStl to={Item.url}>
@@ -112,19 +109,7 @@ export const Menu = () => {
 
         <MenuBackgroundStl/>
       </MenuStl>
-
-      <MobileMenuStl>
-        {
-          MenuItemsList.map((MenuItem) => (
-            <MenuCard
-              title={MenuItem.title}
-              img={MenuItem.img}
-              link={MenuItem.url}
-            />
-          ))
-        }
-      </MobileMenuStl>
-    </WrapperStl>
+    </MenuContainerStl>
   )
 }
 

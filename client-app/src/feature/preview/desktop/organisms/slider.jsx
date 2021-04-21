@@ -1,22 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import Carousel from "react-bootstrap/Carousel";
+import {media} from "../../../../shared/media-queries";
 
 import image1 from "../../../../attachments/photos/home1.jpg"
 import image2 from "../../../../attachments/photos/home2.jpg"
 
 const SliderStl = styled.div`
-  width: 73.375rem;
-  height: 45.5625rem;
+  width: 108.7037vh;
+  height: 100%;
   user-select: none;
   
-  & > div:first-child{
-    padding: 0;
-  }
-
-  //Mobile styles
-  @media screen and (max-width: 576px){
-    display: none;
+  ${media.desktop} {
+    width: 73.375vw;
   }
 `
 

@@ -1,37 +1,42 @@
 import React from "react";
 import styled from "styled-components";
-import {Menu} from "../molecules/menu";
+import {Menu, MenuContainerStl} from "../molecules/menu";
 import {Slider} from "./slider";
+import {media} from "../../../../shared/media-queries";
+import {Container} from "../../../../shared/layout";
 
 const MainContentStl = styled.div`
   position: relative;
-  
-  width: 81.625rem;
+
+  width: 120.9259vh;
+  height: 100%;
   display: flex;
   justify-content: flex-end;
   
-  //Menu
-  & > div:nth-child(1){
+  ${MenuContainerStl} {
     position: absolute;
     z-index: 1;
     left: 0;
-    top: 5.4375rem;
-  }
-
-  //Mobile styles
-  @media screen and (max-width: 576px){
-    width: auto;
-
-    //Menu
-    & > div:nth-child(1){
-      position: static;
+    top: 8.0555vh;
+    
+    ${media.desktop} {
+      top: 5.4375vw;
     }
+  }
+  
+  ${media.desktop} {
+    width: 81.625vw;
+
   }
 `
 
 export const MainContent = () => (
-  <MainContentStl>
-    <Menu />
-    <Slider />
-  </MainContentStl>
+  <Container limiter>
+    <Container flex row center>
+      <MainContentStl>
+        <Menu />
+        <Slider />
+      </MainContentStl>
+    </Container>
+  </Container>
 )
