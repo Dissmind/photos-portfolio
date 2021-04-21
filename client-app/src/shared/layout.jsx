@@ -3,9 +3,9 @@ import styled, {css} from 'styled-components'
 
 
 export const Container = styled.div`
-  ${props => props.w1600 && css`
-    width: 148.1481vh;
-    max-width: 1600px;
+  ${props => props.limiter && css`
+    width: 100%;
+    max-width: 148.1481vmin;
   `}
   
   
@@ -21,6 +21,14 @@ export const Container = styled.div`
       ${props => props.h100 && css`
         height: 100vh;
       `}
+
+
+
+
+      ${props => props.fit && css`
+        min-width: 100%;
+        width: 148.1481vmin;
+      `}
     `}
 
     //Rows
@@ -28,6 +36,7 @@ export const Container = styled.div`
       flex-direction: row;
     `}
 
+    //Other mods
     ${props => props.center && css`
       align-items: center;
       justify-content: center;
