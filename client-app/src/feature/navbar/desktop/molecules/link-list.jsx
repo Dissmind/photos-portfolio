@@ -3,14 +3,20 @@ import styled from 'styled-components'
 import {LinkItem} from "../atoms/link-item";
 import {NavLink} from "react-router-dom";
 import {Wrapper} from "../../../../shared/layout";
+import {media} from "../../../../shared/media-queries";
 
 const LinkListStl = styled.div`
   display: flex;
   flex-grow: 1;
 
   div:not(:last-child){
-    margin-right: 6.4814vmin;
-    //TODO: this
+    margin-right: 6.4814vh;
+  }
+  
+  ${media.desktop} {
+    div:not(:last-child){
+      margin-right: 4.375vw;
+    }
   }
 `
 

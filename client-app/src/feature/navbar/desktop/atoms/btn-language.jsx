@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {media} from "../../../../shared/media-queries";
 
 const BtnLanguageStl = styled.div`
   display: flex;
@@ -21,6 +22,14 @@ const BtnLanguageStl = styled.div`
     cursor: pointer;
     opacity: 0.9;
     transition: .2s;
+  }
+  
+  ${media.desktop} {
+    width: 4.1875vw;
+    height: 2.1875vw;
+    border-radius: 1.125vw;
+    padding-bottom: 0.3125vw;
+    font-size: 1.875vw;
   }
 `
 

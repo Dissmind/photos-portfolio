@@ -8,6 +8,7 @@ import {NavLink} from "react-router-dom";
 import {BtnSelectLanguage} from "../atoms/btn-select-language.mobile";
 import {LanguageModal} from "./language-modal.mobile";
 import {Container, Wrapper} from "../../../../shared/layout";
+import {media} from "../../../../shared/media-queries";
 
 
 const NavbarStl = styled(Container)`
@@ -27,8 +28,11 @@ const ContainerStl = styled(Container)`
 `
 
 const WrapperStl = styled(Wrapper)`
-  margin-right: 5.5555vmin;
-  margin-left: 2vmin;
+  margin-right: 5.5555vh;
+  
+  ${media.desktop} {
+    margin-right: 3.75vw;
+  }
 `
 
 const LinkStl = styled(NavLink)`

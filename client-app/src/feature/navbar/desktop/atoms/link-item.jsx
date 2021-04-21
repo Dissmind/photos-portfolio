@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {media} from "../../../../shared/media-queries";
 
 const LinkItemStl = styled.div`
   font-family: 'PentaLight', serif;
@@ -13,6 +14,10 @@ const LinkItemStl = styled.div`
     cursor: pointer;
     color: #ccc;
     transition: .2s;
+  }
+  
+  ${media.desktop} {
+    font-size: 1.875vw;
   }
 `
 

@@ -1,16 +1,26 @@
 import {css} from "styled-components";
 
 
-// //Mobile styles
-// @media screen and (max-width: 576px){
-//
-// }
+export const media = {
+  desktop: '@media screen and (max-width: 148.1481vmin)',
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 export const MediaQueries = css`
-  
   //Mobile 320px-576px
   @media screen and (min-width: 320px){
     html {
