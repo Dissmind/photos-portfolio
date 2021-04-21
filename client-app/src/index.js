@@ -8,12 +8,12 @@ import {Provider} from "react-redux";
 import {store} from "./redux/store";
 
 import {Home} from "./feature/preview/desktop/pages/home";
-import {About} from "./feature/about/pages/about";
+import {About} from "./feature/about/desktop/pages/about";
 import {Portfolio} from "./feature/portfolio/pages/portfolio";
 import {Records} from "./feature/records/pages/records";
 import {ThemeListItems} from "./feature/portfolio/molecules/theme-link-list";
 import {Photos} from "./feature/photos/pages/photos";
-import {HomeTemp} from "./feature/preview/desktop/templates/home-temp";
+import {AboutTemp} from "./feature/about/desktop/templates/about-temp";
 
 
 const app = (
@@ -21,14 +21,8 @@ const app = (
     <GlobalStyle />
 
     <BrowserRouter>
-
-      {/*del*/}
-      <Route path={"/"} exact render={() => <HomeTemp />} />
-      {/**/}
-
-
-      {/*<Route path={"/"} exact render={() => <Home />} />*/}
-      <Route path={"/about"} exact render={() => <About />} />
+      <Route path={"/"} exact render={() => <Home />} />
+      <Route path={"/about"} exact render={() => <AboutTemp />} />
       <Route path={"/portfolio"} exact render={() => <Portfolio />} />
 
       {ThemeListItems.map((ThemeListItem) => (

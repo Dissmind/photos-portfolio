@@ -1,32 +1,46 @@
 import React from "react";
 import styled from "styled-components";
+import {Container} from "../../../../shared/layout";
+import {media} from "../../../../shared/media-queries";
 
-const MainLabelStl = styled.div`
-  width: 48.875rem;
-  height: 41.25rem;
-  display: flex;
-  flex-direction: column;
+const MainLabelStl = styled(Container)`
+  width: 72.4074vh;
+  height: 100%;
   align-items: center;
   justify-content: space-between;
+  
+  ${media.desktop} {
+    width: 48.875vw;
+  }
 `
 
 const HorizontalLineStl = styled.div`
-  width: 36.4375rem;
-  height: 0.3125rem;
+  width: 53.9814vh;
+  height: 0.4629vh;
   background-color: #133F2C;
+  
+  ${media.desktop} {
+    width: 36.4375vw;
+    height: 0.3125vw;
+  }
 `
 
 const MainLabelTextStl = styled.div`
   font-family: 'PentaLight', serif;
   font-weight: 400;
-  line-height: 2.8125rem;
+  line-height: 4.1666vh;
   text-align: center;
-  font-size: 2.8125rem;
+  font-size: 4.1666vh;
   color: #14402D;
+  
+  ${media.desktop} {
+    line-height: 2.8125vw;
+    font-size: 2.8125vw;
+  }
 `
 
 export const MainLabel = () => (
-  <MainLabelStl>
+  <MainLabelStl flex column>
     <HorizontalLineStl />
 
     <MainLabelTextStl>

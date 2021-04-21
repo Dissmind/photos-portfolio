@@ -3,8 +3,8 @@ import styled from "styled-components";
 import {VerticalLabel} from "../atoms/vertical-label";
 import {MainPhoto} from "../atoms/main-photo";
 import {MainLabel} from "../atoms/main-label";
-import {Navbar} from "../../navbar/desktop/organisms/navbar";
-import {Footer} from "../../footer/organisms/footer";
+import {Navbar} from "../../../navbar/desktop/organisms/navbar";
+import {Footer} from "../../../footer/organisms/footer";
 
 const AboutStl = styled.div`
   min-height: 100vh;
