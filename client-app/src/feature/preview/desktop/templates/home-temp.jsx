@@ -25,6 +25,10 @@ const LabelContainerStl = styled(Container)`
 const MainContentContainerStl = styled(Container)`
   height: 67.5926vh;
   margin-bottom: auto;
+  
+  ${media.desktop} {
+    height: 45.625vw;
+  }
 `
 
 const FooterContainerStl = styled(Container)`

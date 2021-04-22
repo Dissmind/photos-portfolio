@@ -13,7 +13,6 @@ import {Portfolio} from "./feature/portfolio/pages/portfolio";
 import {Records} from "./feature/records/pages/records";
 import {ThemeListItems} from "./feature/portfolio/molecules/theme-link-list";
 import {Photos} from "./feature/photos/pages/photos";
-import {AboutTemp} from "./feature/about/desktop/templates/about-temp";
 
 
 const app = (
@@ -22,7 +21,10 @@ const app = (
 
     <BrowserRouter>
       <Route path={"/"} exact render={() => <Home />} />
-      <Route path={"/about"} exact render={() => <AboutTemp />} />
+      <Route path={"/about"} exact render={() => <About />} />
+
+
+
       <Route path={"/portfolio"} exact render={() => <Portfolio />} />
 
       {ThemeListItems.map((ThemeListItem) => (

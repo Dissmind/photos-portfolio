@@ -27,7 +27,7 @@ const MainContentStl = styled(Container)`
 
 export const MainContent = ({}) => {
   return (
-    <MainContentStl flex row center>
+    <MainContentStl limiter flex row center>
       <VerticalLabel text={"Обо мне"} />
       <MainPhoto />
       <MainLabel />
