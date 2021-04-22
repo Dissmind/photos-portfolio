@@ -3,23 +3,24 @@ import styled from 'styled-components'
 import {FormInput} from "../atoms/form-input";
 import {BtnSend, BtnSendStl} from "../atoms/btn-send";
 import {media} from "../../../../shared/media-queries";
-import {Container, Wrapper} from "../../../../shared/layout";
+import {Container} from "../../../../shared/layout";
 
 
-const FormStl = styled.div`
+const FormStl = styled(Container)`
   position: relative;
-  width: 45.3125rem;
-  background-color: #14402D;
-  
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding: 2.5rem 2.8125rem 3.125rem;
-  
 
+  width: 67.1296vh;
+  padding: 3.7037vh 4.1666vh 4.6296vh;
+  background-color: #14402D;
   
   ${BtnSendStl} {
     align-self: center;
+  }
+  
+  ${media.desktop} {
+    width: 45.3125vw;
+    padding: 2.5vw 2.8125vw 3.125vw;
   }
 `
 
@@ -57,7 +58,7 @@ const ContainerStl = styled(Container)`
 
 export const Form = () => {
   return (
-    <FormStl>
+    <FormStl flex column>
       <LabelStl>
         Заполните анкету и я перезвоню вам для уточнения даты и времени!
       </LabelStl>
