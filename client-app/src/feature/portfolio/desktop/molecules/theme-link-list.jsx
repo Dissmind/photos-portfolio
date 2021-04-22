@@ -3,14 +3,19 @@ import styled from 'styled-components'
 import {ThemeLinkItem} from "../atoms/theme-link-item";
 import {NavLink} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {setTitle} from "../../photos/photos.slice";
+import {setTitle} from "../../../photos/photos.slice";
 
 const ThemeLinkListStl = styled.div`
-  width: 68.9375rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 3.125rem normal;
+  //width: 68.9375rem;
+  //display: flex;
+  //flex-wrap: wrap;
+  //justify-content: space-between;
+  //gap: 3.125rem normal;
+
+
+  column-count: 3;
+  column-gap: 100px;
+  row-gap: 100px;
 `
 
 const LinkStl = styled(NavLink)`

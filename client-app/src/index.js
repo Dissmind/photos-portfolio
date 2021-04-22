@@ -9,10 +9,11 @@ import {store} from "./redux/store";
 
 import {Home} from "./feature/preview/desktop/pages/home";
 import {About} from "./feature/about/desktop/pages/about";
-import {Portfolio} from "./feature/portfolio/pages/portfolio";
+import {Portfolio} from "./feature/portfolio/desktop/pages/portfolio";
 import {Records} from "./feature/records/desktop/pages/records";
-import {ThemeListItems} from "./feature/portfolio/molecules/theme-link-list";
+import {ThemeListItems} from "./feature/portfolio/desktop/molecules/theme-link-list";
 import {Photos} from "./feature/photos/pages/photos";
+import {PortfolioTemp} from "./feature/portfolio/desktop/templates/portfolio-temp";
 
 
 const app = (
@@ -25,7 +26,7 @@ const app = (
 
 
 
-      <Route path={"/portfolio"} exact render={() => <Portfolio />} />
+      <Route path={"/portfolio"} exact render={() => <PortfolioTemp />} />
 
       {ThemeListItems.map((ThemeListItem) => (
         <Route path={`/portfolio/${ThemeListItem.theme.toLowerCase().split(' ').join('-')}`}

@@ -4,7 +4,7 @@ import {Navbar} from "../../navbar/desktop/organisms/navbar";
 import {BtnReturn} from "../atoms/btn-return";
 import {Title} from "../atoms/title";
 import {useDispatch, useSelector} from "react-redux";
-import {ThemeListItems} from "../../portfolio/molecules/theme-link-list";
+import {ThemeListItems} from "../../portfolio/desktop/molecules/theme-link-list";
 import {selectGroupTitle, selectPhotosLinks, setPhotos, setTitle} from "../photos.slice";
 import {getPhotosMock} from "../../../tests/mocks/photosMock";
 import {sortPhotos} from "./sort-photos";

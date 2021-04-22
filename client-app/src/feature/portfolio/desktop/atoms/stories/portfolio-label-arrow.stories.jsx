@@ -1,6 +1,6 @@
 import React from "react";
 
-import {GlobalStyle} from "../../../../shared/global-components"
+import {GlobalStyle} from "../../../../../shared/global-components"
 import {PortfolioLabelArrow} from "../portfolio-label-arrow";
 
 export default {

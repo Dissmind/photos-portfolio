@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Navbar} from "../../navbar/desktop/organisms/navbar";
+import {Navbar} from "../../../navbar/desktop/organisms/navbar";
 import {Label} from "../atoms/label";
 import {ThemeLinkList} from "../molecules/theme-link-list";
 import {PortfolioLabelArrow} from "../atoms/portfolio-label-arrow";
-import {Footer} from "../../footer/organisms/footer";
+import {Footer} from "../../../footer/organisms/footer";
 
 const PortfolioStl = styled.div`
   min-height: 100vh;
