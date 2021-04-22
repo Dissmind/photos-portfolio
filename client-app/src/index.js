@@ -10,9 +10,10 @@ import {store} from "./redux/store";
 import {Home} from "./feature/preview/desktop/pages/home";
 import {About} from "./feature/about/desktop/pages/about";
 import {Portfolio} from "./feature/portfolio/pages/portfolio";
-import {Records} from "./feature/records/pages/records";
+import {Records} from "./feature/records/desktop/pages/records";
 import {ThemeListItems} from "./feature/portfolio/molecules/theme-link-list";
 import {Photos} from "./feature/photos/pages/photos";
+import {RecordsTemp} from "./feature/records/desktop/templates/records-temp";
 
 
 const app = (
@@ -32,7 +33,7 @@ const app = (
                exact render={() => <Photos />} />
       ))}
 
-      <Route path={"/records"} exact render={() => <Records />} />
+      <Route path={"/records"} exact render={() => <RecordsTemp />} />
     </BrowserRouter>
   </Provider>
 )

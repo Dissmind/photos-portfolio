@@ -1,7 +1,7 @@
 import React from "react";
 
 import {FormInput} from "../form-input";
-import {GlobalStyle} from "../../../../shared/global-components";
+import {GlobalStyle} from "../../../../../shared/global-components";
 
 export default {
   title: 'Records/Atoms/FormInput',

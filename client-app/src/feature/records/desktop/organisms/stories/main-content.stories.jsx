@@ -1,6 +1,6 @@
 import React from "react";
 
-import {GlobalStyle} from "../../../../shared/global-components"
+import {GlobalStyle} from "../../../../../shared/global-components"
 import {MainContent} from "../main-content";
 
 export default {

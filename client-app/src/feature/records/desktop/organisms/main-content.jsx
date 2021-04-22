@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import {Form} from "../molecules/form";
 
-import BgImg1 from "../../../attachments/photos/RecordsBg1.svg"
-import BgImg2 from "../../../attachments/photos/RecordsBg2.svg"
+import BgImg1 from "../../../../attachments/photos/RecordsBg1.svg"
+import BgImg2 from "../../../../attachments/photos/RecordsBg2.svg"
 
 const MainContentStl = styled.div`
   width: 66.5rem;

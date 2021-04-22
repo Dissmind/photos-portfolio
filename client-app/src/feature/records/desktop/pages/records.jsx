@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Navbar} from "../../navbar/desktop/organisms/navbar";
+import {Navbar} from "../../../navbar/desktop/organisms/navbar";
 import {MainContent} from "../organisms/main-content";
 import {RecordsVerticalLabel} from "../atoms/records-vertical-label";
-import {Footer} from "../../footer/organisms/footer";
+import {Footer} from "../../../footer/organisms/footer";
 
 const RecordsStl = styled.div`
   min-height: 100vh;
