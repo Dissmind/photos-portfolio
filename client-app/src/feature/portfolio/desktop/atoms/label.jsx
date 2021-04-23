@@ -19,6 +19,6 @@ const LabelStl = styled(Container)`
 
 export const Label = ({}) => {
   return (
-    <LabelStl flex center>Темы портфолио</LabelStl>
+    <LabelStl limiter flex center>Темы портфолио</LabelStl>
   )
 }

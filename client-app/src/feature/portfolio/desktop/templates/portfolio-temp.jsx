@@ -6,6 +6,7 @@ import {Navbar} from "../../../navbar/desktop/organisms/navbar";
 import {Footer} from "../../../footer/organisms/footer";
 import {Label} from "../atoms/label";
 import {ThemeLinkList} from "../molecules/theme-link-list";
+import {PortfolioLabelArrow} from "../atoms/portfolio-label-arrow";
 
 const NavbarContainerStl = styled(Container)`
   height: 6.481vh;
@@ -42,6 +43,8 @@ const MainContentContainerStl = styled(Container)`
 const LabelContainerStl = styled(Container)`
   height: 7.8704vh;
   margin-bottom: auto;
+  background-color: #ccc;
+
 
   ${media.desktop} {
     height: 5.3125vw;
@@ -68,7 +71,7 @@ export const PortfolioTemp = ({navbarChildren, titleChildren, mainContentChildre
 
         <MainContentContainerStl flex row center><ThemeLinkList />{mainContentChildren}</MainContentContainerStl>
 
-        <LabelContainerStl>{labelChildren}</LabelContainerStl>
+        <LabelContainerStl><PortfolioLabelArrow />{labelChildren}</LabelContainerStl>
 
         <FooterContainerStl><Footer />{footerChildren}</FooterContainerStl>
       </Container>

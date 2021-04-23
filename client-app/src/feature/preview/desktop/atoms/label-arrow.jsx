@@ -9,17 +9,7 @@ const LabelArrowStl = styled(Container)`
   height: 100%;
 `
 
-const ContainerStl = styled(Container)`
-  ${Container} {
-    margin-left: 14.2592vh;
-  }
-
-  ${media.desktop} {
-    ${Container} {
-      margin-left: 9.625vw;
-    }
-  }
-`
+export const ContainerStl = styled(Container)``
 
 const ArrowStl = styled.img`
   height: 5.7407vh;
@@ -47,12 +37,10 @@ const LabelStl = styled.div`
 
 export const LabelArrow = ({text}) => {
   return(
-    <LabelArrowStl flex row center>
-      <ContainerStl limiter>
-        <Container flex>
-          <ArrowStl src={Arrow} alt={"Arrow"} />
-          <LabelStl>{text}</LabelStl>
-        </Container>
+    <LabelArrowStl limiter>
+      <ContainerStl flex row>
+        <ArrowStl src={Arrow} alt={"Arrow"} />
+        <LabelStl>{text}</LabelStl>
       </ContainerStl>
     </LabelArrowStl>
   )

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Container} from "../../../../shared/layout";
 import {media} from "../../../../shared/media-queries";
+import {ContainerStl} from "../atoms/label-arrow";
 
 const NavbarContainerStl = styled(Container)`
   height: 6.481vh;
@@ -16,9 +17,18 @@ const NavbarContainerStl = styled(Container)`
 const LabelContainerStl = styled(Container)`
   height: 7.8704vh;
   margin-bottom: auto;
+  background-color: #ccc;
   
   ${media.desktop} {
     height: 5.3125vw;
+  }
+  
+  ${ContainerStl} {
+    margin-left: 14.2592vh;
+
+    ${media.desktop} {
+      margin-left: 9.625vw;
+    }
   }
 `
 
@@ -46,7 +56,7 @@ export const HomeTemp = ({navbarChildren, labelChildren, mainContentChildren, fo
       <Container flex column h100>
         <NavbarContainerStl>{navbarChildren}</NavbarContainerStl>
 
-        <LabelContainerStl>{labelChildren}</LabelContainerStl>
+        <LabelContainerStl flex row center>{labelChildren}</LabelContainerStl>
 
         <MainContentContainerStl flex row center>{mainContentChildren}</MainContentContainerStl>
 
