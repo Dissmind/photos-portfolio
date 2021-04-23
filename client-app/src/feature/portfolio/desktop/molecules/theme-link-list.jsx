@@ -4,18 +4,17 @@ import {ThemeLinkItem} from "../atoms/theme-link-item";
 import {NavLink} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {setTitle} from "../../../photos/photos.slice";
+import {Container} from "../../../../shared/layout";
+import {media} from "../../../../shared/media-queries";
 
-const ThemeLinkListStl = styled.div`
-  //width: 68.9375rem;
-  //display: flex;
-  //flex-wrap: wrap;
-  //justify-content: space-between;
-  //gap: 3.125rem normal;
-
-
-  column-count: 3;
-  column-gap: 100px;
-  row-gap: 100px;
+const ThemeLinkListStl = styled(Container)`
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 4.6296vh 9.2592vh;
+  
+  ${media.desktop} {
+    grid-gap: 3.125vw 6.25vw;
+  }
 `
 
 const LinkStl = styled(NavLink)`

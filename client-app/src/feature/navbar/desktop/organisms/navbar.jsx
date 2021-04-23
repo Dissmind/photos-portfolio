@@ -12,11 +12,6 @@ import {media} from "../../../../shared/media-queries";
 
 
 const NavbarStl = styled(Container)`
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1;
-
   width: 100%;
   height: 100%;
   background-color: #133F2C;

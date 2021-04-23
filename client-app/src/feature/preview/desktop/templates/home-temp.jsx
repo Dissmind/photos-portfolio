@@ -17,7 +17,6 @@ const NavbarContainerStl = styled(Container)`
 const LabelContainerStl = styled(Container)`
   height: 7.8704vh;
   margin-bottom: auto;
-  background-color: #ccc;
   
   ${media.desktop} {
     height: 5.3125vw;

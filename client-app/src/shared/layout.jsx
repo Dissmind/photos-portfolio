@@ -10,6 +10,13 @@ export const Container = styled.div`
     max-width: 148.1481vmin;
   `}
   
+  //Sticky Navbar
+  ${props => props.sticky && css`
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  `}
+  
   
   /*  Flex layouts  */
   
@@ -21,7 +28,8 @@ export const Container = styled.div`
       flex-direction: column;
 
       ${props => props.h100 && css`
-        height: 100vh;
+        height: 100%;
+        min-height: 100vh;
       `}
     `}
 
