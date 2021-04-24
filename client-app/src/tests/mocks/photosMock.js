@@ -34,7 +34,7 @@ const photosError = {
 }
 
 export const getPhotosMock = (group) => {
-   let result
+  let result
 
   console.log("group: " + group)
 

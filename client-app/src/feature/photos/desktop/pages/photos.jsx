@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react'
 import styled from 'styled-components'
-import {Navbar} from "../../navbar/desktop/organisms/navbar";
+import {Navbar} from "../../../navbar/desktop/organisms/navbar";
 import {BtnReturn} from "../atoms/btn-return";
 import {Title} from "../atoms/title";
 import {useDispatch, useSelector} from "react-redux";
-import {ThemeListItems} from "../../portfolio/desktop/molecules/theme-link-list";
-import {selectGroupTitle, selectPhotosLinks, setPhotos, setTitle} from "../photos.slice";
-import {getPhotosMock} from "../../../tests/mocks/photosMock";
+import {ThemeListItems} from "../../../portfolio/desktop/molecules/theme-link-list";
+import {selectGroupTitle, selectPhotosLinks, setPhotos, setTitle} from "../../photos.slice";
+import {getPhotosMock} from "../../../../tests/mocks/photosMock";
 import {sortPhotos} from "./sort-photos";
-import {Footer} from "../../footer/organisms/footer";
+import {Footer} from "../../../footer/organisms/footer";
 
 const PhotosStl = styled.div`
   min-height: 100vh;
@@ -95,7 +95,6 @@ export const Photos = () => {
 
     dispatch(setPhotos({photos}))
   }, [])
-
 
 
   return (
