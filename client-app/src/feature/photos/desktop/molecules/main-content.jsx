@@ -10,9 +10,12 @@ import {ThemeListItems} from "../../../portfolio/desktop/molecules/theme-link-li
 
 const MainContentStl = styled(Container)`
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(2, min-content);
+  
   height: 100%;
+  
+  //place-items: center;
+  justify-content: center;
 `
 
 const SmallPhotoWrapperStl = styled(Wrapper)`
@@ -23,6 +26,7 @@ const SmallPhotoWrapperStl = styled(Wrapper)`
 const LargePhotoWrapperStl = styled(Wrapper)`
   width: 73.75rem;
   height: 45rem;
+  grid-column: 1/3;
 `
 
 const PhotoStl = styled.img`
