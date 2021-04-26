@@ -26,4 +26,12 @@ export const { setTitle, setPhotos } = photosSlice.actions
 export const selectGroupTitle = (state) => state.photos.groupTitle
 export const selectPhotosLinks = (state) => state.photos.photos
 
+export const selectSmallPhotosCount = (state) => state.photos.photos.reduce((total, item) => {
+  if (item.size === 'small') {
+    total += 1
+  }
+
+  return total
+}, 0)
+
 export const photosReducer = photosSlice.reducer
