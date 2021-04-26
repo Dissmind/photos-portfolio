@@ -25,9 +25,23 @@ const photosMock = [
         link: imgDomain + 'AL2A7228.jpg',
         size: 'small'
       },
+      {
+        link: imgDomain + 'AL2A7228.jpg',
+        size: 'small'
+      },
+      {
+        link: imgDomain + 'AL2A7228.jpg',
+        size: 'small'
+      },      {
+        link: imgDomain + 'AL2A7228.jpg',
+        size: 'small'
+      },
     ]
   },
 ]
+
+
+
 
 const photosError = {
   errorMessage: 'Error'
