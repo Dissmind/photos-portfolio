@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {BtnLanguageListModal} from "../molecules/btn-language-list-modal.mobile";
+import {BtnLanguageListModal} from "./btn-language-list-modal.mobile";
 
 const LanguageModalStl = styled.div`
   position: absolute;

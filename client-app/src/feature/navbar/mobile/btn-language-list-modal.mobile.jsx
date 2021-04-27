@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {BtnLanguage} from "../atoms/btn-language";
+import {BtnLanguage} from "../desktop/atoms/btn-language";
 
 const BtnLanguageListModalStl = styled.div`
   display: none;

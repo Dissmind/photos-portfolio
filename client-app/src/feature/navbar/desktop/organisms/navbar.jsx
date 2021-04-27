@@ -5,8 +5,8 @@ import {LinkList} from "../molecules/link-list";
 import {LinkItem} from "../atoms/link-item";
 import {ThemeSwitcher} from "../molecules/theme-switcher";
 import {NavLink} from "react-router-dom";
-import {BtnSelectLanguage} from "../atoms/btn-select-language.mobile";
-import {LanguageModal} from "./language-modal.mobile";
+import {BtnSelectLanguage} from "../../mobile/btn-select-language.mobile";
+import {LanguageModal} from "../../mobile/language-modal.mobile";
 import {Container, Wrapper} from "../../../../shared/layout";
 import {media} from "../../../../shared/media-queries";
 

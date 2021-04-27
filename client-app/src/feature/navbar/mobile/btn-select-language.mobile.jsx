@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import BtnSelectLanguageIco from '../../../../attachments/icon/BtnSelectLanguageIco.svg'
+import BtnSelectLanguageIco from '../../../attachments/icon/BtnSelectLanguageIco.svg'
 
 const BtnSelectLanguageStl = styled.img`
   //display: none;
