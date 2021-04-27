@@ -18,6 +18,7 @@ export const BtnReturnStl = styled(Wrapper)`
 `
 
  const BtnReturnIcoStl = styled.img`
+  display: block;
   width: 100%;
   height: 100%;
   user-select: none;
@@ -25,6 +26,9 @@ export const BtnReturnStl = styled(Wrapper)`
 `
 
 const LinkStl = styled(NavLink)`
+  display: block;
+  width: 100%;
+  height: 100%;
   &:link{
     text-decoration: none;
   }

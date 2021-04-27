@@ -11,9 +11,8 @@ import {Home} from "./feature/preview/desktop/pages/home";
 import {About} from "./feature/about/desktop/pages/about";
 import {Portfolio} from "./feature/portfolio/desktop/pages/portfolio";
 import {Records} from "./feature/records/desktop/pages/records";
-import {ThemeListItems} from "./feature/portfolio/desktop/molecules/theme-link-list";
 import {Photos} from "./feature/photos/desktop/pages/photos";
-import {PhotosTemp} from "./feature/photos/desktop/templates/photos-temp";
+import {ThemeListItems} from "./feature/portfolio/desktop/molecules/theme-link-list";
 
 
 const app = (
@@ -27,7 +26,7 @@ const app = (
 
       {ThemeListItems.map((ThemeListItem) => (
         <Route path={`/portfolio/${ThemeListItem.theme.toLowerCase().split(' ').join('-')}`}
-               exact render={() => <PhotosTemp />} />
+               exact render={() => <Photos />} />
       ))}
 
       <Route path={"/records"} exact render={() => <Records />} />

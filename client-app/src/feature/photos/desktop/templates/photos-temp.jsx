@@ -2,13 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Container} from "../../../../shared/layout";
 import {media} from "../../../../shared/media-queries";
-import {Navbar} from "../../../navbar/desktop/organisms/navbar";
-import {Footer} from "../../../footer/organisms/footer";
-import {Title} from "../atoms/title";
-import {useSelector} from "react-redux";
-import {selectGroupTitle} from "../../photos.slice";
-import {BtnReturn, BtnReturnStl} from "../atoms/btn-return";
-import {MainContent} from "../molecules/main-content";
+import {BtnReturnStl} from "../atoms/btn-return";
 
 
 const NavbarContainerStl = styled(Container)`
@@ -24,7 +18,6 @@ const NavbarContainerStl = styled(Container)`
 const TitleContainerStl = styled(Container)`
   height: 12.6852vh;
   margin-bottom: 5.5555vh;
-  background-color: #ccc;
   
   ${media.desktop} {
     height: 8.5625vw;
@@ -41,8 +34,7 @@ const ContainerStl = styled(Container)`
     left: 22.2222vh;
     top: 50%;
     transform: translateY(-50%);
-    
-    //TODO: Где-то тут что-то не так
+
     ${media.desktop} {
       left: 15vw;
     }
@@ -52,7 +44,6 @@ const ContainerStl = styled(Container)`
 const MainContentContainerStl = styled(Container)`
   height: auto;
   margin-bottom: auto;
-  background-color: #ccc;
 `
 
 const FooterContainerStl = styled(Container)`
@@ -69,19 +60,17 @@ export const PhotosTemp = ({navbarChildren, titleChildren, mainContentChildren, 
   return (
     <>
       <Container flex column h100>
-        <NavbarContainerStl sticky><Navbar type={'menu'} />{navbarChildren}</NavbarContainerStl>
+        <NavbarContainerStl sticky>{navbarChildren}</NavbarContainerStl>
 
         <TitleContainerStl flex row center>
           <ContainerStl limiter flex row center>
-            <BtnReturn />
-            <Title />
+            {titleChildren}
           </ContainerStl>
-          {titleChildren}
         </TitleContainerStl>
 
-        <MainContentContainerStl flex row center><MainContent />{mainContentChildren}</MainContentContainerStl>
+        <MainContentContainerStl flex row center>{mainContentChildren}</MainContentContainerStl>
 
-        <FooterContainerStl><Footer />{footerChildren}</FooterContainerStl>
+        <FooterContainerStl>{footerChildren}</FooterContainerStl>
       </Container>
     </>
   )
