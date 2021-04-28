@@ -1,12 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {BtnLanguageList} from "../molecules/btn-language-list";
 import {LinkList} from "../molecules/link-list";
 import {LinkItem} from "../atoms/link-item";
 import {ThemeSwitcher} from "../molecules/theme-switcher";
 import {NavLink} from "react-router-dom";
-import {BtnSelectLanguage} from "../../mobile/btn-select-language.mobile";
-import {LanguageModal} from "../../mobile/language-modal.mobile";
 import {Container, Wrapper} from "../../../../shared/layout";
 import {media} from "../../../../shared/media-queries";
 
@@ -39,9 +37,6 @@ const LinkStl = styled(NavLink)`
 
 export const Navbar = ({type}) => {
 
-  // const [popupToggle, setPopupToggle] = useState(false)
-
-
   let list = null
 
   switch (type) {
@@ -59,13 +54,6 @@ export const Navbar = ({type}) => {
       <Container limiter>
         <ContainerStl flex row>
           {list}
-
-          {/*<BtnSelectLanguage*/}
-          {/*  onClick={() => {popupToggle ? setPopupToggle(false) : setPopupToggle(true)}}*/}
-          {/*/>*/}
-          {/*{*/}
-          {/*  popupToggle ? <LanguageModal close={() => {setPopupToggle(false)}} /> : null*/}
-          {/*}*/}
 
           <WrapperStl>
             <LinkStl to={"/records"}>

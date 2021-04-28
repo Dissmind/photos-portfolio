@@ -14,5 +14,5 @@ const ThemeIconsStl = styled.img`
 `
 
 export const ThemeIcons = ({path}) => (
-  <ThemeIconsStl src={path} alt={"ThemeIcon"} />
+  <ThemeIconsStl src={path} />
 )

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Container} from "../../../../shared/layout";
+import {Navbar} from "../../../navbar/mobile/organisms/navbar";
 
 const NavbarContainerStl = styled(Container)`
   height: 40px;
@@ -34,7 +35,7 @@ const FooterContainerStl = styled(Container)`
 export const HomeTemp = ({}) => {
   return (
     <Container flex column h100>
-      <NavbarContainerStl flex center>navbar</NavbarContainerStl>
+      <NavbarContainerStl flex center><Navbar /></NavbarContainerStl>
       <LabelContainerStl flex center>label</LabelContainerStl>
 
       <MainContentContainerStl flex column>
