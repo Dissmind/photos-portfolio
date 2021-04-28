@@ -7,7 +7,7 @@ import {BrowserRouter, Route} from "react-router-dom"
 import {Provider} from "react-redux";
 import {store} from "./redux/store";
 
-import {Home} from "./feature/preview/desktop/pages/home";
+import {Home} from "./feature/preview/page/home";
 import {About} from "./feature/about/desktop/pages/about";
 import {Portfolio} from "./feature/portfolio/desktop/pages/portfolio";
 import {Records} from "./feature/records/desktop/pages/records";

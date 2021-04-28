@@ -51,16 +51,14 @@ const FooterContainerStl = styled(Container)`
 
 export const HomeTemp = ({navbarChildren, labelChildren, mainContentChildren, footerChildren}) => {
   return (
-    <>
-      <Container flex column h100>
-        <NavbarContainerStl>{navbarChildren}</NavbarContainerStl>
+    <Container flex column h100>
+      <NavbarContainerStl>{navbarChildren}</NavbarContainerStl>
 
-        <LabelContainerStl flex row center>{labelChildren}</LabelContainerStl>
+      <LabelContainerStl flex row center>{labelChildren}</LabelContainerStl>
 
-        <MainContentContainerStl flex row center>{mainContentChildren}</MainContentContainerStl>
+      <MainContentContainerStl flex row center>{mainContentChildren}</MainContentContainerStl>
 
-        <FooterContainerStl>{footerChildren}</FooterContainerStl>
-      </Container>
-    </>
+      <FooterContainerStl>{footerChildren}</FooterContainerStl>
+    </Container>
   )
 }

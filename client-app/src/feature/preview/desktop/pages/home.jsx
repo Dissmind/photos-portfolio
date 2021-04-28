@@ -6,13 +6,11 @@ import {MainContent} from "../organisms/main-content";
 import {Footer} from "../../../footer/organisms/footer";
 
 
-export const Home = () => (
-  <>
-    <HomeTemp
-      navbarChildren={<Navbar type={'lang'} />}
-      labelChildren={<LabelArrow text={"Выберите свой язык!"} />}
-      mainContentChildren={<MainContent />}
-      footerChildren={<Footer />}
-    />
-  </>
+export const HomeD = () => (
+  <HomeTemp
+    navbarChildren={<Navbar type={'lang'} />}
+    labelChildren={<LabelArrow text={"Выберите свой язык!"} />}
+    mainContentChildren={<MainContent />}
+    footerChildren={<Footer />}
+  />
 )
