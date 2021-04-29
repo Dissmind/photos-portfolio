@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom"
 import {MenuItems} from "../atoms/menu-items";
 import {Container} from "../../../../shared/layout";
 import {media} from "../../../../shared/media-queries";
+import {MenuItemsList} from "../../page/home";
 
 export const MenuContainerStl = styled(Container)`
   width: 20.7407vh;
@@ -71,30 +72,6 @@ const MenuBackgroundStl = styled.div`
 
 
 export const Menu = () => {
-
-  const MenuItemsList = [
-    {
-      title: 'Обо мне',
-      url: '/about',
-      img: ''
-    },
-    {
-      title: 'Портфолио',
-      url: '/portfolio',
-      img: ''
-    },
-    {
-      title: 'Контакты',
-      url: '/records',
-      img: ''
-    },
-    {
-      title: 'Цены',
-      url: '/',
-      img: ''
-    }
-  ]
-
   return(
     <MenuContainerStl>
       <MenuStl flex column>

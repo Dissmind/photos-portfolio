@@ -1,17 +1,18 @@
 import React from "react";
 
 import {GlobalStyle} from "../../../../../shared/global-components"
-import {BtnMore} from "../btn-more.mobile";
+import {MenuItem} from "../menu-item";
 
 export default {
-  title: 'Home/Atoms/BtnMore',
-  component: BtnMore,
+  title: 'Home/Molecules/MenuItem-M',
+  component: MenuItem,
 }
 
 const Template = (args) => (
   <>
     <GlobalStyle />
-    <BtnMore {...args} />
+
+    <MenuItem {...args} />
   </>
 )
 
