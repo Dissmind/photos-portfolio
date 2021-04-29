@@ -3,7 +3,7 @@ import {HomeTemp} from "../templates/home-temp";
 import {Navbar} from "../../../navbar/desktop/organisms/navbar";
 import {LabelArrow} from "../atoms/label-arrow";
 import {MainContent} from "../organisms/main-content";
-import {Footer} from "../../../footer/organisms/footer";
+import {Footer} from "../../../footer/desktop/organisms/footer";
 
 
 export const HomeD = () => (

@@ -5,12 +5,11 @@ import {MenuItemTitle, MenuItemTitleStl} from "../atoms/menu-item-title";
 import {BtnMore} from "../atoms/btn-more";
 
 const MenuItemStl = styled(Container)`
-  width: 300px;
+  width: 92.5%;
   height: 144.5px;
   overflow: hidden;
   background-color: #133F2C;
   border-radius: 10px 0 0 10px;
-  
 `
 
 const ImgContainerStl = styled(Container)`
@@ -19,8 +18,6 @@ const ImgContainerStl = styled(Container)`
 `
 
 const ImgStl = styled.img`
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   user-select: none;
 `
@@ -36,17 +33,16 @@ const TitleLinkContainerStl = styled(Container)`
 `
 
 
-export const MenuItem = ({title, img}) => {
-
+export const MenuItem = ({title, img, url}) => {
   return (
     <MenuItemStl flex center>
-      <ImgContainerStl>
+      <ImgContainerStl flex center>
         <ImgStl src={img} />
       </ImgContainerStl>
 
       <TitleLinkContainerStl flex column center>
         <MenuItemTitle title={title} />
-        <BtnMore />
+        <BtnMore url={url} />
       </TitleLinkContainerStl>
     </MenuItemStl>
   )

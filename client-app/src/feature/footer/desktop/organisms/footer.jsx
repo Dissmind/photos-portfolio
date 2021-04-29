@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Description} from "../atoms/description";
-import {Container, Wrapper} from "../../../shared/layout";
+import {Container} from "../../../../shared/layout";
+import {SocialLink} from "../atoms/social-link";
+
+import InstagramLogo from "../../../../attachments/icon/InstagramLogo.svg"
 
 const FooterStl = styled(Container)`
   height: 100%;
@@ -10,6 +13,8 @@ const FooterStl = styled(Container)`
 
 const ContainerStl = styled(Container)`
   padding: 0 2.5%;
+  justify-content: space-between;
+  align-items: center;
 `
 
 
@@ -17,10 +22,9 @@ export const Footer = () => {
   return (
     <FooterStl flex row center>
       <Container limiter>
-        <ContainerStl>
-          <Wrapper>
-            <Description text={`© 2021 "Название студии"`} />
-          </Wrapper>
+        <ContainerStl flex row>
+          <Description text={`© 2021 "Название студии"`} />
+          <SocialLink url={'https://www.google.com'} logo={InstagramLogo} />
         </ContainerStl>
       </Container>
     </FooterStl>

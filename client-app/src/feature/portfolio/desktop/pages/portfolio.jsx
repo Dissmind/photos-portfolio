@@ -3,7 +3,7 @@ import {Navbar} from "../../../navbar/desktop/organisms/navbar";
 import {Label} from "../atoms/label";
 import {ThemeLinkList} from "../molecules/theme-link-list";
 import {PortfolioLabelArrow} from "../atoms/portfolio-label-arrow";
-import {Footer} from "../../../footer/organisms/footer";
+import {Footer} from "../../../footer/desktop/organisms/footer";
 import {PortfolioTemp} from "../templates/portfolio-temp";
 
 

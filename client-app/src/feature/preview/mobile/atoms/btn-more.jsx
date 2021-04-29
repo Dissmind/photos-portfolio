@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Container} from "../../../../shared/layout";
+import {NavLink} from "react-router-dom";
 
 const BtnMoreStl = styled(Container)`
   width: 114px;
@@ -11,7 +12,6 @@ const BtnMoreStl = styled(Container)`
   font-weight: 400;
   font-size: 15px;
   line-height: 15px;
-  color: #FFFFFF;
   user-select: none;
   
   :hover{
@@ -19,11 +19,27 @@ const BtnMoreStl = styled(Container)`
   }
 `
 
+const LinkStl = styled(NavLink)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  
+  &:link, &:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+`
 
-export const BtnMore = ({}) => {
+
+export const BtnMore = ({url}) => {
   return (
     <BtnMoreStl flex center>
-      Подробнее
+      <LinkStl to={url}>
+        Подробнее
+      </LinkStl>
     </BtnMoreStl>
   )
 }

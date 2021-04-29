@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Container} from "../../../../shared/layout";
-import {Navbar} from "../../../navbar/mobile/organisms/navbar";
-import {LabelArrow, LabelArrowStl} from "../atoms/label-arrow";
-import {MainContent} from "../organisms/main-content";
+import {LabelArrowStl} from "../atoms/label-arrow";
 
 const NavbarContainerStl = styled(Container)`
   height: 40px;
@@ -22,23 +20,19 @@ const LabelContainerStl = styled(Container)`
 const MainContentContainerStl = styled(Container)`
   height: 627.5px;
   margin-bottom: 50.5px;
-  background-color: #ccc;
 `
 
 const FooterContainerStl = styled(Container)`
   height: 45px;
-  background-color: #ccc;
 `
 
-export const HomeTemp = ({}) => {
+export const HomeTemp = ({navbarChildren, labelChildren, mainContentChildren, footerChildren}) => {
   return (
     <Container flex column h100>
-      <NavbarContainerStl flex center><Navbar /></NavbarContainerStl>
-      <LabelContainerStl><LabelArrow /></LabelContainerStl>
-
-      <MainContentContainerStl flex><MainContent /></MainContentContainerStl>
-
-      <FooterContainerStl flex center>footer</FooterContainerStl>
+      <NavbarContainerStl>{navbarChildren}</NavbarContainerStl>
+      <LabelContainerStl>{labelChildren}</LabelContainerStl>
+      <MainContentContainerStl flex>{mainContentChildren}</MainContentContainerStl>
+      <FooterContainerStl>{footerChildren}</FooterContainerStl>
     </Container>
   )
 }

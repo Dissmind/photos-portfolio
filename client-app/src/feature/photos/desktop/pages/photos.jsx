@@ -4,7 +4,7 @@ import {Navbar} from "../../../navbar/desktop/organisms/navbar";
 import {BtnReturn} from "../atoms/btn-return";
 import {Title} from "../atoms/title";
 import {MainContent} from "../molecules/main-content";
-import {Footer} from "../../../footer/organisms/footer";
+import {Footer} from "../../../footer/desktop/organisms/footer";
 
 
 export const Photos = () => {

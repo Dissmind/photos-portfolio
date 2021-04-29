@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {media} from "../../../shared/media-queries";
+import {media} from "../../../../shared/media-queries";
 
 const DescriptionStl = styled.div`
   font-family: 'PentaLight', serif;
