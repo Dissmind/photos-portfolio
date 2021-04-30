@@ -20,10 +20,10 @@ const ToggleSwitchStl = styled.input`
 
   ::before{
     position: absolute;
-
+    
     content: "";
-    width: 18px;
-    height: 18px;
+    width: 50%;
+    height: 100%;
     border: #FFFFFF 0.2px solid;
     border-radius: 18px;
     background-color: #133F2C;

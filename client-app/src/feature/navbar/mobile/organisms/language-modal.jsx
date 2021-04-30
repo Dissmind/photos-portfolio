@@ -16,7 +16,7 @@ const BackgroundStl = styled.div`
   
   background-color: #000000;
   opacity: 30%;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
 `
 
