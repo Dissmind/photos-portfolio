@@ -28,6 +28,7 @@ const MainContentContainerStl = styled(Container)`
 
 const FooterContainerStl = styled(Container)`
   height: 45px;
+  margin-top: auto;
 `
 
 

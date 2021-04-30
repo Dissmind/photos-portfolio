@@ -24,6 +24,7 @@ const MainContentContainerStl = styled(Container)`
 
 const FooterContainerStl = styled(Container)`
   height: 45px;
+  margin-top: auto;
 `
 
 export const HomeTemp = ({navbarChildren, labelChildren, mainContentChildren, footerChildren}) => {

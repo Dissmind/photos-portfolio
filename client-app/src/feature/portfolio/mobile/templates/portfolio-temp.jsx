@@ -2,10 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Container} from "../../../../shared/layout";
 import {BtnReturnStl} from "../../../about/mobile/atoms/btn-return";
-import {Navbar} from "../../../navbar/mobile/organisms/navbar";
-import {BtnReturnPortfolio} from "../atoms/btn-return";
-import {TitlePortfolio} from "../atoms/title";
-import {Footer} from "../../../footer/mobile/organisms/footer";
+
 
 const NavbarContainerStl = styled(Container)`
   height: 40px;
@@ -28,22 +25,22 @@ const TitleContainerStl = styled(Container)`
 
 const MainContentContainerStl = styled(Container)`
   margin-bottom: 50px;
-  background-color: #ccc;
 `
 
 const FooterContainerStl = styled(Container)`
   height: 45px;
+  margin-top: auto;
 `
 
 
-export const PortfolioTemp = ({}) => {
+export const PortfolioTemp = ({navbarChildren, btnReturnChildren, titleChildren, mainContentChildren, footerChildren}) => {
   return (
     <Container flex column h100>
-      <NavbarContainerStl><Navbar /></NavbarContainerStl>
-      <ReturnContainerStl><BtnReturnPortfolio /></ReturnContainerStl>
-      <TitleContainerStl><TitlePortfolio /></TitleContainerStl>
-      <MainContentContainerStl flex center></MainContentContainerStl>
-      <FooterContainerStl><Footer /></FooterContainerStl>
+      <NavbarContainerStl>{navbarChildren}</NavbarContainerStl>
+      <ReturnContainerStl>{btnReturnChildren}</ReturnContainerStl>
+      <TitleContainerStl>{titleChildren}</TitleContainerStl>
+      <MainContentContainerStl>{mainContentChildren}</MainContentContainerStl>
+      <FooterContainerStl>{footerChildren}</FooterContainerStl>
     </Container>
   )
 }

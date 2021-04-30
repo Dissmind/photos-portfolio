@@ -1,16 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Container} from "../../../../shared/layout";
+import {media} from "../../../../shared/media-queries";
 
 const SocialLinkStl = styled(Container)`
-  height: 22px;
+  width: 3.7037vh;
+  height: 3.7037vh;
   
   &:hover{
     cursor: pointer;
   }
+  
+  ${media.desktop} {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
 `
 
 const SocialLogoStl = styled.img`
+  display: block;
   height: 100%;
 `
 

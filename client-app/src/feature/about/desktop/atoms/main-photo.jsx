@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import AboutMainPhoto from "../../../../attachments/photos/AbotMainPhoto.jpg";
+import AboutMainPhoto from "../../../../attachments/photos/AboutPhoto.jpg";
 import {media} from "../../../../shared/media-queries";
 
 export const MainPhotoStl = styled.div`
+  height: 100%;
   position: relative;
   user-select: none;
 `
@@ -11,6 +12,7 @@ export const MainPhotoStl = styled.div`
 const MainPhotoImgStl = styled.img`
   width: 47.9629vh;
   height: 100%;
+  object-fit: cover;
   
   ${media.desktop} {
     width: 32.375vw;

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Container} from "../../../../shared/layout";
 
-import AboutPhotoMobile from '../../../../attachments/photos/AboutPhotoMob.jpg'
+import AboutPhotoMobile from '../../../../attachments/photos/AboutPhoto.jpg'
 
 export const MainPhotoStl = styled(Container)`
   position: relative;
@@ -11,6 +11,7 @@ export const MainPhotoStl = styled(Container)`
 
 const PhotoStl = styled.img`
   width: 100%;
+  object-fit: cover;
   user-select: none;
 `
 
@@ -25,7 +26,6 @@ const PhotoBorderStl = styled.div`
 
 
 export const MainPhoto = ({}) => {
-
   return (
     <MainPhotoStl flex center>
       <PhotoStl src={AboutPhotoMobile} />
