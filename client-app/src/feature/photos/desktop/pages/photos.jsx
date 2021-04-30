@@ -7,20 +7,18 @@ import {MainContent} from "../molecules/main-content";
 import {Footer} from "../../../footer/desktop/organisms/footer";
 
 
-export const Photos = () => {
+export const PhotosD = () => {
   return (
-    <>
-      <PhotosTemp
-        navbarChildren={<Navbar type={'menu'} />}
-        titleChildren={
-          <>
-            <BtnReturn />
-            <Title />
-          </>
-        }
-        mainContentChildren={<MainContent />}
-        footerChildren={<Footer />}
-      />
-    </>
+    <PhotosTemp
+      navbarChildren={<Navbar type={'menu'} />}
+      titleChildren={
+        <>
+          <BtnReturn />
+          <Title />
+        </>
+      }
+      mainContentChildren={<MainContent />}
+      footerChildren={<Footer />}
+    />
   )
 }

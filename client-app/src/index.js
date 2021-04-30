@@ -10,8 +10,8 @@ import {store} from "./redux/store";
 import {Home} from "./feature/preview/page/home";
 import {About} from "./feature/about/page/about";
 import {Portfolio, ThemeListItems} from "./feature/portfolio/page/portfolio";
+import {Photos} from "./feature/photos/page/photos";
 import {Records} from "./feature/records/desktop/pages/records";
-import {Photos} from "./feature/photos/desktop/pages/photos";
 
 
 const app = (
