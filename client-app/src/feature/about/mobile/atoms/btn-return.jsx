@@ -16,6 +16,10 @@ const LinkStl = styled(NavLink)`
   align-items: center;
   width: 100%;
   height: 100%;
+  
+  &:hover, &:link {
+    text-decoration: none;
+  }
 `
 
 const ArrowStl = styled.img`

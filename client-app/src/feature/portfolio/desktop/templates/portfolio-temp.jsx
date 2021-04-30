@@ -59,18 +59,16 @@ const FooterContainerStl = styled(Container)`
 
 export const PortfolioTemp = ({navbarChildren, titleChildren, mainContentChildren, labelChildren, footerChildren}) => {
   return (
-    <>
-      <Container flex column h100>
-        <NavbarContainerStl sticky>{navbarChildren}</NavbarContainerStl>
+    <Container flex column h100>
+      <NavbarContainerStl sticky>{navbarChildren}</NavbarContainerStl>
 
-        <TitleContainerStl flex row center>{titleChildren}</TitleContainerStl>
+      <TitleContainerStl flex row center>{titleChildren}</TitleContainerStl>
 
-        <MainContentContainerStl flex row center>{mainContentChildren}</MainContentContainerStl>
+      <MainContentContainerStl flex row center>{mainContentChildren}</MainContentContainerStl>
 
-        <LabelContainerStl flex row center>{labelChildren}</LabelContainerStl>
+      <LabelContainerStl flex row center>{labelChildren}</LabelContainerStl>
 
-        <FooterContainerStl>{footerChildren}</FooterContainerStl>
-      </Container>
-    </>
+      <FooterContainerStl>{footerChildren}</FooterContainerStl>
+    </Container>
   )
 }

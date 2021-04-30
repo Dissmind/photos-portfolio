@@ -6,8 +6,8 @@ import {selectPhotosLinks, selectSmallPhotosCount, setPhotos} from "../../photos
 import {sortPhotos} from "../pages/sort-photos";
 import {getPhotosMock} from "../../../../tests/mocks/photosMock";
 import {getTitleFromUrl} from "../atoms/title";
-import {ThemeListItems} from "../../../portfolio/desktop/molecules/theme-link-list";
 import {media} from "../../../../shared/media-queries";
+import {ThemeListItems} from "../../../portfolio/page/portfolio";
 
 const MainContentStl = styled(Container)`
   display: grid;

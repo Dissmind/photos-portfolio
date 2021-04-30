@@ -9,10 +9,9 @@ import {store} from "./redux/store";
 
 import {Home} from "./feature/preview/page/home";
 import {About} from "./feature/about/page/about";
-import {Portfolio} from "./feature/portfolio/desktop/pages/portfolio";
+import {Portfolio, ThemeListItems} from "./feature/portfolio/page/portfolio";
 import {Records} from "./feature/records/desktop/pages/records";
 import {Photos} from "./feature/photos/desktop/pages/photos";
-import {ThemeListItems} from "./feature/portfolio/desktop/molecules/theme-link-list";
 
 
 const app = (

@@ -6,6 +6,7 @@ import {useDispatch} from "react-redux";
 import {setTitle} from "../../../photos/photos.slice";
 import {Container} from "../../../../shared/layout";
 import {media} from "../../../../shared/media-queries";
+import {ThemeListItems} from "../../page/portfolio";
 
 const ThemeLinkListStl = styled(Container)`
   display: grid;
@@ -23,22 +24,9 @@ const LinkStl = styled(NavLink)`
   }
 `
 
-export const ThemeListItems = [
-  {theme: "Backstage blog"},
-  {theme: "Family"},
-  {theme: "Kids"},
-  {theme: "Love story"},
-  {theme: "New Year"},
-  {theme: "Pregnancy"},
-  {theme: "Travel"},
-  {theme: "Wedding"},
-  {theme: "Women"},
-]
-
 export const ThemeLinkList = () => {
 
   const dispatch = useDispatch()
-
 
   return (
     <ThemeLinkListStl>

@@ -7,16 +7,14 @@ import {Footer} from "../../../footer/desktop/organisms/footer";
 import {PortfolioTemp} from "../templates/portfolio-temp";
 
 
-export const Portfolio = () => {
+export const PortfolioD = () => {
   return (
-    <>
-      <PortfolioTemp
-        navbarChildren={<Navbar type={'menu'} />}
-        titleChildren={<Label />}
-        mainContentChildren={<ThemeLinkList />}
-        labelChildren={<PortfolioLabelArrow />}
-        footerChildren={<Footer />}
-      />
-    </>
+    <PortfolioTemp
+      navbarChildren={<Navbar type={'menu'} />}
+      titleChildren={<Label />}
+      mainContentChildren={<ThemeLinkList />}
+      labelChildren={<PortfolioLabelArrow />}
+      footerChildren={<Footer />}
+    />
   )
 }

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {media} from "../../../../shared/media-queries";
 import {useDispatch, useSelector} from "react-redux";
 import {selectGroupTitle, setTitle} from "../../photos.slice";
-import {ThemeListItems} from "../../../portfolio/desktop/molecules/theme-link-list";
+import {ThemeListItems} from "../../../portfolio/page/portfolio";
 
 const TitleStl = styled.div`
   height: 100%;
