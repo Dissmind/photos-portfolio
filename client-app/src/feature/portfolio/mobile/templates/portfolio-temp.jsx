@@ -24,7 +24,7 @@ const TitleContainerStl = styled(Container)`
 `
 
 const MainContentContainerStl = styled(Container)`
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 `
 
 const FooterContainerStl = styled(Container)`
