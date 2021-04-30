@@ -5,12 +5,10 @@ import {MainContent} from "../organisms/main-content";
 import {Footer} from "../../../footer/desktop/organisms/footer";
 
 
-export const About = () => (
-  <>
-    <AboutTemp
-      navbarChildren={<Navbar type={'menu'} />}
-      mainContentChildren={<MainContent />}
-      footerChildren={<Footer />}
-    />
-  </>
+export const AboutD = () => (
+  <AboutTemp
+    navbarChildren={<Navbar type={'menu'} />}
+    mainContentChildren={<MainContent />}
+    footerChildren={<Footer />}
+  />
 )

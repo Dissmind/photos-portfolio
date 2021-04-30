@@ -32,14 +32,12 @@ const FooterContainerStl = styled(Container)`
 
 export const AboutTemp = ({navbarChildren, mainContentChildren, footerChildren}) => {
   return (
-    <>
-      <Container flex column h100>
-        <NavbarContainerStl>{navbarChildren}</NavbarContainerStl>
+    <Container flex column h100>
+      <NavbarContainerStl>{navbarChildren}</NavbarContainerStl>
 
-        <MainContentContainerStl flex row center>{mainContentChildren}</MainContentContainerStl>
+      <MainContentContainerStl flex row center>{mainContentChildren}</MainContentContainerStl>
 
-        <FooterContainerStl>{footerChildren}</FooterContainerStl>
-      </Container>
-    </>
+      <FooterContainerStl>{footerChildren}</FooterContainerStl>
+    </Container>
   )
 }

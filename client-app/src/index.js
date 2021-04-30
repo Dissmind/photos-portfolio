@@ -8,7 +8,7 @@ import {Provider} from "react-redux";
 import {store} from "./redux/store";
 
 import {Home} from "./feature/preview/page/home";
-import {About} from "./feature/about/desktop/pages/about";
+import {About} from "./feature/about/page/about";
 import {Portfolio} from "./feature/portfolio/desktop/pages/portfolio";
 import {Records} from "./feature/records/desktop/pages/records";
 import {Photos} from "./feature/photos/desktop/pages/photos";
@@ -24,10 +24,12 @@ const app = (
       <Route path={"/about"} exact render={() => <About />} />
       <Route path={"/portfolio"} exact render={() => <Portfolio />} />
 
-      {ThemeListItems.map((ThemeListItem) => (
-        <Route path={`/portfolio/${ThemeListItem.theme.toLowerCase().split(' ').join('-')}`}
-               exact render={() => <Photos />} />
-      ))}
+      {
+        ThemeListItems.map((ThemeListItem) => (
+          <Route path={`/portfolio/${ThemeListItem.theme.toLowerCase().split(' ').join('-')}`}
+                 exact render={() => <Photos />} />
+        ))
+      }
 
       <Route path={"/records"} exact render={() => <Records />} />
     </BrowserRouter>
